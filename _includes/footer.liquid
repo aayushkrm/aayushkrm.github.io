@@ -10,15 +10,15 @@
   </footer>
 {% else %}
   <footer
-    class="sticky-bottom mt-5"
+    class="sticky-bottom"
     role="contentinfo"
-    style="background: transparent; border: none; padding: 1.5rem 0 2rem 0;"
+    style="background: transparent; border: none; padding: 2rem 0; margin-top: 3rem; font-size: 0.875rem;"
   >
     {% if site.newsletter.enabled %}
       {% include newsletter.liquid %}
     {% endif %}
 
-    <div style="text-align: center; background: transparent; color: var(--global-text-color); opacity: 0.7; font-size: 0.875rem;">
+    <div style="text-align: center; background: transparent; color: var(--global-text-color); opacity: 0.7;">
       {{ footer_contents }}
     </div>
   </footer>
