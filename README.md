@@ -29,6 +29,7 @@ This is my personal portfolio website showcasing my work as a Machine Learning E
 ## Technologies Used
 
 This website is built using:
+
 - [Jekyll](https://jekyllrb.com/) - Static site generator
 - [al-folio](https://github.com/alshedivat/al-folio) - Academic Jekyll theme
 - GitHub Pages - Hosting platform

@@ -118,34 +118,17 @@
     {
       "name": "Machine Learning",
       "level": "Advanced",
-      "keywords": [
-        "Deep Learning",
-        "LLMs",
-        "CNNs",
-        "NLP",
-        "Data Preprocessing"
-      ]
+      "keywords": ["Deep Learning", "LLMs", "CNNs", "NLP", "Data Preprocessing"]
     },
     {
       "name": "Frameworks & Tools",
       "level": "Advanced",
-      "keywords": [
-        "PyTorch",
-        "TensorFlow",
-        "LangChain",
-        "Scikit-learn",
-        "Pandas"
-      ]
+      "keywords": ["PyTorch", "TensorFlow", "LangChain", "Scikit-learn", "Pandas"]
     },
     {
       "name": "Programming",
       "level": "Advanced",
-      "keywords": [
-        "Python",
-        "SQL",
-        "Java",
-        "C++"
-      ]
+      "keywords": ["Python", "SQL", "Java", "C++"]
     },
     {
       "name": "ML Concepts",

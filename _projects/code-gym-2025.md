@@ -17,6 +17,7 @@ A comprehensive collection of robust solutions for 10 diverse programming challe
 ### Competition Highlights
 
 **Achievement**
+
 - Secured **3rd place** in a highly competitive programming competition
 - Successfully solved 10 diverse challenges in a high-pressure environment
 - Demonstrated excellence in algorithmic thinking and implementation
@@ -26,16 +27,19 @@ A comprehensive collection of robust solutions for 10 diverse programming challe
 **Advanced Algorithms Implemented**
 
 1. **Dynamic Programming**
+
    - Combinatorial counting problems
    - Optimization of overlapping subproblems
    - Memoization for performance
 
 2. **Graph Algorithms**
+
    - Breadth-First Search (BFS) for pathfinding
    - Graph traversal optimization
    - Complex graph modeling
 
 3. **Binary Search**
+
    - Optimization tasks with binary search
    - Efficient search space reduction
    - Time complexity optimization

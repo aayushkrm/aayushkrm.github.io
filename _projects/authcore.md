@@ -15,26 +15,31 @@ A secure and scalable authentication system built from the ground up with modern
 ### Key Features
 
 **Stateless Authentication**
+
 - Implemented JSON Web Tokens (JWT) for efficient session management
 - Token-based authentication for stateless, scalable architecture
 - Secure token generation and validation
 
 **Robust Password Security**
+
 - Leveraged bcrypt for secure password hashing
 - Protection against rainbow table and brute-force attacks
 - Industry-standard cryptographic practices
 
 **Fine-Grained RBAC**
+
 - Designed and built a comprehensive Role-Based Access Control model
 - Custom middleware for permission validation
 - Protected RESTful API endpoints with granular access control
 
 **Database Integration**
+
 - PostgreSQL database for persistent storage
 - Efficient user permission lookups and validation
 - Optimized database queries for performance
 
 **DevOps & Automation**
+
 - Automated deployment workflows with Shell scripting
 - Streamlined maintenance and update processes
 - Production-ready deployment configuration
@@ -60,6 +65,7 @@ A secure and scalable authentication system built from the ground up with modern
 ### Why AuthCore?
 
 AuthCore was developed to provide a scalable, efficient, and secure backend solution that meets modern application security needs. The system demonstrates proficiency in:
+
 - Security-first development
 - System design and architecture
 - Database design and optimization
