@@ -2,23 +2,15 @@
   &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}.{% if site.last_updated %} Last updated: {{ 'now' | date: '%B %d, %Y' }}.{% endif %}
 {% endcapture %}
 
-{% if site.footer_fixed %}
-  <footer class="fixed-bottom" role="contentinfo" style="background: transparent;">
-    <div style="text-align: center; padding: 1rem 0; background: transparent;">
-      {{ footer_contents }}
-    </div>
-  </footer>
-{% else %}
-  <footer
-    role="contentinfo"
-    style="background: transparent; border: none; padding: 2rem 0; margin-top: 3rem; font-size: 0.875rem; position: relative;"
-  >
-    {% if site.newsletter.enabled %}
-      {% include newsletter.liquid %}
-    {% endif %}
+<footer
+  role="contentinfo"
+  style="background: transparent; border: none; padding: 2rem 0; margin-top: 3rem; font-size: 0.875rem; position: static; width: 100%;"
+>
+  {% if site.newsletter.enabled %}
+    {% include newsletter.liquid %}
+  {% endif %}
 
-    <div style="text-align: center; background: transparent; color: var(--global-text-color); opacity: 0.7;">
-      {{ footer_contents }}
-    </div>
-  </footer>
-{% endif %}
+  <div style="text-align: center; background: transparent; color: var(--global-text-color); opacity: 0.7;">
+    {{ footer_contents }}
+  </div>
+</footer>
