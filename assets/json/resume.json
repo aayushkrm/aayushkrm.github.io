@@ -1,200 +1,198 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Ayush Kumar",
+    "label": "Machine Learning Engineer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "aayush.kumarm.3myself@gmail.com",
+    "phone": "+7 989 352 9683",
+    "url": "https://aayushkrm.github.io/",
+    "summary": "Machine Learning Engineer specializing in Deep Learning, Large Language Models (LLMs), and AI system development. Currently pursuing a Specialization in Computational Mathematics and Computer Modeling at Tomsk State University. Proven track record in developing production-grade ML solutions and competitive programming achievements.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "city": "Tomsk",
+      "countryCode": "RU",
+      "region": "Russia"
     },
     "profiles": [
       {
+        "network": "LinkedIn",
+        "username": "ayush-kumar-aa79751a1",
+        "url": "https://www.linkedin.com/in/ayush-kumar-aa79751a1/"
+      },
+      {
+        "network": "GitHub",
+        "username": "aayushkrm",
+        "url": "https://github.com/aayushkrm"
+      },
+      {
         "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "username": "aayushkrm",
+        "url": "https://x.com/aayushkrm"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "T-Bank Education",
+      "position": "AI Apprenticeship",
+      "url": "",
+      "startDate": "2025-04-01",
+      "endDate": "Present",
+      "summary": "Developed and fine-tuned LLM-based systems for automated support and evaluation.",
+      "highlights": [
+        "Developed and fine-tuned an LLM-based question-answering system that improved automated support response accuracy by 25% and reduced manual ticket handling by 15%",
+        "Collaborated with senior engineers to implement a new evaluation framework, increasing model F1-score by 10% and improving response relevance through rigorous data preprocessing"
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Avito",
+      "position": "Machine Learning Intern",
+      "url": "https://www.avito.ru/",
+      "startDate": "2025-05-01",
+      "endDate": "Present",
+      "summary": "Focused on model performance optimization and ML pipeline deployment.",
+      "highlights": [
+        "Collaborated on a model performance optimization project, focusing on improving prediction accuracy through data preprocessing and validation",
+        "Supported deployment of ML pipelines using PyTorch and Scikit-learn for production-grade tasks"
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Tomsk State University",
+      "location": "Tomsk, Russia",
+      "url": "https://www.tsu.ru/",
+      "area": "Computational Mathematics and Computer Modeling",
+      "studyType": "Specialization (5 years)",
+      "startDate": "",
+      "endDate": "",
+      "courses": ["Faculty of Mathematics and Computer Science"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "3rd Place Winner - Code Gym by Т-Банк Образование",
+      "date": "2025-04-01",
+      "awarder": "T-Bank Education",
+      "summary": "Secured 3rd place in the Siberian Region Russia programming competition by developing robust solutions for 10 diverse challenges involving logic, algorithms, and mathematical modeling."
+    },
+    {
+      "title": "AvitoTech ML CUP 2025 - Diploma for Successful Challenge Completion",
+      "date": "2025-01-01",
+      "awarder": "Avito, Open Data Science (ods.ai)",
+      "summary": "Awarded diploma for successfully completing the AvitoTech ML CUP 2025 machine learning challenge."
     }
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "name": "Deep Learning AI Specialization",
+      "date": "2024-01-01",
+      "issuer": "DeepLearning.AI",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/BREU94XXQD7P"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "name": "Neural Networks and Deep Learning",
+      "date": "2023-12-01",
+      "issuer": "DeepLearning.AI",
+      "url": "https://www.coursera.org/account/accomplishments/verify/E8GLGGXSYWW8"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "name": "IBM Machine Learning Professional Certificate",
+      "date": "2023-07-01",
+      "issuer": "IBM via Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/professional-cert/QVWKPA67KJLT"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
+      "name": "Python Pro Bootcamp (100 Days of Code)",
+      "date": "2022-12-01",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-b790f354-0b71-4521-b78a-7e608fc7fca8/"
     },
     {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Full-Stack Web Development Bootcamp",
+      "date": "2022-05-01",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-073bb1f5-407c-432b-aedd-19b790ea25b7/"
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Machine Learning",
+      "level": "Advanced",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Deep Learning",
+        "LLMs",
+        "CNNs",
+        "NLP",
+        "Data Preprocessing"
+      ]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "level": "Advanced",
+      "keywords": [
+        "PyTorch",
+        "TensorFlow",
+        "LangChain",
+        "Scikit-learn",
+        "Pandas"
+      ]
+    },
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "keywords": [
+        "Python",
+        "SQL",
+        "Java",
+        "C++"
+      ]
+    },
+    {
+      "name": "ML Concepts",
+      "level": "Advanced",
+      "keywords": [
+        "Model Evaluation & Validation",
+        "Feature Engineering",
+        "Hyperparameter Tuning",
+        "Prompt Engineering",
+        "Transfer Learning & Fine-Tuning",
+        "Algorithm Design & Analysis",
+        "MLOps Principles",
+        "System Design"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
       "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "fluency": "Fluent"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "language": "Russian",
+      "fluency": "Intermediate"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "AuthCore - Custom Authentication & RBAC System",
+      "summary": "Developed a secure and stateless authentication system in Python, leveraging JSON Web Tokens (JWT) for efficient session management with fine-grained Role-Based Access Control (RBAC).",
+      "highlights": [
+        "Implemented robust password security using bcrypt for hashing",
+        "Designed and built a fine-grained RBAC model to safeguard RESTful API endpoints",
+        "Created custom middleware to validate user permissions against a PostgreSQL database",
+        "Automated deployment and maintenance workflows through Shell scripting"
+      ],
+      "url": "https://github.com/aayushkrm/AuthCore"
+    },
+    {
+      "name": "Code Gym 2025 Q&A - Award-Winning Competition Solutions",
+      "summary": "Secured 3rd place in the T-Bank Code Gym Programming Competition by developing robust solutions for 10 diverse challenges involving logic, algorithms, and mathematical modeling.",
+      "highlights": [
+        "Implemented advanced algorithms including dynamic programming, graph traversal (BFS), and binary search",
+        "Engineered highly-optimized solutions in C++ and Python",
+        "Applied concepts from number theory, probability, and systems of linear equations"
+      ],
+      "url": "https://github.com/aayushkrm/Code-Gym-2025-Q-A"
     }
   ]
 }
