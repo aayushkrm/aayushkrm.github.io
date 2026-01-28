@@ -5,8 +5,10 @@
       value: Ayush Kumar
     - name: Location
       value: Tomsk, Russia
-    - name: Phone
+    - name: Phone (RU)
       value: +7 989 352 9683
+    - name: Phone (IN)
+      value: +919771036198
     - name: Email
       value: aayush.kumarm.3myself@gmail.com
     - name: Languages
@@ -15,28 +17,38 @@
 - title: Education
   type: time_table
   contents:
-    - title: Specialization in Computational Mathematics and Computer Modeling
-      institution: Tomsk State University, Tomsk, Russia
-      year: 5-year program
+    - title: Specialist Degree in Mathematics and Computer Science (Equivalent to M.Sc.)
+      institution: National Research Tomsk State University, Tomsk, Russia
+      year: 2023–Present
       description:
-        - Faculty of Mathematics and Computer Science
-        - Focus on advanced mathematical modeling and computational techniques
+        - 'Faculty: Mathematics and Computer Science (02.03.01)'
+        - 'Specialization: Computational Mathematics and Computer Modeling'
+        - 'Core Coursework & Focus:'
+        - 'Machine Learning: Applied ML, artificial neural networks (Python, C++), and deep learning.'
+        - 'Computational Mathematics: Advanced numerical methods and solutions for industrial mathematics.'
+        - 'High-Performance Computing: Parallel programming and computing methods.'
+        - 'Mathematical Modeling: Differential equations and finite-difference schemes for ecology and mechanics.'
+        - 'Applied Science: Computer-based analysis of natural science and computational mechanics.'
 
 - title: Experience
   type: time_table
   contents:
-    - title: AI Apprenticeship
-      institution: T-Bank Education
-      year: April 2025
+    - title: Machine Learning Researcher (Independent)
+      institution: Wunder Fund RNN
+      year: Sep 2025 – Jan 2026
       description:
-        - Developed and fine-tuned an LLM-based question-answering system that improved automated support response accuracy by 25% and reduced manual ticket handling by 15%
-        - Collaborated with senior engineers to implement a new evaluation framework, increasing model F1-score by 10% and improving response relevance through rigorous data preprocessing
-    - title: Machine Learning Intern
-      institution: Avito
-      year: May 2025
+        - 'HFT Forecasting: Designed and deployed a production-grade inference pipeline for High-Frequency Trading (HFT) market state forecasting, achieving a Top 30 Global Ranking in the Wunder Fund Challenge.'
+        - 'Optimization: Solved extreme deployment constraints (Single-core CPU, <20MB storage) by engineering a custom INT8 Dynamic Quantization pipeline in PyTorch.'
+        - 'Efficiency: Reduced model memory footprint by 75%, enabling the deployment of a 10-model ensemble within strict resource limits.'
+        - 'Architecture: Architected a "Hive Mind" Ensemble using Deep Residual GRUs and LSTMs with Mish activations and Squeeze-and-Excitation blocks to minimize latency and maximize performance.'
+        - 'MLOps: Implemented automated artifact serialization, custom loss functions (Huber, Pinball), and rigorous cross-validation strategies.'
+    - title: Mathematical Problem Creator & Programmer
+      institution: Turing AI
+      year:
       description:
-        - Collaborated on a model performance optimization project, focusing on improving prediction accuracy through data preprocessing and validation
-        - Supported deployment of ML pipelines using PyTorch and Scikit-learn for production-grade tasks
+        - 'Reasoning Models: Created original, hard-level mathematical and algorithmic problems to train AI models in logic.'
+        - 'Algorithm Design: Wrote efficient reference solutions in C++ and Python, ensuring  complexity to meet strict time and memory limits.'
+        - 'Quality Assurance: Designed rigorous test cases for edge cases and provided detailed, step-by-step mathematical explanations.'
 
 - title: Certifications
   type: time_table
@@ -60,12 +72,16 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: April 2025
-      items:
-        - 3rd Place Winner (Siberian Region Russia), Code Gym by Т‐Банк Образование
     - year: 2025
       items:
-        - AvitoTech ML CUP 2025 by Avito hosted by Open Data Science (ods.ai) - Awarded Diploma for Successful Challenge Completion
+        - Top 28 Global Ranking: Wunder Fund RNN Challenge 2025.
+    - year: April 2025
+      items:
+        - 3rd Place Winner: Code Gym Hackathon by Т-Банк Образование.
+    - year: 2025
+      items:
+        - AvitoTech ML CUP 2025: Awarded Diploma for Successful Challenge Completion.
+
 
 - title: Skills
   type: nested_list
@@ -81,6 +97,4 @@
         - Python, SQL, Java, C++
     - title: Concepts
       items:
-        - Model Evaluation & Validation, Feature Engineering, Hyperparameter Tuning
-        - Prompt Engineering, Transfer Learning & Fine-Tuning
-        - Algorithm Design & Analysis, MLOps Principles, System Design
+        - Model Evaluation, Feature Engineering, Hyperparameter Tuning, Prompt Engineering, Transfer Learning, Algorithm Design, MLOps, System Design

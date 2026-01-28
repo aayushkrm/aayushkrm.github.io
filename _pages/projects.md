@@ -5,7 +5,7 @@ permalink: /projects/
 description: Featured projects showcasing expertise in Machine Learning, AI, and Software Development.
 nav: true
 nav_order: 3
-display_categories: [work]
+display_categories: [work, research]
 horizontal: false
 ---
 
