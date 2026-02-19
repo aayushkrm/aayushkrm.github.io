@@ -15,7 +15,7 @@ I believe in continuous learning and staying current with the latest development
 
 ### Deep Learning AI Specialization
 
-**DeepLearning.AI** | *January 2024*
+**DeepLearning.AI** | _January 2024_
 
 Comprehensive 5-course specialization covering neural networks, deep learning, structuring ML projects, CNNs, and sequence models.
 
@@ -27,7 +27,7 @@ Comprehensive 5-course specialization covering neural networks, deep learning, s
 
 ### Neural Networks and Deep Learning
 
-**DeepLearning.AI** | *December 2023*
+**DeepLearning.AI** | _December 2023_
 
 Foundational course on neural networks, deep learning frameworks, and implementation of deep learning algorithms.
 
@@ -39,7 +39,7 @@ Foundational course on neural networks, deep learning frameworks, and implementa
 
 ### IBM Machine Learning Professional Certificate
 
-**IBM via Coursera** | *July 2023*
+**IBM via Coursera** | _July 2023_
 
 Comprehensive program covering supervised learning, unsupervised learning, deep learning, reinforcement learning, and time series analysis.
 
@@ -51,7 +51,7 @@ Comprehensive program covering supervised learning, unsupervised learning, deep 
 
 ### Python Pro Bootcamp - 100 Days of Code
 
-**Udemy** | *December 2022*
+**Udemy** | _December 2022_
 
 Intensive 100-day Python programming bootcamp covering fundamentals, data structures, web scraping, APIs, automation, and full-stack development.
 
@@ -63,7 +63,7 @@ Intensive 100-day Python programming bootcamp covering fundamentals, data struct
 
 ### Full-Stack Web Development Bootcamp
 
-**Udemy** | *May 2022*
+**Udemy** | _May 2022_
 
 Complete web development course covering HTML, CSS, JavaScript, Node.js, React, MongoDB, and deployment.
 

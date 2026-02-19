@@ -41,7 +41,7 @@ My research focuses on **High-Frequency Trading (HFT)** systems, where I design 
 ## 💼 Experience
 
 **Wunder Fund RNN** | Sep 2025 – Jan 2026  
-*Machine Learning Researcher (Independent)*
+_Machine Learning Researcher (Independent)_
 
 - Designed & deployed production-grade HFT inference pipeline
 - Built INT8 Dynamic Quantization pipeline (75% memory reduction)
@@ -49,19 +49,19 @@ My research focuses on **High-Frequency Trading (HFT)** systems, where I design 
 - Top 30 Global Ranking in Wunder Fund Challenge
 
 **Turing AI**  
-*Mathematical Problem Creator & Programmer*
+_Mathematical Problem Creator & Programmer_
 
 - Created hard-level mathematical problems for AI reasoning training
 - Wrote efficient solutions in C++ & Python (O(n log n) complexity)
 
 ## 🛠️ Technical Skills
 
-| Category | Skills |
-|----------|--------|
-| **ML/DL** | Deep Learning, LLMs, CNNs, NLP, Data Preprocessing |
-| **Frameworks** | PyTorch, TensorFlow, LangChain, Scikit-learn |
-| **Programming** | Python, SQL, Java, C++ |
-| **Concepts** | MLOps, Model Evaluation, Feature Engineering, System Design |
+| Category        | Skills                                                      |
+| --------------- | ----------------------------------------------------------- |
+| **ML/DL**       | Deep Learning, LLMs, CNNs, NLP, Data Preprocessing          |
+| **Frameworks**  | PyTorch, TensorFlow, LangChain, Scikit-learn                |
+| **Programming** | Python, SQL, Java, C++                                      |
+| **Concepts**    | MLOps, Model Evaluation, Feature Engineering, System Design |
 
 ## 🌐 Languages
 
@@ -70,4 +70,4 @@ My research focuses on **High-Frequency Trading (HFT)** systems, where I design 
 
 ---
 
-*Feel free to reach out for collaboration or just to say hi!* 👋
+_Feel free to reach out for collaboration or just to say hi!_ 👋

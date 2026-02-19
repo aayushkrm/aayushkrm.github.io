@@ -3,12 +3,12 @@
    ===================================================== */
 
 /* Import modern fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 /* Base font changes */
 :root {
-  --global-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --global-mono-font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  --global-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --global-mono-font-family: "JetBrains Mono", "Fira Code", monospace;
   --global-text-color: #374151;
   --global-bg-color: #ffffff;
   --global-theme-color: #6366f1;
@@ -34,7 +34,9 @@ html {
 
 /* Body transitions */
 body {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   font-family: var(--global-font-family);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -42,19 +44,32 @@ body {
 }
 
 /* Better heading styles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.875rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.875rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
 
 /* Card hover effects */
 .card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   border: none;
   border-radius: 12px;
 }
@@ -115,7 +130,9 @@ h3 { font-size: 1.5rem; }
 
 /* Social icons */
 .social-container .social-icon {
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .social-container .social-icon:hover {
@@ -140,7 +157,8 @@ h3 { font-size: 1.5rem; }
 }
 
 /* Code blocks */
-pre, code {
+pre,
+code {
   font-family: var(--global-mono-font-family);
   font-size: 0.9em;
 }
@@ -167,8 +185,14 @@ main {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Better link styles */
@@ -206,7 +230,9 @@ a:hover {
 .search-box {
   border-radius: 12px;
   border: 2px solid transparent;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .search-box:focus {
@@ -228,7 +254,8 @@ a:hover {
 }
 
 /* Skills table styling */
-.skills-table td, .skills-table th {
+.skills-table td,
+.skills-table th {
   padding: 0.75rem 1rem;
   vertical-align: top;
 }
@@ -241,14 +268,20 @@ a:hover {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
-  
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
   .profile {
     text-align: center !important;
   }
-  
+
   .profile .profile-image {
     margin: 0 auto 1.5rem !important;
     float: none !important;
@@ -257,10 +290,12 @@ a:hover {
 
 /* Print styles */
 @media print {
-  .navbar, .footer, .progress-container {
+  .navbar,
+  .footer,
+  .progress-container {
     display: none;
   }
-  
+
   body {
     font-size: 12pt;
   }
