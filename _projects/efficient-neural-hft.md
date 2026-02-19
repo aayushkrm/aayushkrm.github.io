@@ -19,7 +19,7 @@ github: https://github.com/aayushkrm/efficient-neural-hft
     <a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" class="btn btn-sm z-depth-0" role="button">
       <i class="fab fa-github gh-icon"></i> View on GitHub
     </a>
-    <a href="httpshttps://huggingface.co/spaces/aayushkrm/hft-quant-lab" target="_blank" class="btn btn-sm z-depth-0" role="button">
+    <a href="https://huggingface.co/spaces/aayushkrm/hft-quant-lab" target="_blank" class="btn btn-sm z-depth-0" role="button">
       <i class="fas fa-rocket"></i> View Demo
     </a>
   </div>
