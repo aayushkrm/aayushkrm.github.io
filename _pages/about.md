@@ -2,31 +2,72 @@
 layout: about
 title: about
 permalink: /
-subtitle: Machine Learning Engineer | AI Enthusiast | Competitive Programmer
+subtitle: Machine Learning Researcher | AI Engineer | HFT Systems
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>Tomsk, Russia</p>
+    <p>📍 Tomsk, Russia</p>
+    <p>📧 aayush.kumarm.3myself@gmail.com</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-I'm a passionate Machine Learning Researcher specializing in **Deep Learning**, **Large Language Models (LLMs)**, and **AI system development**. Currently pursuing a Specialist Degree in Mathematics and Computer Science at **Tomsk State University**, I combine strong theoretical foundations with hands-on experience in building production-grade ML solutions.
+I'm a passionate **Machine Learning Researcher** specializing in **Deep Learning**, **Large Language Models (LLMs)**, and **AI system development**. Currently pursuing a Specialist Degree in Mathematics and Computer Science at **Tomsk State University**, I combine strong theoretical foundations with hands-on experience in building production-grade ML solutions.
 
-My recent work as an independent researcher for **Wunder Fund RNN** involved designing and deploying a production-grade inference pipeline for High-Frequency Trading (HFT) market state forecasting, achieving a Top 30 Global Ranking in the Wunder Fund Challenge. At **Turing AI**, I created original, hard-level mathematical and algorithmic problems to train AI models in logic.
+## 🎯 Current Focus
 
-I'm also an accomplished competitive programmer, having secured **3rd place** in the **Code Gym Hackathon by Т-Банк Образование** (April 2025) and successfully completed the **AvitoTech ML CUP 2025** challenge. My expertise spans across Neural Networks, NLP, CNNs, model evaluation, hyperparameter tuning, and MLOps principles.
+My research focuses on **High-Frequency Trading (HFT)** systems, where I design and deploy production-grade inference pipelines for market state forecasting. I recently achieved a **Top 28 Global Ranking** in the **Wunder Fund RNN Challenge** as an independent researcher.
+
+## 🏆 Achievements
+
+- **Top 28 Global** — Wunder Fund RNN Challenge 2025 (Market State Forecasting)
+- **3rd Place** — Code Gym Hackathon by Т-Банк Образование (April 2025)
+- **Diploma** — AvitoTech ML CUP 2025 (Open Data Science)
+
+## 💼 Experience
+
+**Wunder Fund RNN** | Sep 2025 – Jan 2026  
+*Machine Learning Researcher (Independent)*
+
+- Designed & deployed production-grade HFT inference pipeline
+- Built INT8 Dynamic Quantization pipeline (75% memory reduction)
+- Architected "Hive Mind" Ensemble (Deep Residual GRUs + LSTMs)
+- Top 30 Global Ranking in Wunder Fund Challenge
+
+**Turing AI**  
+*Mathematical Problem Creator & Programmer*
+
+- Created hard-level mathematical problems for AI reasoning training
+- Wrote efficient solutions in C++ & Python (O(n log n) complexity)
+
+## 🛠️ Technical Skills
+
+| Category | Skills |
+|----------|--------|
+| **ML/DL** | Deep Learning, LLMs, CNNs, NLP, Data Preprocessing |
+| **Frameworks** | PyTorch, TensorFlow, LangChain, Scikit-learn |
+| **Programming** | Python, SQL, Java, C++ |
+| **Concepts** | MLOps, Model Evaluation, Feature Engineering, System Design |
+
+## 🌐 Languages
+
+- English (Fluent)
+- Russian (Intermediate)
+
+---
+
+*Feel free to reach out for collaboration or just to say hi!* 👋

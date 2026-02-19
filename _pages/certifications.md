@@ -1,23 +1,23 @@
 ---
 layout: page
 permalink: /certifications/
-title: certifications
+title: Certifications
 description: Professional certifications and completed courses in Machine Learning, Deep Learning, and Software Development.
 nav: true
-nav_order: 5
+nav_order: 4
 ---
 
 ## Professional Certifications
 
-Below are my completed certifications from leading educational platforms, demonstrating continuous learning and expertise in Machine Learning, AI, and Software Development.
+I believe in continuous learning and staying current with the latest developments in AI and Machine Learning. Here are my completed certifications from leading educational platforms.
 
 ---
 
-### Deep Learning Specialization
+### Deep Learning AI Specialization
 
-**DeepLearning.AI** | _January 2024_
+**DeepLearning.AI** | *January 2024*
 
-Comprehensive specialization covering neural networks, deep learning, structuring ML projects, CNNs, and sequence models.
+Comprehensive 5-course specialization covering neural networks, deep learning, structuring ML projects, CNNs, and sequence models.
 
 <a href="https://www.coursera.org/account/accomplishments/specialization/BREU94XXQD7P" target="_blank" class="btn btn-sm z-depth-0" role="button">
   <i class="fas fa-award"></i> View Certificate
@@ -27,7 +27,7 @@ Comprehensive specialization covering neural networks, deep learning, structurin
 
 ### Neural Networks and Deep Learning
 
-**DeepLearning.AI** | _December 2023_
+**DeepLearning.AI** | *December 2023*
 
 Foundational course on neural networks, deep learning frameworks, and implementation of deep learning algorithms.
 
@@ -39,7 +39,7 @@ Foundational course on neural networks, deep learning frameworks, and implementa
 
 ### IBM Machine Learning Professional Certificate
 
-**IBM via Coursera** | _July 2023_
+**IBM via Coursera** | *July 2023*
 
 Comprehensive program covering supervised learning, unsupervised learning, deep learning, reinforcement learning, and time series analysis.
 
@@ -51,7 +51,7 @@ Comprehensive program covering supervised learning, unsupervised learning, deep 
 
 ### Python Pro Bootcamp - 100 Days of Code
 
-**Udemy** | _December 2022_
+**Udemy** | *December 2022*
 
 Intensive 100-day Python programming bootcamp covering fundamentals, data structures, web scraping, APIs, automation, and full-stack development.
 
@@ -63,26 +63,13 @@ Intensive 100-day Python programming bootcamp covering fundamentals, data struct
 
 ### Full-Stack Web Development Bootcamp
 
-**Udemy** | _May 2022_
+**Udemy** | *May 2022*
 
 Complete web development course covering HTML, CSS, JavaScript, Node.js, React, MongoDB, and deployment.
 
 <a href="https://www.udemy.com/certificate/UC-073bb1f5-407c-432b-aedd-19b790ea25b7/" target="_blank" class="btn btn-sm z-depth-0" role="button">
   <i class="fas fa-award"></i> View Certificate
 </a>
-
----
-
-## Skills Developed
-
-Through these certifications, I've developed expertise in:
-
-- **Deep Learning**: Neural Networks, CNNs, RNNs, Transfer Learning
-- **Machine Learning**: Supervised & Unsupervised Learning, Model Evaluation, Feature Engineering
-- **Frameworks**: PyTorch, TensorFlow, Scikit-learn
-- **Programming**: Python (Advanced), JavaScript, Node.js, React
-- **Development**: Full-Stack Web Development, API Integration, Database Design
-- **Best Practices**: MLOps, Model Deployment, Code Quality, Testing
 
 ---
 

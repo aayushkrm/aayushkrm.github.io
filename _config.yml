@@ -2,37 +2,43 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Ayush Kumar # the website title (if blank, full name will be used instead)
+title: Ayush Kumar
 first_name: Ayush
 middle_name:
 last_name: Kumar
 contact_note: >
   Feel free to reach out via email or connect on LinkedIn.
 description: >
-  Personal portfolio of Ayush Kumar - Machine Learning Researcher specializing in Deep Learning, LLMs, HFT, and AI systems.
+  Machine Learning Researcher specializing in Deep Learning, LLMs, HFT, and AI Systems. Top 28 Global - Wunder Fund RNN Challenge.
 footer_text: >
 
-keywords: machine-learning, deep-learning, llm, ai, python, pytorch, hft, quantitative-finance, portfolio, tomsk
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: favicon.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+keywords: machine-learning, deep-learning, llm, ai, python, pytorch, hft, quantitative-finance, portfolio, tomsk, researcher
+lang: en
+icon: 👨‍💻
+icon: favicon.jpg
 
-url: https://aayushkrm.github.io/ # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
-last_updated: true # set to true if you want to display last updated in the footer
-impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-back_to_top: true # set to false to disable the back to top button
+url: https://aayushkrm.github.io/
+baseurl: 
+last_updated: false
+impressum_path:
+back_to_top: true
 
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
 
-# repo color theme
-repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+# Custom theme colors (modern gradient)
+theme_style: default
+theme_color: "#6366f1"  # Indigo
+enable_darkmode: true
+
+# Repo color theme
+repo_theme_light: default
+repo_theme_dark: dark
 repo_trophies:
   enabled: true
-  theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
-  theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
+  theme_light: flat
+  theme_dark: gitdimmed
 
 # -----------------------------------------------------------------------------
 # RSS Feed

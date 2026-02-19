@@ -8,11 +8,22 @@ category: work
 github: https://github.com/aayushkrm/AuthCore
 ---
 
-## AuthCore Custom Authentication & RBAC System
+## AuthCore - Custom Authentication & RBAC System
 
-* **System Design:** Developed a secure, stateless authentication system in Python using JWT for session management.
-* **Security:** Implemented bcrypt hashing for password security and a fine-grained Role-Based Access Control (RBAC) model for RESTful APIs.
-* **Automation:** Built custom middleware to validate permissions against a PostgreSQL database and automated workflows via Shell scripting.
+**GitHub:** [aayushkrm/AuthCore](https://github.com/aayushkrm/AuthCore)
+
+### Key Features
+
+- **Authentication:** Developed a secure and stateless authentication system in Python, leveraging JSON Web Tokens (JWT) for efficient session management.
+- **Security:** Implemented robust password security using bcrypt for hashing.
+- **Authorization:** Designed and built a fine-grained Role-Based Access Control (RBAC) model to safeguard RESTful API endpoints.
+- **Middleware:** Created custom middleware to validate user permissions against a PostgreSQL database.
+- **Automation:** Automated deployment and maintenance workflows through Shell scripting.
+- **Result:** Delivered a scalable, efficient, and secure backend solution tailored to meet modern application security needs.
+
+### Technologies Used
+
+`Python` `JWT` `bcrypt` `PostgreSQL` `REST API` `RBAC` `Shell Scripting`
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   <div>
