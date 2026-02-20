@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Ayush Kumar",
-    "label": "Machine Learning Engineer",
+    "label": "Machine Learning Researcher",
     "image": "",
     "email": "aayush.kumarm.3myself@gmail.com",
     "phone": "+7 989 352 9683",
     "url": "https://aayushkrm.github.io/",
-    "summary": "Machine Learning Engineer specializing in Deep Learning, Large Language Models (LLMs), and AI system development. Currently pursuing a Specialization in Computational Mathematics and Computer Modeling at Tomsk State University. Proven track record in developing production-grade ML solutions and competitive programming achievements.",
+    "summary": "Machine Learning Researcher specializing in Deep Learning, Large Language Models (LLMs), and AI system development. Currently pursuing a Specialist Degree in Mathematics and Computer Science at Tomsk State University. Achieved Top 28 Global Ranking in Wunder Fund RNN Challenge for HFT market state forecasting.",
     "location": {
       "city": "Tomsk",
       "countryCode": "RU",
@@ -32,54 +32,70 @@
   },
   "work": [
     {
-      "name": "T-Bank Education",
-      "position": "AI Apprenticeship",
+      "name": "Wunder Fund RNN",
+      "position": "Machine Learning Researcher (Independent)",
       "url": "",
-      "startDate": "2025-04-01",
-      "endDate": "Present",
-      "summary": "Developed and fine-tuned LLM-based systems for automated support and evaluation.",
+      "startDate": "2025-09-01",
+      "endDate": "2026-01-01",
+      "summary": "Designed and deployed a production-grade inference pipeline for High-Frequency Trading (HFT) market state forecasting.",
       "highlights": [
-        "Developed and fine-tuned an LLM-based question-answering system that improved automated support response accuracy by 25% and reduced manual ticket handling by 15%",
-        "Collaborated with senior engineers to implement a new evaluation framework, increasing model F1-score by 10% and improving response relevance through rigorous data preprocessing"
+        "Achieved Top 30 Global Ranking in the Wunder Fund Challenge",
+        "Engineered custom INT8 Dynamic Quantization pipeline in PyTorch, reducing model memory footprint by 75%",
+        "Architected 'Hive Mind' Ensemble with Deep Residual GRUs and LSTMs with Mish activations and Squeeze-and-Excitation blocks",
+        "Implemented robust MLOps practices including automated artifact serialization, custom loss functions (Huber, Pinball), and rigorous cross-validation"
       ]
     },
     {
-      "name": "Avito",
-      "position": "Machine Learning Intern",
-      "url": "https://www.avito.ru/",
-      "startDate": "2025-05-01",
-      "endDate": "Present",
-      "summary": "Focused on model performance optimization and ML pipeline deployment.",
+      "name": "Turing AI",
+      "position": "Mathematical Problem Creator & Programmer",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "Created original mathematical and algorithmic problems to train AI models in reasoning and logic.",
       "highlights": [
-        "Collaborated on a model performance optimization project, focusing on improving prediction accuracy through data preprocessing and validation",
-        "Supported deployment of ML pipelines using PyTorch and Scikit-learn for production-grade tasks"
+        "Created original, hard-level mathematical and algorithmic problems similar to Project Euler",
+        "Wrote efficient reference solutions in C++ and Python (O(n log n) complexity)",
+        "Designed rigorous test cases and checking for edge cases",
+        "Wrote detailed step-by-step explanations and hints"
       ]
     }
   ],
   "education": [
     {
-      "institution": "Tomsk State University",
+      "institution": "National Research Tomsk State University",
       "location": "Tomsk, Russia",
       "url": "https://www.tsu.ru/",
       "area": "Computational Mathematics and Computer Modeling",
-      "studyType": "Specialization (5 years)",
-      "startDate": "",
+      "studyType": "Specialist Degree (Equivalent to M.Sc.)",
+      "startDate": "2023-09-01",
       "endDate": "",
-      "courses": ["Faculty of Mathematics and Computer Science"]
+      "courses": [
+        "Faculty of Mathematics and Computer Science (02.03.01)",
+        "Machine Learning: Applied ML and artificial neural networks (Python, C++)",
+        "Computational Mathematics: Advanced numerical methods and computer modeling",
+        "High-Performance Computing: Parallel programming technologies",
+        "Mathematical Modeling: Differential equations and finite-difference schemes"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "3rd Place Winner - Code Gym by Т-Банк Образование",
-      "date": "2025-04-01",
-      "awarder": "T-Bank Education",
-      "summary": "Secured 3rd place in the Siberian Region Russia programming competition by developing robust solutions for 10 diverse challenges involving logic, algorithms, and mathematical modeling."
+      "title": "Top 28 Global Ranking - Wunder Fund RNN Challenge 2025",
+      "date": "2025-01-01",
+      "awarder": "Wunder Fund",
+      "summary": "Machine Learning Competition for market state forecasting."
     },
     {
-      "title": "AvitoTech ML CUP 2025 - Diploma for Successful Challenge Completion",
+      "title": "3rd Place Winner - Code Gym Hackathon",
+      "date": "2025-04-01",
+      "awarder": "Т-Банк Образование",
+      "summary": "Secured 3rd place in the coding Hackathon."
+    },
+    {
+      "title": "AvitoTech ML CUP 2025 - Diploma",
       "date": "2025-01-01",
       "awarder": "Avito, Open Data Science (ods.ai)",
-      "summary": "Awarded diploma for successfully completing the AvitoTech ML CUP 2025 machine learning challenge."
+      "summary": "Awarded Diploma for Successful Challenge Completion."
     }
   ],
   "certificates": [
@@ -157,25 +173,26 @@
   ],
   "projects": [
     {
-      "name": "AuthCore - Custom Authentication & RBAC System",
-      "summary": "Developed a secure and stateless authentication system in Python, leveraging JSON Web Tokens (JWT) for efficient session management with fine-grained Role-Based Access Control (RBAC).",
+      "name": "Efficient Neural HFT (Market State Forecasting)",
+      "summary": "Architected a 'Hive Mind' Ensemble for financial time-series forecasting with custom INT8 quantization.",
       "highlights": [
-        "Implemented robust password security using bcrypt for hashing",
-        "Designed and built a fine-grained RBAC model to safeguard RESTful API endpoints",
-        "Created custom middleware to validate user permissions against a PostgreSQL database",
-        "Automated deployment and maintenance workflows through Shell scripting"
+        "Architected 'Hive Mind' Ensemble with Deep Residual GRUs and LSTMs",
+        "Engineered custom INT8 Dynamic Quantization pipeline - 75% memory reduction",
+        "Implemented automated MLOps workflows with custom financial loss functions (Huber, Pinball)",
+        "Achieved Top 30 Global Ranking in Wunder Fund Challenge"
       ],
-      "url": "https://github.com/aayushkrm/AuthCore"
+      "url": "https://github.com/aayushkrm/efficient-neural-hft"
     },
     {
-      "name": "Code Gym 2025 Q&A - Award-Winning Competition Solutions",
-      "summary": "Secured 3rd place in the T-Bank Code Gym Programming Competition by developing robust solutions for 10 diverse challenges involving logic, algorithms, and mathematical modeling.",
+      "name": "AuthCore - Custom Authentication & RBAC System",
+      "summary": "Developed a secure and stateless authentication system in Python with JWT and fine-grained RBAC.",
       "highlights": [
-        "Implemented advanced algorithms including dynamic programming, graph traversal (BFS), and binary search",
-        "Engineered highly-optimized solutions in C++ and Python",
-        "Applied concepts from number theory, probability, and systems of linear equations"
+        "Implemented JWT-based session management with bcrypt password hashing",
+        "Designed fine-grained RBAC model for RESTful API endpoints",
+        "Created custom middleware for PostgreSQL permission validation",
+        "Automated deployment via Shell scripting"
       ],
-      "url": "https://github.com/aayushkrm/Code-Gym-2025-Q-A"
+      "url": "https://github.com/aayushkrm/AuthCore"
     }
   ]
 }
