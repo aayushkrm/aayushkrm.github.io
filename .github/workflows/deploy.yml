@@ -1,10 +1,11 @@
 name: Deploy site
 
-on:
-  push:
-    branches:
-      - master
-      - main
+# DISABLED - conflicts with GitHub Pages automatic build
+# on:
+#   push:
+#     branches:
+#       - master
+#       - main
     paths:
       - "assets/**"
       - "_sass/**"
