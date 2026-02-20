@@ -1,98 +1,20 @@
-# Ayush Kumar
-Tomsk, Russia | Phone (RU): +7 989 352 9683 | Phone (IN): +919771036198
-aayush.kumarm.3myself@gmail.com | LinkedIn | GitHub | X
-
-## EDUCATION
-
-### National Research Tomsk State University
-2023 - Present
-Tomsk, Russia
-
-**Specialist Degree in Mathematics and Computer Science (Equivalent to M.Sc.)**
-Faculty of Mathematics and Computer Science (02.03.01)
-Specializing in Computational Mathematics and Computer Modeling
-
-**Core coursework and professional focus:**
-- Machine Learning: Applied ML and artificial neural networks (Python, C++), ML fundamentals, and deep learning technologies.
-- Computational Mathematics: Advanced numerical methods, computer modeling, and numerical solutions for industrial mathematics.
-- High-Performance Computing: Parallel programming technologies and parallel computing methods.
-- Mathematical Modeling: Differential equations and finite-difference schemes applied to ecology, medicine, and mechanics.
-- Applied Science: Computer-based analysis of natural science problems and computational mechanics.
-- Computer workshop on mechanics.
-- Models and numerical methods in natural science problems.
-
----
-
-## EXPERIENCE
-
-### Wunder Fund RNN
-**Machine Learning Researcher (Independent)** | Sep 2025 - Jan 2026
-
-- Designed and deployed a production-grade inference pipeline for High-Frequency Trading (HFT) market state forecasting, achieving a Top 30 Global Ranking in the Wunder Fund Challenge.
-- Solved extreme deployment constraints (Single-core CPU, <20MB storage limit) by engineering a custom INT8 Dynamic Quantization pipeline in PyTorch. This reduced model memory footprint by 75%, allowing for the deployment of a 10-model ensemble within the strict resource budget.
-- Architected a "Hive Mind" Ensemble consisting of Deep Residual GRUs and LSTMs with Mish activations and Squeeze-and-Excitation blocks. This architecture maximized predictive performance while minimizing inference latency.
-- Implemented robust MLOps practices, including automated artifact serialization, custom loss function implementation (Huber, Pinball), and rigorous cross-validation strategies to prevent overfitting on small-sample financial datasets.
-
-### Turing AI
-**Mathematical Problem Creator & Programmer**
-
-- Created original, hard-level mathematical and algorithmic problems (similar to Project Euler) to help train AI models in reasoning and logic.
-- Wrote efficient reference solutions in C++ and Python, ensuring they run within strict time and memory limits (O(n log n) complexity).
-- Designed rigorous test cases and checking for edge cases to verify that the solutions are correct and stable.
-- Wrote detailed, step-by-step explanations and hints to clearly show the mathematical logic behind each solution.
-
----
-
-## PROJECTS
-
-### AuthCore – Custom Authentication & RBAC System
-GitHub
-
-- Developed a secure and stateless authentication system in Python, leveraging JSON Web Tokens (JWT) for efficient session management.
-- Implemented robust password security using bcrypt for hashing.
-- Designed and built a fine-grained Role-Based Access Control (RBAC) model to safeguard RESTful API endpoints.
-- Created custom middleware to validate user permissions against a PostgreSQL database.
-- Automated deployment and maintenance workflows through Shell scripting.
-- Delivered a scalable, efficient, and secure backend solution tailored to meet modern application security needs.
-
-### Efficient Neural HFT (Market State Forecasting)
-GitHub | Hugging Face (demo)
-
-- Architected a "Hive Mind" Ensemble consisting of Deep Residual GRUs and LSTMs, optimized with Mish activations and Squeeze-and-Excitation blocks to maximize predictive power in financial time-series forecasting.
-- Engineered a custom INT8 Dynamic Quantization pipeline in PyTorch to meet extreme deployment constraints of <20MB storage and single-core CPU execution.
-- Reduced model memory footprint by 75%, allowing a sophisticated 10-model ensemble to operate within a strictly limited resource budget.
-- Implemented automated MLOps workflows, including artifact serialization and custom financial loss functions (Huber, Pinball) to improve model robustness.
-- Developed a production-grade inference pipeline specifically designed for high-frequency trading (HFT) latency and performance standards.
-
----
-
-## CERTIFICATIONS
-
-- **Deep Learning AI Specialization** – DeepLearning.AI (January 2024)
-- **Neural Networks and Deep Learning** – DeepLearning.AI (December 2023)
-- **IBM Machine Learning** – Coursera (July 2023)
-- **Python Pro Bootcamp (100 Days of Code)** – Udemy (December 2022)
-- **Full-Stack Web Development Bootcamp** – Udemy (May 2022)
-
----
-
-## SKILLS
-
-- **Machine Learning:** Deep Learning, LLMs, CNNs, NLP, Data Preprocessing
-- **Frameworks & Tools:** PyTorch, TensorFlow, LangChain, Scikit-learn, Pandas
-- **Programming:** Python, SQL, Java, C++
-- **Concepts:** Model Evaluation & Validation, Feature Engineering, Hyperparameter Tuning, Prompt Engineering, Transfer Learning & Fine-Tuning, Algorithm Design & Analysis, MLOps Principles, System Design
-
----
-
-## ADDITIONAL
-
-- **Languages:** English (Fluent), Russian (Intermediate)
-
----
-
-## AWARDS AND HONORS
-
-- **Top 28 Global Ranking** in the Wunder Fund RNN Challenge 2025 — Machine Learning Competition for market state forecasting.
-- **3rd Place Winner** in a coding Hackathon Code Gym by Т-Банк Образование (April 2025).
-- **AvitoTech ML CUP 2025** by Avito hosted by Open Data Science (ods.ai) — Awarded Diploma for Successful Challenge Completion.
+name: Ayush Kumar
+label: Machine Learning Researcher
+email: aayush.kumarm.3myself@gmail.com
+phone: "+7 989 352 9683"
+url: https://aayushkrm.github.io/
+summary: Machine Learning Researcher specializing in Deep Learning, LLMs, HFT, and AI systems. Top 28 Global - Wunder Fund RNN Challenge.
+location:
+  city: Tomsk
+  countryCode: RU
+  region: Russia
+profiles:
+  - network: LinkedIn
+    username: ayush-kumar-aa79751a1
+    url: https://www.linkedin.com/in/ayush-kumar-aa79751a1/
+  - network: GitHub
+    username: aayushkrm
+    url: https://github.com/aayushkrm
+  - network: Twitter
+    username: aayushkrm
+    url: https://x.com/aayushkrm
