@@ -1,0 +1,198 @@
+{
+  "basics": {
+    "name": "Ayush Kumar",
+    "label": "Machine Learning Researcher",
+    "image": "",
+    "email": "aayush.kumarm.3myself@gmail.com",
+    "phone": "+7 989 352 9683",
+    "url": "https://aayushkrm.github.io/",
+    "summary": "Machine Learning Researcher specializing in Deep Learning, Large Language Models (LLMs), and AI system development. Currently pursuing a Specialist Degree in Mathematics and Computer Science at Tomsk State University. Achieved Top 28 Global Ranking in Wunder Fund RNN Challenge for HFT market state forecasting.",
+    "location": {
+      "city": "Tomsk",
+      "countryCode": "RU",
+      "region": "Russia"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ayush-kumar-aa79751a1",
+        "url": "https://www.linkedin.com/in/ayush-kumar-aa79751a1/"
+      },
+      {
+        "network": "GitHub",
+        "username": "aayushkrm",
+        "url": "https://github.com/aayushkrm"
+      },
+      {
+        "network": "Twitter",
+        "username": "aayushkrm",
+        "url": "https://x.com/aayushkrm"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Wunder Fund RNN",
+      "position": "Machine Learning Researcher (Independent)",
+      "url": "",
+      "startDate": "2025-09-01",
+      "endDate": "2026-01-01",
+      "summary": "Designed and deployed a production-grade inference pipeline for High-Frequency Trading (HFT) market state forecasting.",
+      "highlights": [
+        "Achieved Top 30 Global Ranking in the Wunder Fund Challenge",
+        "Engineered custom INT8 Dynamic Quantization pipeline in PyTorch, reducing model memory footprint by 75%",
+        "Architected 'Hive Mind' Ensemble with Deep Residual GRUs and LSTMs with Mish activations and Squeeze-and-Excitation blocks",
+        "Implemented robust MLOps practices including automated artifact serialization, custom loss functions (Huber, Pinball), and rigorous cross-validation"
+      ]
+    },
+    {
+      "name": "Turing AI",
+      "position": "Mathematical Problem Creator & Programmer",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "Created original mathematical and algorithmic problems to train AI models in reasoning and logic.",
+      "highlights": [
+        "Created original, hard-level mathematical and algorithmic problems similar to Project Euler",
+        "Wrote efficient reference solutions in C++ and Python (O(n log n) complexity)",
+        "Designed rigorous test cases and checking for edge cases",
+        "Wrote detailed step-by-step explanations and hints"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "National Research Tomsk State University",
+      "location": "Tomsk, Russia",
+      "url": "https://www.tsu.ru/",
+      "area": "Computational Mathematics and Computer Modeling",
+      "studyType": "Specialist Degree (Equivalent to M.Sc.)",
+      "startDate": "2023-09-01",
+      "endDate": "",
+      "courses": [
+        "Faculty of Mathematics and Computer Science (02.03.01)",
+        "Machine Learning: Applied ML and artificial neural networks (Python, C++)",
+        "Computational Mathematics: Advanced numerical methods and computer modeling",
+        "High-Performance Computing: Parallel programming technologies",
+        "Mathematical Modeling: Differential equations and finite-difference schemes"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Top 28 Global Ranking - Wunder Fund RNN Challenge 2025",
+      "date": "2025-01-01",
+      "awarder": "Wunder Fund",
+      "summary": "Machine Learning Competition for market state forecasting."
+    },
+    {
+      "title": "3rd Place Winner - Code Gym Hackathon",
+      "date": "2025-04-01",
+      "awarder": "Т-Банк Образование",
+      "summary": "Secured 3rd place in the coding Hackathon."
+    },
+    {
+      "title": "AvitoTech ML CUP 2025 - Diploma",
+      "date": "2025-01-01",
+      "awarder": "Avito, Open Data Science (ods.ai)",
+      "summary": "Awarded Diploma for Successful Challenge Completion."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Deep Learning AI Specialization",
+      "date": "2024-01-01",
+      "issuer": "DeepLearning.AI",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/BREU94XXQD7P"
+    },
+    {
+      "name": "Neural Networks and Deep Learning",
+      "date": "2023-12-01",
+      "issuer": "DeepLearning.AI",
+      "url": "https://www.coursera.org/account/accomplishments/verify/E8GLGGXSYWW8"
+    },
+    {
+      "name": "IBM Machine Learning Professional Certificate",
+      "date": "2023-07-01",
+      "issuer": "IBM via Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/professional-cert/QVWKPA67KJLT"
+    },
+    {
+      "name": "Python Pro Bootcamp (100 Days of Code)",
+      "date": "2022-12-01",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-b790f354-0b71-4521-b78a-7e608fc7fca8/"
+    },
+    {
+      "name": "Full-Stack Web Development Bootcamp",
+      "date": "2022-05-01",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-073bb1f5-407c-432b-aedd-19b790ea25b7/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Machine Learning",
+      "level": "Advanced",
+      "keywords": ["Deep Learning", "LLMs", "CNNs", "NLP", "Data Preprocessing"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "level": "Advanced",
+      "keywords": ["PyTorch", "TensorFlow", "LangChain", "Scikit-learn", "Pandas"]
+    },
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "keywords": ["Python", "SQL", "Java", "C++"]
+    },
+    {
+      "name": "ML Concepts",
+      "level": "Advanced",
+      "keywords": [
+        "Model Evaluation & Validation",
+        "Feature Engineering",
+        "Hyperparameter Tuning",
+        "Prompt Engineering",
+        "Transfer Learning & Fine-Tuning",
+        "Algorithm Design & Analysis",
+        "MLOps Principles",
+        "System Design"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Russian",
+      "fluency": "Intermediate"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Efficient Neural HFT (Market State Forecasting)",
+      "summary": "Architected a 'Hive Mind' Ensemble for financial time-series forecasting with custom INT8 quantization.",
+      "highlights": [
+        "Architected 'Hive Mind' Ensemble with Deep Residual GRUs and LSTMs",
+        "Engineered custom INT8 Dynamic Quantization pipeline - 75% memory reduction",
+        "Implemented automated MLOps workflows with custom financial loss functions (Huber, Pinball)",
+        "Achieved Top 30 Global Ranking in Wunder Fund Challenge"
+      ],
+      "url": "https://github.com/aayushkrm/efficient-neural-hft"
+    },
+    {
+      "name": "AuthCore - Custom Authentication & RBAC System",
+      "summary": "Developed a secure and stateless authentication system in Python with JWT and fine-grained RBAC.",
+      "highlights": [
+        "Implemented JWT-based session management with bcrypt password hashing",
+        "Designed fine-grained RBAC model for RESTful API endpoints",
+        "Created custom middleware for PostgreSQL permission validation",
+        "Automated deployment via Shell scripting"
+      ],
+      "url": "https://github.com/aayushkrm/AuthCore"
+    }
+  ]
+}

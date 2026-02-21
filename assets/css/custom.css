@@ -1,0 +1,302 @@
+/* =====================================================
+   CUSTOM STYLES - Modern & Fast
+   ===================================================== */
+
+/* Import modern fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* Base font changes */
+:root {
+  --global-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --global-mono-font-family: "JetBrains Mono", "Fira Code", monospace;
+  --global-text-color: #374151;
+  --global-bg-color: #ffffff;
+  --global-theme-color: #6366f1;
+  --global-link-color: #6366f1;
+  --navy: #1e1e30;
+  --purple: #6366f1;
+  --dark-mode-text-color: #e5e7eb;
+  --dark-mode-bg-color: #0f0f1a;
+}
+
+/* Dark mode colors */
+[data-theme="dark"] {
+  --global-text-color: #e5e7eb;
+  --global-bg-color: #0f0f1a;
+  --global-link-color: #818cf8;
+  --global-theme-color: #818cf8;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body transitions */
+body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  font-family: var(--global-font-family);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.875rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Card hover effects */
+.card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border: none;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+}
+
+/* Button improvements */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1.25rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-sm {
+  padding: 0.375rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Profile image */
+.profile .profile-image {
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile .profile-image:hover {
+  transform: scale(1.02);
+}
+
+/* Navbar improvements */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(15, 15, 26, 0.9);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Social icons */
+.social-container .social-icon {
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.social-container .social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Table improvements */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* News/Blog items */
+.news-item {
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.news-item:hover {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+/* Code blocks */
+pre,
+code {
+  font-family: var(--global-mono-font-family);
+  font-size: 0.9em;
+}
+
+/* Project cards */
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth page transitions */
+main {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Better link styles */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Category badges */
+.category {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Progress bar (if enabled) */
+.progress-container {
+  background: transparent;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  transition: width 0.3s ease;
+}
+
+/* Search box */
+.search-box {
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-box:focus {
+  border-color: var(--global-theme-color);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  outline: none;
+}
+
+/* About page subtitle */
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+[data-theme="dark"] .subtitle {
+  color: #9ca3af;
+}
+
+/* Skills table styling */
+.skills-table td,
+.skills-table th {
+  padding: 0.75rem 1rem;
+  vertical-align: top;
+}
+
+.skills-category {
+  font-weight: 600;
+  color: var(--global-theme-color);
+  min-width: 140px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .profile {
+    text-align: center !important;
+  }
+
+  .profile .profile-image {
+    margin: 0 auto 1.5rem !important;
+    float: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .progress-container {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+}
