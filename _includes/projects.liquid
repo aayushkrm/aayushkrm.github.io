@@ -1,35 +1,32 @@
-<div class="col">
-  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
-      {% if project.img %}
-        {%
-          include figure.liquid
-          loading="eager"
-          path=project.img
-          sizes = "250px"
-          alt="project thumbnail"
-          class="card-img-top"
-        %}
+{% if project.redirect %}
+  {% assign project_href = project.redirect %}
+{% else %}
+  {% assign project_href = project.url | relative_url %}
+{% endif %}
+<li class="project">
+  {% if project.img %}
+    <a class="project__thumb" href="{{ project_href }}" aria-hidden="true" tabindex="-1">
+      {%
+        include figure.liquid
+        loading="lazy"
+        path=project.img
+        sizes="120px"
+        alt=project.title
+      %}
+    </a>
+  {% endif %}
+  <div class="project__body">
+    <div class="project__head">
+      <h3 class="entry__title"><a href="{{ project_href }}">{{ project.title }}</a></h3>
+      {% if project.tags %}
+        <span class="entry__date">{{ project.tags | join: ', ' }}</span>
       {% endif %}
-      <div class="card-body">
-        <h2 class="card-title">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0">
-          {% if project.github %}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-              </div>
-              {% if project.github_stars %}
-                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                  <i class="fa-solid fa-star"></i>
-                  <span id="{{ project.github_stars }}-stars"></span>
-                </span>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
-      </div>
     </div>
-  </a>
-</div>
+    <p class="entry__desc">{{ project.description }}</p>
+    <p class="entry__meta">
+      {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener">Code</a>{% endif %}
+      {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener">Demo</a>{% endif %}
+      <a href="{{ project_href }}">Details</a>
+    </p>
+  </div>
+</li>

@@ -1,0 +1,15 @@
+- title: Agentic systems & synthetic data
+  icon: fa-solid fa-diagram-project
+  text: >-
+    Four-agent pipelines that generate, verify, reflect on, and compile data for RLHF/DPO — with physical
+    oracles such as RDKit and xTB keeping chemistry datasets grounded and auditable.
+- title: Efficient ML & deployment
+  icon: fa-solid fa-bolt
+  text: >-
+    Getting large ensembles to run inside tiny budgets: custom dynamic INT8 quantization in PyTorch,
+    pruning, and MLOps practices that keep inference reproducible on constrained hardware.
+- title: Scientific machine learning
+  icon: fa-solid fa-dna
+  text: >-
+    Applying self-supervised learning and calibrated neural networks to genomics — detecting deletions from
+    sequencing read alignments and evaluating models across populations and label budgets.

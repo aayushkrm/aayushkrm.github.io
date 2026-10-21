@@ -11,3 +11,10 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# local/personal files — not part of the published site
+/=-/
+/akm.md
+/Ayush_resume_english FINAL.pdf
+/Ayush_Kumar_Resume.pdf
+/lighthouse_results/

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="AuthCore: stateless authentication service">
+  <rect x="0.5" y="0.5" width="1199" height="674" fill="#ffffff" stroke="#d8dee4"/>
+  <text x="70" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="600" fill="#1b4d89">AuthCore</text>
+  <text x="70" y="134" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#6b7280">stateless JWT authentication and role-based access control</text>
+
+  <g fill="#f6f8fa" stroke="#c6cdd6" stroke-width="2">
+    <rect x="80" y="300" width="240" height="130" rx="4"/>
+    <rect x="460" y="270" width="290" height="190" rx="4"/>
+    <rect x="890" y="300" width="230" height="130" rx="4"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="200" y="374" font-size="28" fill="#1b4d89">Client</text>
+    <text x="605" y="352" font-size="28" fill="#1b4d89">API service</text>
+    <text x="605" y="392" font-size="21" fill="#6b7280">JWT · roles · scopes</text>
+    <text x="1005" y="360" font-size="28" fill="#1b4d89">Database</text>
+    <text x="1005" y="394" font-size="21" fill="#6b7280">users · policies</text>
+  </g>
+
+  <g stroke="#8894a2" stroke-width="3">
+    <line x1="320" y1="365" x2="448" y2="365"/>
+    <line x1="750" y1="365" x2="878" y2="365"/>
+  </g>
+  <g fill="#8894a2">
+    <path d="M448 365l-12 -7v14z"/>
+    <path d="M878 365l-12 -7v14z"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#6b7280" text-anchor="middle">
+    <text x="384" y="344">token</text>
+    <text x="814" y="344">roles</text>
+  </g>
+
+  <text x="70" y="540" font-family="Georgia, 'Times New Roman', serif" font-size="22" fill="#6b7280">no server-side sessions · Python · FastAPI · PostgreSQL</text>
+</svg>

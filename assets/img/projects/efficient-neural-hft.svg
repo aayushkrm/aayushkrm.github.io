@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Efficient Neural HFT: quantized ensemble forecasting">
+  <rect x="0.5" y="0.5" width="1199" height="674" fill="#ffffff" stroke="#d8dee4"/>
+  <text x="70" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="600" fill="#1b4d89">Efficient Neural HFT</text>
+  <text x="70" y="134" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#6b7280">10-model ensemble · dynamic INT8 quantization · 20 MB budget</text>
+
+  <g stroke="#c6cdd6" stroke-width="2">
+    <line x1="90" y1="200" x2="90" y2="530"/>
+    <line x1="90" y1="530" x2="1130" y2="530"/>
+  </g>
+  <g stroke="#e6eaee" stroke-width="1">
+    <line x1="90" y1="290" x2="1130" y2="290"/>
+    <line x1="90" y1="370" x2="1130" y2="370"/>
+    <line x1="90" y1="450" x2="1130" y2="450"/>
+  </g>
+
+  <polyline points="90,470 150,420 210,452 270,360 330,398 390,320 450,352 510,268 570,300 630,240 690,286 750,232 810,262 870,214 930,252 990,210 1050,246 1110,206"
+            fill="none" stroke="#1b4d89" stroke-width="3"/>
+  <polyline points="90,478 150,468 210,470 270,452 330,454 390,436 450,438 510,420 570,422 630,404 690,406 750,392 810,394 870,380 930,382 990,368 1050,370 1110,358"
+            fill="none" stroke="#8894a2" stroke-width="3" stroke-dasharray="10 8"/>
+
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#6b7280">
+    <line x1="90" y1="590" x2="150" y2="590" stroke="#1b4d89" stroke-width="3"/>
+    <text x="164" y="597">fp32 forecast</text>
+    <line x1="404" y1="590" x2="464" y2="590" stroke="#8894a2" stroke-width="3" stroke-dasharray="10 8"/>
+    <text x="478" y="597">INT8 weights (75% less memory)</text>
+  </g>
+  <text x="90" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#6b7280">market state</text>
+</svg>

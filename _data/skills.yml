@@ -1,0 +1,65 @@
+- group: ML & Deep Learning
+  icon: fa-solid fa-brain
+  items:
+    - PyTorch
+    - Transformers
+    - Sequence models (RNN, LSTM, GRU)
+    - LLMs
+    - Quantization
+    - Pruning
+    - Model optimization
+- group: Generative AI & Agents
+  icon: fa-solid fa-robot
+  items:
+    - Multi-agent orchestration
+    - LangChain
+    - LangGraph
+    - RAG
+    - Prompt engineering
+    - Synthetic data generation
+    - RLHF / DPO
+    - Fine-tuning
+- group: AI Engineering & MLOps
+  icon: fa-solid fa-gears
+  items:
+    - LLM integration
+    - Workflow design
+    - Agentic AI pipelines
+    - Deployment
+    - Monitoring
+    - Evaluation
+    - CI/CD for AI
+- group: Data & Scientific Computing
+  icon: fa-solid fa-chart-line
+  items:
+    - Pandas
+    - NumPy
+    - SciPy
+    - Matplotlib
+    - SQL
+- group: Programming & Infrastructure
+  icon: fa-solid fa-code
+  items:
+    - Python (Expert)
+    - C++ (Intermediate)
+    - SQL
+    - Bash
+    - Git
+    - Docker
+    - Linux
+    - FastAPI
+- group: Tools & Languages
+  icon: fa-solid fa-wand-magic-sparkles
+  items:
+    - Claude Code
+    - Cursor
+    - OpenClaw
+    - Hermes Agent
+    - GitHub Copilot
+    - Codex
+    - OpenCode
+    - Cline
+    - n8n
+    - CLI agents
+    - English (Native/Fluent)
+    - Russian (Professional)

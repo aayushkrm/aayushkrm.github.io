@@ -1,80 +1,165 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+{% assign email = site.data.socials.email %}
+{% assign cv_exp = site.data.cv | where: 'title', 'Experience' | first %}
+{% assign cv_edu = site.data.cv | where: 'title', 'Education' | first %}
+{% assign cv_awards = site.data.cv | where: 'title', 'Awards' | first %}
+{% assign cv_certs = site.data.cv | where: 'title', 'Certifications' | first %}
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+<div class="home">
+  <!-- Intro -->
+  <section class="intro" aria-labelledby="intro-name">
+    <div class="intro__text">
+      <h1 class="intro__name" id="intro-name">{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="intro__role">{{ page.subtitle }}</p>
+      <p class="intro__affil">Tomsk, Russia</p>
+
+      <p class="intro__links">
+        <a href="mailto:{{ email | encode_email }}">Email</a>
+        <a href="https://github.com/{{ site.data.socials.github_username }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com/{{ site.data.socials.x_username }}" target="_blank" rel="noopener">X</a>
+        <a href="{{ '/assets/pdf/Ayush_Kumar_Resume.pdf' | relative_url }}">CV (PDF)</a>
+      </p>
+
+      <p class="intro__lead">{{ page.lead | default: site.description }}</p>
+    </div>
+
+    <div class="intro__photo">
+      {% assign portrait = page.profile.image | default: 'prof_pic.jpg' %}
+      {% assign portrait_path = portrait | prepend: 'assets/img/' %}
+      {%
+        include figure.liquid loading="eager" path=portrait_path sizes='180px'
+        alt='Portrait of Ayush Kumar' cache_bust=true
+      %}
+    </div>
+  </section>
+
+  <div class="home-sections">
+    <!-- About -->
+    <section class="home-section" id="about" aria-labelledby="about-title">
+      <h2 class="sec-title" id="about-title">About</h2>
+      <div class="prose">{{ content }}</div>
+    </section>
+
+    <!-- Research interests -->
+    <section class="home-section" id="research" aria-labelledby="research-title">
+      <h2 class="sec-title" id="research-title">Research interests</h2>
+      <dl class="facts">
+        {% for item in site.data.focus %}
+          <dt>{{ item.title }}</dt>
+          <dd>{{ item.text }}</dd>
+        {% endfor %}
+      </dl>
+    </section>
+
+    <!-- Selected projects -->
+    <section class="home-section" id="work" aria-labelledby="work-title">
+      <h2 class="sec-title" id="work-title">Selected projects</h2>
+      <ul class="entries">
+        {% assign sorted_projects = site.projects | sort: 'importance' %}
+        {% for project in sorted_projects limit: 4 %}
+          {% include projects.liquid %}
+        {% endfor %}
+      </ul>
+      <p class="more-link"><a href="{{ '/projects/' | relative_url }}">All projects →</a></p>
+    </section>
+
+    <!-- Experience -->
+    <section class="home-section" id="experience" aria-labelledby="experience-title">
+      <h2 class="sec-title" id="experience-title">Experience</h2>
+      <ul class="entries">
+        {% for job in cv_exp.contents %}
+          <li>
+            <div class="entry__head">
+              <h3 class="entry__role">{{ job.title }}</h3>
+              <span class="entry__date">{{ job.year }}</span>
+            </div>
+            <p class="entry__org">{{ job.institution }}{% if job.location %} · {{ job.location }}{% endif %}</p>
+            <div class="entry__body">
+              <ul>
+                {% for point in job.description limit: 3 %}
+                  <li>{{ point }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% assign extra = job.description | size | minus: 3 %}
+            {% if extra > 0 %}
+              <p class="more-link"><a href="{{ '/cv/' | relative_url }}">{{ extra }} more in the CV →</a></p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section class="home-section" id="education" aria-labelledby="education-title">
+      <h2 class="sec-title" id="education-title">Education</h2>
+      <ul class="entries">
+        {% for edu in cv_edu.contents %}
+          <li>
+            <div class="entry__head">
+              <h3 class="entry__role">{{ edu.title }}</h3>
+              <span class="entry__date">{{ edu.year }}</span>
+            </div>
+            <p class="entry__org">{{ edu.institution }}</p>
+            <details class="more">
+              <summary>Program details and selected coursework</summary>
+              <ul>
+                {% for point in edu.description %}
+                  <li>{{ point }}</li>
+                {% endfor %}
+              </ul>
+            </details>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="home-section" id="skills" aria-labelledby="skills-title">
+      <h2 class="sec-title" id="skills-title">Skills</h2>
+      <div class="skill-lines">
+        {% for group in site.data.skills %}
+          <p><strong>{{ group.group }}.</strong> {{ group.items | join: ', ' }}</p>
+        {% endfor %}
       </div>
-    {% endif %}
+    </section>
 
-    <div class="clearfix">{{ content }}</div>
+    <!-- Awards -->
+    <section class="home-section" id="awards" aria-labelledby="awards-title">
+      <h2 class="sec-title" id="awards-title">Awards &amp; honors</h2>
+      <ul class="year-list">
+        {% for award in cv_awards.contents %}
+          <li>
+            <span class="year-list__y">{{ award.year }}</span>
+            <span>{{ award.items | first }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+    <!-- Certifications -->
+    <section class="home-section" id="certifications" aria-labelledby="certs-title">
+      <h2 class="sec-title" id="certs-title">Certifications</h2>
+      <ul class="year-list">
+        {% for cert in cv_certs.contents %}
+          <li>
+            <span class="year-list__y">{{ cert.year }}</span>
+            <span>{{ cert.items | first }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+    <!-- Contact -->
+    <section class="home-section" id="contact" aria-labelledby="contact-title">
+      <h2 class="sec-title" id="contact-title">Contact</h2>
+      <p class="prose">
+        {{ site.contact_note }}
+        <a href="mailto:{{ email | encode_email }}">aayush.kumarm0607@gmail.com</a>
+      </p>
+    </section>
+  </div>
 </div>

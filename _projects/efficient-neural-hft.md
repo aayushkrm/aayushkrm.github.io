@@ -1,37 +1,28 @@
 ---
 layout: page
 title: Efficient Neural HFT
-description: Market State Forecasting
-img:
-importance: 2
+description: Quantized deep ensemble for market state forecasting on constrained hardware.
+img: assets/img/projects/efficient-neural-hft.svg
+importance: 3
 category: research
+tags: [Time Series, INT8, PyTorch, MLOps]
 github: https://github.com/aayushkrm/efficient-neural-hft
+demo: https://huggingface.co/spaces/aayushkrm/hft-quant-lab
 ---
 
-## Efficient Neural HFT (Market State Forecasting)
+## Efficient Neural HFT — Market State Forecasting
 
-**GitHub:** [aayushkrm/efficient-neural-hft](https://github.com/aayushkrm/efficient-neural-hft)  
-**Demo:** [Hugging Face Space](https://huggingface.co/spaces/aayushkrm/hft-quant-lab)
+*High-frequency trading market-state forecasting under extreme deployment constraints: a 10-model ensemble running on a single CPU core with a memory limit under 20 MB.*
 
-### Key Achievements
+### Highlights
 
-- **Architecture:** Architected a "Hive Mind" Ensemble consisting of Deep Residual GRUs and LSTMs, optimized with Mish activations and Squeeze-and-Excitation blocks to maximize predictive power in financial time-series forecasting.
-- **Model Compression:** Engineered a custom INT8 Dynamic Quantization pipeline in PyTorch to meet extreme deployment constraints of <20MB storage and single-core CPU execution.
-- **Memory Efficiency:** Reduced model memory footprint by 75%, allowing a sophisticated 10-model ensemble to operate within a strictly limited resource budget.
-- **MLOps:** Implemented automated MLOps workflows, including artifact serialization and custom financial loss functions (Huber, Pinball) to improve model robustness.
-- **Production:** Developed a production-grade inference pipeline specifically designed for high-frequency trading (HFT) latency and performance standards.
+- **Architecture:** a Hive Mind ensemble of deep residual GRUs and LSTMs with Mish activations and Squeeze-and-Excitation blocks.
+- **Model compression:** a custom dynamic INT8 quantization pipeline in PyTorch that reduced memory usage by **75%**.
+- **Robustness:** automated artifact serialization and custom Huber and Pinball financial losses.
+- **Result:** Top 30 of the Wunder Fund RNN Challenge global ranking.
 
-### Technologies Used
-
-`PyTorch` `TensorFlow` `Python` `INT8 Quantization` `MLOps` `Financial ML`
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  <div>
-    <a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" class="btn btn-sm z-depth-0" role="button">
-      <i class="fab fa-github gh-icon"></i> View on GitHub
-    </a>
-    <a href="https://huggingface.co/spaces/aayushkrm/hft-quant-lab" target="_blank" class="btn btn-sm z-depth-0" role="button">
-      <i class="fas fa-rocket"></i> View Demo
-    </a>
-  </div>
-</div>
+<p class="project-links">
+  <a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" rel="noopener">View on GitHub</a>
+  ·
+  <a href="https://huggingface.co/spaces/aayushkrm/hft-quant-lab" target="_blank" rel="noopener">View demo</a>
+</p>

@@ -2,43 +2,37 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Ayush Kumar
+title: Ayush Kumar # the website title (if blank, full name will be used instead)
 first_name: Ayush
 middle_name:
 last_name: Kumar
 contact_note: >
-  Feel free to reach out via email or connect on LinkedIn.
-description: >
-  Machine Learning Researcher specializing in Deep Learning, LLMs, HFT, and AI Systems. Top 28 Global - Wunder Fund RNN Challenge.
+  Open to research and ML engineering roles in Generative AI, agentic systems, or scientific computing. Feel free to reach out by email.
+description: > # the ">" symbol means to ignore newlines until "footer_text:"
+  Ayush Kumar — ML Engineer and AI Researcher working on multi-agent LLM systems, synthetic data generation for RLHF/DPO, and efficient ML engineering.
 footer_text: >
 
-keywords: machine-learning, deep-learning, llm, ai, python, pytorch, hft, quantitative-finance, portfolio, tomsk, researcher
-lang: en
-icon: 👨‍💻
-icon: favicon.jpg
+keywords: machine-learning, deep-learning, llm, agentic-ai, multi-agent-systems, synthetic-data, rlhf, dpo, quantization, mlops, pytorch, python, portfolio # add your own keywords or leave empty
+lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://aayushkrm.github.io/
-baseurl: 
-last_updated: false
-impressum_path:
-back_to_top: true
+url: https://aayushkrm.github.io/ # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
+last_updated: true # set to true if you want to display last updated in the footer
+impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+back_to_top: false # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
 
-# Custom theme colors (modern gradient)
-theme_style: default
-theme_color: "#6366f1"  # Indigo
-enable_darkmode: true
-
-# Repo color theme
-repo_theme_light: default
-repo_theme_dark: dark
+# repo color theme
+repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
   enabled: true
-  theme_light: flat
-  theme_dark: gitdimmed
+  theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
+  theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
 # -----------------------------------------------------------------------------
 # RSS Feed
@@ -52,13 +46,13 @@ repo_trophies:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1120px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -67,9 +61,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://aayushkrm.github.io/assets/img/og-card.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -90,8 +84,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Ayush Kumar # blog_name will be displayed in your blog page
+blog_description: Notes on machine learning, AI research, and engineering.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -106,7 +100,7 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: aayushkrm/aayushkrm.github.io
+  repo: # <your-github-user-name>/<your-github-repo-name>
   repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
   category: Comments # name of the category under which discussions will be created
   category_id: # leave empty or specify your category_id (see https://giscus.app/)
@@ -127,12 +121,10 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
+  - name: GitHub
     posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+      - url: https://github.com/aayushkrm
+        published_date: 2026-01-01
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -178,6 +170,8 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
+  - akm.md
+  - Ayush_resume_english FINAL.pdf
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
@@ -295,10 +289,10 @@ scholar:
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
 enable_publication_badges:
-  altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
-  dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
-  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
-  inspirehep: true # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
+  altmetric: false # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
+  dimensions: false # Dimensions badge (Customization options: https://badge.dimensions.ai/)
+  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+  inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
@@ -352,7 +346,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # responsive images are handled with lightweight SVG assets and CSS aspect ratios
   widths:
     - 480
     - 800
@@ -386,14 +380,14 @@ enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
-enable_masonry: true # enables automatic project cards arrangement
-enable_math: true # enables math typesetting (uses MathJax)
+enable_masonry: false # enables automatic project cards arrangement
+enable_math: false # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
-enable_medium_zoom: true # enables image zoom feature (as on medium.com)
-enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
+enable_medium_zoom: false # enables image zoom feature (as on medium.com)
+enable_progressbar: false # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
 
 # -----------------------------------------------------------------------------
@@ -445,7 +439,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
   highlightjs:
     integrity:
       css:
@@ -628,17 +622,5 @@ third_party_libraries:
 # -----------------------------------------------------------------------------
 # Get external JSON data
 # -----------------------------------------------------------------------------
-
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
-
-jsonresume:
-  - basics
-  - work
-  - education
-  - projects
-  - awards
-  - certificates
-  - skills
-  - languages
+# The CV is authored in _data/cv.yml so there is a single source of truth for
+# the resume content shown on the homepage and the CV page.

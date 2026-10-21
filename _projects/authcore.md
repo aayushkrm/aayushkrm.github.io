@@ -1,34 +1,26 @@
 ---
 layout: page
 title: AuthCore
-description: Custom Authentication & RBAC System
-img: assets/img/projects/authcore.jpg
-importance: 1
+description: Stateless JWT authentication and role-based access control for REST APIs.
+img: assets/img/projects/authcore.svg
+importance: 4
 category: work
+tags: [Python, JWT, RBAC, PostgreSQL]
 github: https://github.com/aayushkrm/AuthCore
 ---
 
-## AuthCore - Custom Authentication & RBAC System
+## AuthCore — Custom Authentication and RBAC System
 
-**GitHub:** [aayushkrm/AuthCore](https://github.com/aayushkrm/AuthCore)
+*A stateless Python authentication system with fine-grained, API-manageable permissions, built from scratch on top of PostgreSQL.*
 
-### Key Features
+### Highlights
 
-- **Authentication:** Developed a secure and stateless authentication system in Python, leveraging JSON Web Tokens (JWT) for efficient session management.
-- **Security:** Implemented robust password security using bcrypt for hashing.
-- **Authorization:** Designed and built a fine-grained Role-Based Access Control (RBAC) model to safeguard RESTful API endpoints.
-- **Middleware:** Created custom middleware to validate user permissions against a PostgreSQL database.
-- **Automation:** Automated deployment and maintenance workflows through Shell scripting.
-- **Result:** Delivered a scalable, efficient, and secure backend solution tailored to meet modern application security needs.
+- **Session management:** JSON Web Tokens (JWT) keep authentication stateless and scalable.
+- **Password security:** bcrypt hashing for stored credentials.
+- **Authorization:** a role-based access control (RBAC) model protects REST API endpoints.
+- **Enforcement:** custom middleware validates user permissions against a PostgreSQL database.
+- **Automation:** deployment and maintenance workflows are automated through Shell scripts.
 
-### Technologies Used
-
-`Python` `JWT` `bcrypt` `PostgreSQL` `REST API` `RBAC` `Shell Scripting`
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  <div>
-    <a href="https://github.com/aayushkrm/AuthCore" target="_blank" class="btn btn-sm z-depth-0" role="button">
-      <i class="fab fa-github gh-icon"></i> View on GitHub
-    </a>
-  </div>
-</div>
+<p class="project-links">
+  <a href="https://github.com/aayushkrm/AuthCore" target="_blank" rel="noopener">View on GitHub</a>
+</p>
