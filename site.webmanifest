@@ -1,0 +1,23 @@
+{
+  "name": "Ayush Kumar — ML Engineer & AI Researcher",
+  "short_name": "Ayush Kumar",
+  "description": "Multi-agent LLM systems, synthetic data for RLHF/DPO, and efficient machine learning for scientific discovery.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

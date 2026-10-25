@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#000000">
+  <title>404 — Ayush Kumar</title>
+  <script>
+    (() => {
+      let saved = null;
+      try { saved = localStorage.getItem("theme"); } catch {}
+      const theme = saved === "light" || saved === "dark"
+        ? saved
+        : window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = theme;
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = theme === "light" ? "#f7f5f0" : "#000000";
+    })();
+  </script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <main class="notfound">
+    <div class="notfound-inner">
+      <p class="notfound-code">Error 404 · Sequence not found</p>
+      <h1>This page slipped through the alignments.</h1>
+      <p>Whatever you were looking for isn't here. The rest of the site is still one click away.</p>
+      <a class="btn" href="/">Back to the homepage <span aria-hidden="true">→</span></a>
+      <a class="notfound-mail" href="mailto:aayush.kumarm0607@gmail.com">aayush.kumarm0607@gmail.com</a>
+    </div>
+  </main>
+</body>
+</html>

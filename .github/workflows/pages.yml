@@ -1,4 +1,4 @@
-name: Deploy site
+name: Deploy site to GitHub Pages
 
 on:
   push:
@@ -15,35 +15,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3.5"
-          bundler-cache: true
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
-      - name: Build site
-        env:
-          JEKYLL_ENV: production
-        run: bundle exec jekyll build
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          rsync -a --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            --exclude='scripts' \
+            --exclude='README.md' \
+            --exclude='.gitignore' \
+            ./ _site/
+          touch _site/.nojekyll
+          ls -la _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

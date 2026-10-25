@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#000000">
+
+  <script>
+    (() => {
+      let saved = null;
+      try { saved = localStorage.getItem("theme"); } catch {}
+      const theme = saved === "light" || saved === "dark"
+        ? saved
+        : window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = theme;
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.content = theme === "light" ? "#f7f5f0" : "#000000";
+    })();
+  </script>
+
+  <title>Ayush Kumar — ML Engineer &amp; AI Researcher</title>
+  <meta name="description" content="Ayush Kumar is an ML engineer and AI researcher working on multi-agent LLM systems, synthetic data for RLHF/DPO, and efficient machine learning.">
+  <link rel="canonical" href="https://aayushkrm.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ayush Kumar">
+  <meta property="og:title" content="Ayush Kumar — ML Engineer &amp; AI Researcher">
+  <meta property="og:description" content="Multi-agent LLM systems, synthetic data for RLHF/DPO, and efficient machine learning for scientific discovery.">
+  <meta property="og:url" content="https://aayushkrm.github.io/">
+  <meta property="og:image" content="https://aayushkrm.github.io/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ayush Kumar — ML Engineer and AI Researcher">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ayush Kumar — ML Engineer &amp; AI Researcher">
+  <meta name="twitter:description" content="Multi-agent LLM systems, synthetic data for RLHF/DPO, and efficient machine learning for scientific discovery.">
+  <meta name="twitter:image" content="https://aayushkrm.github.io/assets/img/og-image.jpg">
+  <meta name="twitter:creator" content="@aayushkrm">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/assets/img/header.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayush Kumar",
+    "jobTitle": "ML Engineer & AI Researcher",
+    "url": "https://aayushkrm.github.io/",
+    "email": "mailto:aayush.kumarm0607@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tomsk",
+      "addressCountry": "RU"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "National Research Tomsk State University"
+    },
+    "sameAs": [
+      "https://github.com/aayushkrm",
+      "https://www.linkedin.com/in/ayush-kumar-aa79751a1/",
+      "https://x.com/aayushkrm"
+    ],
+    "knowsAbout": [
+      "Machine Learning",
+      "Multi-agent systems",
+      "Large language models",
+      "Synthetic data",
+      "RLHF and DPO",
+      "Model quantization",
+      "Scientific computing"
+    ]
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.97 3.22 9.18 7.69 10.67.56.1.77-.24.77-.54 0-.27-.01-1.16-.02-2.1-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.16a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.16 3.1-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.33-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08 0 1.5-.01 2.72-.01 3.09 0 .3.2.65.78.54a11.26 11.26 0 0 0 7.68-10.67C23.25 5.48 18.27.5 12 .5Z"/>
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-4.71-6.23-5.4 6.23H2.74l7.73-8.84L2.25 2.25h6.98l4.26 5.63 4.75-5.63Zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64Z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="2.75" y="4.75" width="18.5" height="14.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="m4.5 7 6.36 5.03a1.8 1.8 0 0 0 2.28 0L19.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/>
+    </symbol>
+  </svg>
+
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menu-open" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="site-menu">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+      <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+    </button>
+  </header>
+
+  <nav class="menu-panel" id="site-menu" aria-label="Site menu" inert>
+    <a href="#about">About</a>
+    <a href="#experience">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <span class="menu-divider" aria-hidden="true"></span>
+    <a class="menu-email" href="mailto:aayush.kumarm0607@gmail.com">aayush.kumarm0607@gmail.com</a>
+  </nav>
+
+  <main id="content">
+    <div class="banner">
+      <picture>
+        <source srcset="/assets/img/header.webp" type="image/webp">
+        <img src="/assets/img/header.jpg" alt="" width="1800" height="401" fetchpriority="high">
+      </picture>
+    </div>
+
+    <section class="hero container" aria-labelledby="hero-name">
+      <picture>
+        <source srcset="/assets/img/avatar.webp" type="image/webp">
+        <img class="avatar" src="/assets/img/avatar.jpg" alt="Portrait of Ayush Kumar" width="115" height="115" fetchpriority="high">
+      </picture>
+
+      <h1 class="name" id="hero-name">Ayush Kumar</h1>
+      <p class="role">ML Engineer &amp; AI Researcher</p>
+      <p class="hero-bio">I build multi-agent AI systems and efficient models that turn messy scientific data into reproducible results.</p>
+      <p class="meta">Tomsk, Russia <span aria-hidden="true">·</span> From India</p>
+
+      <div class="socials" aria-label="Elsewhere">
+        <a class="social-link" href="https://github.com/aayushkrm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg aria-hidden="true"><use href="#i-github"/></svg>
+        </a>
+        <a class="social-link" href="https://www.linkedin.com/in/ayush-kumar-aa79751a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg aria-hidden="true"><use href="#i-linkedin"/></svg>
+        </a>
+        <a class="social-link" href="https://x.com/aayushkrm" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg aria-hidden="true"><use href="#i-x"/></svg>
+        </a>
+        <a class="social-link" href="mailto:aayush.kumarm0607@gmail.com" aria-label="Email">
+          <svg aria-hidden="true"><use href="#i-mail"/></svg>
+        </a>
+        <a class="resume-link" href="/assets/pdf/ayush-kumar-resume.pdf" target="_blank" rel="noopener">Resume <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+
+      <blockquote class="quote">
+        “What I cannot create, I do not understand.”
+        <cite>Richard Feynman</cite>
+      </blockquote>
+    </section>
+
+    <section class="section container reveal" id="about" aria-labelledby="about-title">
+      <h2 class="section-label" id="about-title">About</h2>
+      <div class="prose">
+        <p>I'm Ayush, an independent AI researcher from India, currently based in Tomsk, Russia. My work sits at the intersection of agentic AI, synthetic data, and efficient machine learning.</p>
+        <p>At the AIRI Institute of Artificial Intelligence (TSU × AIRI), I developed Auto-ChemInstruct, an autonomous four-agent pipeline that generates physically verified chemistry datasets without human annotators. The manuscript is in preparation for NeurIPS Datasets &amp; Benchmarks 2026.</p>
+        <p>I'm currently Research Team Lead at the Big Mathematical Workshop, building AlignSSL-SV, a neural system for detecting genomic deletions from sequencing read alignments. Before that, I placed in the top 30 of the Wunder Fund RNN Challenge with a dynamically quantized 10-model ensemble that cut memory use by 75%.</p>
+        <p>I care about systems that are reproducible, auditable, and useful outside a notebook. I'm looking for research or ML engineering roles in generative AI, agentic systems, or scientific computing.</p>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="experience" aria-labelledby="experience-title">
+      <h2 class="section-label" id="experience-title">Work</h2>
+      <div class="work-list">
+        <article class="work">
+          <div class="work-head">
+            <h3>Research Team Lead</h3>
+            <span class="dates">Jul 2026 — Present</span>
+          </div>
+          <p class="org">Big Mathematical Workshop (BMM) · Novosibirsk State University</p>
+          <p class="desc">Leading AlignSSL-SV, a neural system for detecting genomic deletions from read alignments. Built a reproducible pipeline spanning alignment tensors, masked pretraining, multi-scale CNNs, a transformer encoder, and calibrated evaluation on 1000 Genomes.</p>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>AI Research Intern</h3>
+            <span class="dates">Mar 2026 — May 2026</span>
+          </div>
+          <p class="org">AIRI Institute of Artificial Intelligence (TSU × AIRI)</p>
+          <p class="desc">Built Auto-ChemInstruct, a four-agent pipeline that generates and physically verifies chemistry data with RDKit and xTB, turning failed reactions into causal failure traces and negative examples for DPO/RLHF.</p>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Independent Machine Learning Researcher</h3>
+            <span class="dates">Sep 2025 — Jan 2026</span>
+          </div>
+          <p class="org">Wunder Fund RNN</p>
+          <p class="desc">Ranked 28th globally in market-state forecasting with a 10-model GRU/LSTM ensemble. A custom dynamic INT8 pipeline cut memory use by 75%, fitting the ensemble on one CPU core under 20 MB.</p>
+        </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>Mathematics Problem Creator &amp; Programmer</h3>
+            <span class="dates">Apr 2025 — Aug 2025</span>
+          </div>
+          <p class="org">Turing AI</p>
+          <p class="desc">Created original math and algorithm problems with C++ and Python reference solutions, strict tests, and step-by-step explanations for reasoning-model training.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="projects" aria-labelledby="projects-title">
+      <h2 class="section-label" id="projects-title">Projects</h2>
+      <div class="project-list">
+        <article class="project">
+          <div class="project-head">
+            <h3><a href="https://github.com/aayushkrm/AlignSSL-SV" target="_blank" rel="noopener noreferrer">AlignSSL-SV <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
+            <span class="year">2026</span>
+          </div>
+          <p>Neural detection of genomic deletions from read alignments. Image-free alignment tensors, masked pretraining, multi-scale CNNs, and calibrated uncertainty, evaluated on 1000 Genomes.</p>
+          <div class="project-links">
+            <a href="https://github.com/aayushkrm/AlignSSL-SV" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><a href="https://github.com/aayushkrm/auto-cheminstruct" target="_blank" rel="noopener noreferrer">Auto-ChemInstruct <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
+            <span class="year">2026</span>
+          </div>
+          <p>A four-agent pipeline that generates, verifies, and compiles chemistry data for DPO/RLHF, with RDKit and xTB as physical oracles and MAP-Elites prompt optimization.</p>
+          <div class="project-links">
+            <a href="https://github.com/aayushkrm/auto-cheminstruct" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" rel="noopener noreferrer">Efficient Neural HFT <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
+            <span class="year">2025</span>
+          </div>
+          <p>A quantized ensemble of residual GRUs and LSTMs that fits 10 models on a single CPU core under 20 MB, with a live Hugging Face demo.</p>
+          <div class="project-links">
+            <a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            <a href="https://huggingface.co/spaces/aayushkrm/hft-quant-lab" target="_blank" rel="noopener noreferrer">Demo <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><a href="https://github.com/aayushkrm/AuthCore" target="_blank" rel="noopener noreferrer">AuthCore <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
+            <span class="year">2025</span>
+          </div>
+          <p>JWT authentication with bcrypt, database-driven RBAC, permission middleware, and shell-automated deployment.</p>
+          <div class="project-links">
+            <a href="https://github.com/aayushkrm/AuthCore" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="education" aria-labelledby="education-title">
+      <h2 class="section-label" id="education-title">Education</h2>
+      <div class="edu">
+        <div class="work-head">
+          <h3>National Research Tomsk State University</h3>
+          <span class="dates">2023 — 2027</span>
+        </div>
+        <p class="edu-degree">Specialist Degree · Mathematics and Computer Science</p>
+        <p class="edu-detail">Computational Mathematics and Computer Modeling<br>Faculty of Mechanics and Mathematics · VMiKM Department</p>
+        <p class="edu-focus">Focus: machine learning and neural networks, high-performance computing, numerical methods, and mathematical modeling.</p>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="skills" aria-labelledby="skills-title">
+      <h2 class="section-label" id="skills-title">Toolkit</h2>
+      <dl class="skills">
+        <div class="skill-row">
+          <dt>ML &amp; Deep Learning</dt>
+          <dd>PyTorch · Transformers · RNN / LSTM / GRU · LLMs · quantization · pruning</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Generative AI</dt>
+          <dd>Multi-agent orchestration · LangChain · LangGraph · RAG · RLHF / DPO · synthetic data</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Engineering &amp; MLOps</dt>
+          <dd>Python · C++ · FastAPI · Docker · Linux · Git · CI/CD</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Scientific Computing</dt>
+          <dd>NumPy · Pandas · SciPy · SQL · numerical methods</dd>
+        </div>
+        <div class="skill-row">
+          <dt>AI Dev Tools</dt>
+          <dd>Claude Code · Cursor · Codex · OpenCode · n8n</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Languages</dt>
+          <dd>English (fluent) · Russian (professional)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section container reveal" id="recognition" aria-labelledby="recognition-title">
+      <h2 class="section-label" id="recognition-title">Recognition</h2>
+      <ul class="awards">
+        <li class="award">
+          <div>
+            <span class="award-title">Big Mathematical Workshop, Great Math Track</span>
+            <span class="award-note">Certificate for work on neural detection of genomic mutations · Research Team Lead</span>
+          </div>
+          <span class="year">2026</span>
+        </li>
+        <li class="award">
+          <div>
+            <span class="award-title">Code Sport Tomsk — T-Education</span>
+            <span class="award-note">4th place · team Vibe Compilers</span>
+          </div>
+          <span class="year">2026</span>
+        </li>
+        <li class="award">
+          <div>
+            <span class="award-title">Wunder Fund RNN Challenge</span>
+            <span class="award-note">28th place in the global market-state forecasting ranking</span>
+          </div>
+          <span class="year">2025</span>
+        </li>
+        <li class="award">
+          <div>
+            <span class="award-title">T-Bank Code Gym, Tomsk</span>
+            <span class="award-note">3rd place · team 40 + 40 + 1 = 1001</span>
+          </div>
+          <span class="year">2025</span>
+        </li>
+        <li class="award">
+          <div>
+            <span class="award-title">AvitoTech ML CUP · Open Data Science</span>
+            <span class="award-note">Certificate of successful completion</span>
+          </div>
+          <span class="year">2025</span>
+        </li>
+      </ul>
+
+      <details class="certs">
+        <summary>
+          <span>Certifications <span class="certs-count">05</span></span>
+          <span class="certs-plus" aria-hidden="true">+</span>
+        </summary>
+        <ul>
+          <li>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/BREU94XXQD7P" target="_blank" rel="noopener noreferrer">Deep Learning Specialization — DeepLearning.AI</a>
+            <span>Jan 2024</span>
+          </li>
+          <li>
+            <a href="https://www.coursera.org/account/accomplishments/verify/E8GLGGXSYWW8" target="_blank" rel="noopener noreferrer">Neural Networks and Deep Learning — DeepLearning.AI</a>
+            <span>Dec 2023</span>
+          </li>
+          <li>
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/QVWKPA67KJLT" target="_blank" rel="noopener noreferrer">IBM Machine Learning — Coursera</a>
+            <span>Jul 2023</span>
+          </li>
+          <li>
+            <a href="https://www.udemy.com/certificate/UC-b790f354-0b71-4521-b78a-7e608fc7fca8/" target="_blank" rel="noopener noreferrer">Python Pro Bootcamp (100 Days of Code) — Udemy</a>
+            <span>Dec 2022</span>
+          </li>
+          <li>
+            <a href="https://www.udemy.com/certificate/UC-073bb1f5-407c-432b-aedd-19b790ea25b7/" target="_blank" rel="noopener noreferrer">Full-Stack Web Development Bootcamp — Udemy</a>
+            <span>May 2022</span>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="section contact container reveal" id="contact" aria-labelledby="contact-title">
+      <h2 class="section-label" id="contact-title">Contact</h2>
+      <p class="contact-kicker"><span class="dot" aria-hidden="true"></span> Currently open to new roles</p>
+      <h3 class="contact-title">Let's build something useful.</h3>
+      <p class="contact-copy">I'm looking for research or ML engineering roles in generative AI, agentic systems, and scientific computing. If you're working on something in that space — or just want to compare notes — I'd love to hear from you.</p>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:aayush.kumarm0607@gmail.com">Get in touch <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        <a class="text-link" href="/assets/pdf/ayush-kumar-resume.pdf" target="_blank" rel="noopener">Download CV <svg aria-hidden="true"><use href="#i-download"/></svg></a>
+      </div>
+      <p class="contact-email"><a href="mailto:aayush.kumarm0607@gmail.com">aayush.kumarm0607@gmail.com</a></p>
+    </section>
+
+    <footer class="footer container">
+      <p>© <span id="year">2026</span> Ayush Kumar</p>
+      <p><a href="#top">Back to top ↑</a></p>
+    </footer>
+  </main>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
