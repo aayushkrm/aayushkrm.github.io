@@ -10,15 +10,12 @@ ROOT = Path(__file__).resolve().parent.parent
 IMG = ROOT / "assets" / "img"
 
 # ---------------------------------------------------------------------------
-# Avatar: crop the portrait to a square, keep the face centred, export webp+jpg
+# Avatar: centre the head and full upper body inside the circular crop
 # ---------------------------------------------------------------------------
 src = Image.open(ROOT / "scripts" / "profile-source.png").convert("RGB")
-# Add a little headroom above the chalkboard photo, then keep the head
-# and shoulders framed inside the circular avatar.
-pad = 44
-expanded = Image.new("RGB", (src.width, src.height + pad), src.getpixel((12, 12)))
-expanded.paste(src, (0, pad))
-avatar = expanded.crop((210, 0, 770, 560)).resize((480, 480), Image.LANCZOS)
+# The source is a wide classroom photo. This square keeps the full upper
+# and middle body with a little headroom while centring the torso.
+avatar = src.crop((690, 522, 2090, 1922)).resize((480, 480), Image.LANCZOS)
 avatar.save(IMG / "avatar.webp", "WEBP", quality=90, method=6)
 avatar.save(IMG / "avatar.jpg", "JPEG", quality=88, optimize=True, progressive=True)
 
