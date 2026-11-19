@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#f7f5f0">
 
   <script>
     (() => {
@@ -12,7 +12,7 @@
       try { saved = localStorage.getItem("theme"); } catch {}
       const theme = saved === "light" || saved === "dark"
         ? saved
-        : window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        : "light";
       document.documentElement.dataset.theme = theme;
       const meta = document.querySelector('meta[name="theme-color"]');
       if (meta) meta.content = theme === "light" ? "#f7f5f0" : "#000000";
@@ -367,7 +367,7 @@
     </section>
 
     <section class="section container reveal" id="recognition" aria-labelledby="recognition-title">
-      <h2 class="section-label" id="recognition-title">Recognition</h2>
+      <h2 class="section-label" id="recognition-title">Awards and Recognition</h2>
       <ul class="awards">
         <li class="award">
           <div>
