@@ -1223,3 +1223,10 @@ button {
     color: #111;
   }
 }
+
+/* Key phrases in work and project descriptions, bold as in the resume */
+.work .desc strong,
+.project p strong {
+  font-weight: 600;
+  color: var(--text);
+}
