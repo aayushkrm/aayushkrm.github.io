@@ -340,7 +340,7 @@ button {
   position: relative;
   width: 100%;
   aspect-ratio: 1800 / 401;
-  max-height: 380px;
+  max-height: 200px;
   overflow: hidden;
   background: #1a1512;
 }
@@ -1077,7 +1077,7 @@ button {
 
 @media (min-width: 601px) {
   .banner {
-    min-height: 180px;
+    min-height: 150px;
   }
 }
 
@@ -1096,7 +1096,7 @@ button {
   }
 
   .banner {
-    height: 150px;
+    height: 110px;
   }
 
   .banner img {
@@ -1229,4 +1229,58 @@ button {
 .project p strong {
   font-weight: 600;
   color: var(--text);
+}
+
+/* Work bullets and the compact "Earlier experience" list */
+.work .bullets {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.work .bullets li + li {
+  margin-top: 4px;
+}
+
+.work .bullets strong,
+.earlier strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.earlier {
+  margin-top: 8px;
+}
+
+.earlier-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.earlier-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.earlier-list li + li {
+  margin-top: 10px;
+}
+
+.earlier-role {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.earlier-list .dates {
+  margin-left: 6px;
+  color: var(--text-muted);
+  font-size: 12px;
+  white-space: nowrap;
 }
