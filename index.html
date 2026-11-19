@@ -52,7 +52,7 @@
     "name": "Ayush Kumar",
     "jobTitle": "ML Engineer & AI Researcher",
     "url": "https://aayushkrm.github.io/",
-    "email": "mailto:aayush.kumarm0607@gmail.com",
+    "email": "mailto:ayushkrm@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Tomsk",
@@ -64,7 +64,7 @@
     },
     "sameAs": [
       "https://github.com/aayushkrm",
-      "https://www.linkedin.com/in/ayush-kumar-aa79751a1/",
+      "https://www.linkedin.com/in/ayushkxai",
       "https://x.com/aayushkrm"
     ],
     "knowsAbout": [
@@ -128,7 +128,7 @@
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
     <span class="menu-divider" aria-hidden="true"></span>
-    <a class="menu-email" href="mailto:aayush.kumarm0607@gmail.com">aayush.kumarm0607@gmail.com</a>
+    <a class="menu-email" href="mailto:ayushkrm@gmail.com">ayushkrm@gmail.com</a>
   </nav>
 
   <main id="content">
@@ -154,13 +154,13 @@
         <a class="social-link" href="https://github.com/aayushkrm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <svg aria-hidden="true"><use href="#i-github"/></svg>
         </a>
-        <a class="social-link" href="https://www.linkedin.com/in/ayush-kumar-aa79751a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a class="social-link" href="https://www.linkedin.com/in/ayushkxai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <svg aria-hidden="true"><use href="#i-linkedin"/></svg>
         </a>
         <a class="social-link" href="https://x.com/aayushkrm" target="_blank" rel="noopener noreferrer" aria-label="X">
           <svg aria-hidden="true"><use href="#i-x"/></svg>
         </a>
-        <a class="social-link" href="mailto:aayush.kumarm0607@gmail.com" aria-label="Email">
+        <a class="social-link" href="mailto:ayushkrm@gmail.com" aria-label="Email">
           <svg aria-hidden="true"><use href="#i-mail"/></svg>
         </a>
         <a class="resume-link" href="/assets/pdf/ayush-kumar-resume.pdf" target="_blank" rel="noopener">Resume <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -176,8 +176,8 @@
       <h2 class="section-label" id="about-title">About</h2>
       <div class="prose">
         <p>I'm Ayush, an independent AI researcher from India, currently based in Tomsk, Russia. My work sits at the intersection of agentic AI, synthetic data, and efficient machine learning.</p>
-        <p>At the AIRI Institute of Artificial Intelligence (TSU × AIRI), I developed Auto-ChemInstruct, an autonomous four-agent pipeline that generates physically verified chemistry datasets without human annotators. A research manuscript on it is in preparation.</p>
-        <p>I'm currently Research Team Lead at the Big Mathematical Workshop, building AlignSSL-SV, a neural system for detecting genomic deletions from sequencing read alignments. Before that, I placed in the top 30 of the Wunder Fund RNN Challenge with a dynamically quantized 10-model ensemble that cut memory use by 75%.</p>
+        <p>At the AIRI Institute of Artificial Intelligence (TSU × AIRI), I developed Auto-ChemInstruct, a four-agent LLM pipeline for chemistry data generation and DPO/RLHF preference pairs, with RDKit and MMFF94 verification. A research manuscript on it is in preparation.</p>
+        <p>I'm currently Research Team Lead at the Big Mathematical Workshop, leading structural-variant genomics research, including AlignSSL-SV, a neural model for detecting genomic deletions from read alignments. Before that, I ranked 28th globally in the Wunder Fund RNN Challenge with a custom INT8-quantized 10-model ensemble that cut memory use by 75%.</p>
         <p>I care about systems that are reproducible, auditable, and useful outside a notebook. I'm looking for research or ML engineering roles in generative AI, agentic systems, or scientific computing.</p>
       </div>
     </section>
@@ -191,7 +191,7 @@
             <span class="dates">Jul 2026 — Present</span>
           </div>
           <p class="org">Big Mathematical Workshop (BMM) · Novosibirsk State University</p>
-          <p class="desc">Leading AlignSSL-SV, a neural system for detecting genomic deletions from read alignments. Built a reproducible pipeline spanning alignment tensors, masked pretraining, multi-scale CNNs, a transformer encoder, and calibrated evaluation on 1000 Genomes.</p>
+          <p class="desc">Lead structural-variant genomics research and maintain Python workflows for data preparation, model experiments, and reproducible evaluation. Identified a benchmark shortcut: an untrained read-depth feature reached ROC-AUC 0.955 on a historical deletion dataset, and corrected the label-budget and threshold comparisons. Evaluated alignment-tensor CNN and transformer models against RGB-pileup and classical baselines, including hard-negative and cross-population checks.</p>
         </article>
 
         <article class="work">
@@ -200,7 +200,7 @@
             <span class="dates">Mar 2026 — May 2026</span>
           </div>
           <p class="org">AIRI Institute of Artificial Intelligence (TSU × AIRI)</p>
-          <p class="desc">Built Auto-ChemInstruct, a four-agent pipeline that generates and physically verifies chemistry data with RDKit and xTB, turning failed reactions into causal failure traces and negative examples for DPO/RLHF.</p>
+          <p class="desc">Built Auto-ChemInstruct, a four-agent LLM pipeline for chemistry data generation and DPO/RLHF preference pairs, with RDKit and MMFF94 verification and xTB support. Studied positive-label bias and annotation costs in chemistry LLM datasets, including ChemCoTBench, and contributed to a research manuscript in preparation.</p>
         </article>
 
         <article class="work">
@@ -208,18 +208,28 @@
             <h3>Independent Machine Learning Researcher</h3>
             <span class="dates">Sep 2025 — Jan 2026</span>
           </div>
-          <p class="org">Wunder Fund RNN</p>
-          <p class="desc">Ranked 28th globally in market-state forecasting with a 10-model GRU/LSTM ensemble. A custom dynamic INT8 pipeline cut memory use by 75%, fitting the ensemble on one CPU core under 20 MB.</p>
+          <p class="org">Wunder Fund RNN Challenge</p>
+          <p class="desc">Implemented custom PyTorch INT8 quantization for a 10-model GRU/LSTM ensemble, reducing inference memory use by 75% and meeting the 20 MB, one-CPU-core constraints. Ranked 28th globally (private leaderboard score 0.3873) and benchmarked 42 architectures for market-state forecasting. Built CPU inference and model-serialization workflows, comparing recurrent models with Huber and Pinball losses and cross-validation.</p>
         </article>
 
         <article class="work">
           <div class="work-head">
-            <h3>Mathematics Problem Creator &amp; Programmer</h3>
+            <h3>Mathematics Problem Creator and Programmer</h3>
             <span class="dates">Apr 2025 — Aug 2025</span>
           </div>
           <p class="org">Turing AI</p>
-          <p class="desc">Created original math and algorithm problems with C++ and Python reference solutions, strict tests, and step-by-step explanations for reasoning-model training.</p>
+          <p class="desc">Created Project Euler-style computational mathematics and algorithmic programming problems, with Python and C++ reference solutions, edge-case tests, and step-by-step explanations under runtime and memory limits.</p>
         </article>
+
+        <article class="work">
+          <div class="work-head">
+            <h3>International Affiliate Manager</h3>
+            <span class="dates">Jan 2025 — Jun 2025</span>
+          </div>
+          <p class="org">Skiller, gaming platform</p>
+          <p class="desc">Negotiated international influencer partnerships and managed campaign budgets and onboarding; contributed to a reported 60% increase in user engagement.</p>
+        </article>
+
       </div>
     </section>
 
@@ -267,7 +277,7 @@
             <h3><a href="https://github.com/aayushkrm/AlignSSL-SV" target="_blank" rel="noopener noreferrer">AlignSSL-SV <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
             <span class="year">2026</span>
           </div>
-          <p>Neural detection of genomic deletions from read alignments. Image-free alignment tensors, masked pretraining, multi-scale CNNs, and calibrated uncertainty, evaluated on 1000 Genomes. On corrected, depth-matched negatives, masked pretraining gave no reliable gain over training from scratch (AUPRC 0.300 ± 0.044 vs 0.278 ± 0.042, n = 35).</p>
+          <p>Neural detection of genomic deletions from read alignments: 18 × 64 × 256 alignment tensors, multi-scale CNN and transformer encoding, and masked-alignment pretraining. On corrected depth-matched negatives at 1% labels (n = 35), pretrained AUPRC was 0.300 ± 0.044 against 0.278 ± 0.042 from scratch, so there was no reliable pretraining gain.</p>
           <div class="project-links">
             <a href="https://github.com/aayushkrm/AlignSSL-SV" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </div>
@@ -278,7 +288,7 @@
             <h3><a href="https://github.com/aayushkrm/auto-cheminstruct" target="_blank" rel="noopener noreferrer">Auto-ChemInstruct <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
             <span class="year">2026</span>
           </div>
-          <p>A four-agent pipeline that generates, verifies, and compiles chemistry data for DPO/RLHF, with RDKit and xTB as physical oracles and MAP-Elites prompt optimization.</p>
+          <p>A four-agent LLM pipeline for chemistry data generation and DPO/RLHF preference pairs: 172 pairs across 19 reaction types, RDKit and MMFF94 verification, MAP-Elites search, and a 7-variant ablation (84.6% pass rate for the full system against 69.0% for the baseline, as reported in the repository).</p>
           <div class="project-links">
             <a href="https://github.com/aayushkrm/auto-cheminstruct" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </div>
@@ -289,7 +299,7 @@
             <h3><a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" rel="noopener noreferrer">Efficient Neural HFT <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
             <span class="year">2025</span>
           </div>
-          <p>A quantized ensemble of residual GRUs and LSTMs that fits 10 models on a single CPU core under 20 MB, with a live Hugging Face demo.</p>
+          <p>Deep residual GRU and LSTM networks with Mish activation and Squeeze-and-Excitation blocks for market-state forecasting, with a CPU-based quantized forecasting demo released on Hugging Face.</p>
           <div class="project-links">
             <a href="https://github.com/aayushkrm/efficient-neural-hft" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
             <a href="https://huggingface.co/spaces/aayushkrm/hft-quant-lab" target="_blank" rel="noopener noreferrer">Demo <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
@@ -298,10 +308,18 @@
 
         <article class="project">
           <div class="project-head">
+            <h3>Gas Pipeline Defect Forecasting</h3>
+            <span class="year">2026</span>
+          </div>
+          <p>Developing defect forecasts for pipelines from operational and in-line inspection records, with dataset preparation, model comparison and historical validation with the industrial partner Gazprom Transgaz Tomsk. An 80% reliability figure is a project target, not a validated result.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
             <h3><a href="https://github.com/aayushkrm/AuthCore" target="_blank" rel="noopener noreferrer">AuthCore <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></h3>
             <span class="year">2025</span>
           </div>
-          <p>JWT authentication with bcrypt, database-driven RBAC, permission middleware, and shell-automated deployment.</p>
+          <p>JWT authentication, bcrypt password hashing, PostgreSQL-backed role permissions, API middleware, and shell deployment scripts.</p>
           <div class="project-links">
             <a href="https://github.com/aayushkrm/AuthCore" target="_blank" rel="noopener noreferrer">Code <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
           </div>
@@ -314,11 +332,11 @@
       <div class="edu">
         <div class="work-head">
           <h3>National Research Tomsk State University</h3>
-          <span class="dates">2023 — 2027</span>
+          <span class="dates">2024 — 2029 (expected)</span>
         </div>
-        <p class="edu-degree">Specialist Degree · Mathematics and Computer Science</p>
-        <p class="edu-detail">Computational Mathematics and Computer Modeling<br>Faculty of Mechanics and Mathematics · VMiKM Department</p>
-        <p class="edu-focus">Focus: machine learning and neural networks, high-performance computing, numerical methods, and mathematical modeling.</p>
+        <p class="edu-degree">Integrated 5-Year Degree · Mathematics and Computer Science</p>
+        <p class="edu-detail">Specialization: Computational Mathematics and Computer Modeling</p>
+        <p class="edu-focus">Relevant coursework: Machine Learning, Parallel Computing, Numerical Methods, Mathematical Modeling, Probability and Statistics.</p>
       </div>
     </section>
 
@@ -326,32 +344,24 @@
       <h2 class="section-label" id="skills-title">Toolkit</h2>
       <dl class="skills">
         <div class="skill-row">
-          <dt>ML &amp; Deep Learning</dt>
-          <dd>PyTorch · Transformers · RNN / LSTM / GRU · LLMs · INT8 and GGUF quantization · llama.cpp · pruning</dd>
+          <dt>Programming &amp; Data</dt>
+          <dd>Python · C++ · SQL · Bash · NumPy · pandas · SciPy · Matplotlib · PostgreSQL</dd>
+        </div>
+        <div class="skill-row">
+          <dt>Machine Learning</dt>
+          <dd>PyTorch · CNNs · transformers · GRU/LSTM · self-supervised learning · fine-tuning · INT8 quantization · cross-validation · model evaluation</dd>
         </div>
         <div class="skill-row">
           <dt>Generative AI</dt>
-          <dd>Multi-agent orchestration · LangChain · LangGraph · RAG · RLHF / DPO · synthetic data</dd>
+          <dd>LLMs · LangChain · LangGraph · RAG · multi-agent systems · synthetic data · RLHF · DPO · RDKit · xTB · MMFF94</dd>
         </div>
         <div class="skill-row">
-          <dt>Evaluation &amp; Reliability</dt>
-          <dd>pass^k · bootstrap and permutation tests · pre-registered experiments · benchmark leakage detection · MCP v2 tool servers</dd>
-        </div>
-        <div class="skill-row">
-          <dt>Engineering &amp; MLOps</dt>
-          <dd>Python · C++ · FastAPI · Docker · Linux · Git · CI/CD</dd>
-        </div>
-        <div class="skill-row">
-          <dt>Scientific Computing</dt>
-          <dd>NumPy · Pandas · SciPy · SQL · numerical methods</dd>
-        </div>
-        <div class="skill-row">
-          <dt>AI Dev Tools</dt>
-          <dd>Claude Code · Cursor · Codex · OpenCode · n8n</dd>
+          <dt>Engineering</dt>
+          <dd>Linux · Git · Docker · FastAPI · Redis · MLOps · GPU computing · reproducible Python pipelines</dd>
         </div>
         <div class="skill-row">
           <dt>Languages</dt>
-          <dd>English (fluent) · Hindi (fluent) · Russian (professional)</dd>
+          <dd>English (native/fluent) · Hindi (fluent) · Russian (professional)</dd>
         </div>
       </dl>
     </section>
@@ -361,44 +371,30 @@
       <ul class="awards">
         <li class="award">
           <div>
-            <span class="award-title">Big Mathematical Workshop, Great Math Track</span>
-            <span class="award-note">Certificate for work on neural detection of genomic mutations · Research Team Lead</span>
-          </div>
-          <span class="year">2026</span>
-        </li>
-        <li class="award">
-          <div>
-            <span class="award-title">Code Sport Tomsk — T-Education</span>
-            <span class="award-note">4th place · team Vibe Compilers</span>
-          </div>
-          <span class="year">2026</span>
-        </li>
-        <li class="award">
-          <div>
             <span class="award-title">Wunder Fund RNN Challenge</span>
-            <span class="award-note">28th place in the global market-state forecasting ranking</span>
+            <span class="award-note">28th globally</span>
           </div>
           <span class="year">2025</span>
         </li>
         <li class="award">
           <div>
-            <span class="award-title">T-Bank Code Gym, Tomsk</span>
-            <span class="award-note">3rd place · team 40 + 40 + 1 = 1001</span>
+            <span class="award-title">T-Bank Code Gym</span>
+            <span class="award-note">3rd place</span>
           </div>
           <span class="year">2025</span>
         </li>
         <li class="award">
           <div>
-            <span class="award-title">AvitoTech ML CUP · Open Data Science</span>
-            <span class="award-note">Certificate of successful completion</span>
+            <span class="award-title">Code Sport Tomsk</span>
+            <span class="award-note">4th place</span>
           </div>
-          <span class="year">2025</span>
+          <span class="year">2026</span>
         </li>
       </ul>
 
       <details class="certs">
         <summary>
-          <span>Certifications <span class="certs-count">05</span></span>
+          <span>Certifications <span class="certs-count">02</span></span>
           <span class="certs-plus" aria-hidden="true">+</span>
         </summary>
         <ul>
@@ -407,20 +403,8 @@
             <span>Jan 2024</span>
           </li>
           <li>
-            <a href="https://www.coursera.org/account/accomplishments/verify/E8GLGGXSYWW8" target="_blank" rel="noopener noreferrer">Neural Networks and Deep Learning — DeepLearning.AI</a>
-            <span>Dec 2023</span>
-          </li>
-          <li>
             <a href="https://www.coursera.org/account/accomplishments/professional-cert/QVWKPA67KJLT" target="_blank" rel="noopener noreferrer">IBM Machine Learning — Coursera</a>
             <span>Jul 2023</span>
-          </li>
-          <li>
-            <a href="https://www.udemy.com/certificate/UC-b790f354-0b71-4521-b78a-7e608fc7fca8/" target="_blank" rel="noopener noreferrer">Python Pro Bootcamp (100 Days of Code) — Udemy</a>
-            <span>Dec 2022</span>
-          </li>
-          <li>
-            <a href="https://www.udemy.com/certificate/UC-073bb1f5-407c-432b-aedd-19b790ea25b7/" target="_blank" rel="noopener noreferrer">Full-Stack Web Development Bootcamp — Udemy</a>
-            <span>May 2022</span>
           </li>
         </ul>
       </details>
@@ -432,10 +416,10 @@
       <h3 class="contact-title">Let's build something useful.</h3>
       <p class="contact-copy">I'm looking for research or ML engineering roles in generative AI, agentic systems, and scientific computing. If you're working on something in that space — or just want to compare notes — I'd love to hear from you.</p>
       <div class="contact-actions">
-        <a class="btn" href="mailto:aayush.kumarm0607@gmail.com">Get in touch <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        <a class="btn" href="mailto:ayushkrm@gmail.com">Get in touch <svg aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
         <a class="text-link" href="/assets/pdf/ayush-kumar-resume.pdf" target="_blank" rel="noopener">Download CV <svg aria-hidden="true"><use href="#i-download"/></svg></a>
       </div>
-      <p class="contact-email"><a href="mailto:aayush.kumarm0607@gmail.com">aayush.kumarm0607@gmail.com</a></p>
+      <p class="contact-email"><a href="mailto:ayushkrm@gmail.com">ayushkrm@gmail.com</a></p>
     </section>
 
     <footer class="footer container">
