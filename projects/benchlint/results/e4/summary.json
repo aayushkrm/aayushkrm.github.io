@@ -1,0 +1,525 @@
+{
+  "datasets": {
+    "passk": {
+      "dataset": "passk-instructions",
+      "exact": {
+        "ci_high": 0.13797620655132792,
+        "ci_low": 0.0,
+        "examples": [],
+        "groups": 0,
+        "matched": 0,
+        "n": 24,
+        "rate": 0.0
+      },
+      "experiment": "E4",
+      "field": "instruction",
+      "files": [
+        {
+          "path": "src/passk/tasks/labstock/t1_01.yaml",
+          "sha256": "94c5a44cdf09100630edecd57babd124fdd84a8555086c2703c5f929e237dd69"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_02.yaml",
+          "sha256": "3b76bbf6ed9dc3e3565cc3302504e5bcc4d861ca61ed56a4cf4814752ef0871f"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_03.yaml",
+          "sha256": "01c6e398bb3ab2d5c31459adab501ebcfe4190b5577b901ed3d6e0ad57966330"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_04.yaml",
+          "sha256": "80a944a6f2ec2b574589b54c9086a7c8cae3565692029c77f25221bd515dcd05"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_05.yaml",
+          "sha256": "db2723d544977a64f435eb0763b809ffca5d4ff89403f121c346112d724e2eb8"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_06.yaml",
+          "sha256": "145a790eb13efabb4339992fd2b3348e49c2c39b29fbb16325eab48fce4eacb1"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_07.yaml",
+          "sha256": "a8e17b54c45d3677297f888fab1b9527d8f73c4cd274aeafbc68a008096c0e51"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t1_08.yaml",
+          "sha256": "1f5b9a1181802486502f7157d5dd80b7c695b4f9550fd8ba2e40e3809d5a28f2"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_01.yaml",
+          "sha256": "05717ccbe210a71512305ec2df0a52196a006ae3b08530e87f367e3b38649416"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_02.yaml",
+          "sha256": "1abb94a17dcbc6410a53a80da57dae2e1b01541693c499f0016b2d3f767ea6fd"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_03.yaml",
+          "sha256": "fc1d273bc47aa3a18dccda7d4d70b41ef03477ce624b3170e10e139f93ac4a63"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_04.yaml",
+          "sha256": "bd7681ba20420e4d073a772138e88607646b02371f09fa634f45471fbb49c203"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_05.yaml",
+          "sha256": "d02af55d629c5130b1c5c90d8bec8edf139037922267edeb2cb902b1cff9fb53"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_06.yaml",
+          "sha256": "b7abb4e947d0443a27b9a701b1b8b2ebd62519208af0b223fb491d770407fe63"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_07.yaml",
+          "sha256": "3f7add005936cf1971624ec47a9a0d0489a1cc4794b124c9e36bf39de7d6e3ce"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t2_08.yaml",
+          "sha256": "c3285b25f827ffc48d75b98f41c763f28efad24cf997d55cdf10d8333f068bb6"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_01.yaml",
+          "sha256": "52ad6a0c80f92693000266696d5b5af9e08b89576baf4437603a8bef6096685a"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_02.yaml",
+          "sha256": "856d00feb7e5b6e50b05418e266f933c7f9f1b3e002afe10321a7bf5214e5b0c"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_03.yaml",
+          "sha256": "896ec2e995e11bd5bd397f9c6fecaddb6acac248ff519704e313383b41063591"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_04.yaml",
+          "sha256": "ced7732dc01e2b4ce0a1b61925cdb8d432c25c78e1883c81230f9b61a4c06d20"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_05.yaml",
+          "sha256": "b621bbc938274ddfdae441f6e01f92f36c0adfd7ad6292d4786c4d8895c828c9"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_06.yaml",
+          "sha256": "23cd0a89ea7905be73cccc8452271da7285d3556673ff8fc8d045700b5028a7b"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_07.yaml",
+          "sha256": "1fe5a5e48f34a9a5a8185c7cec2098afe1752602fe798167ab45f5f6245f8c6a"
+        },
+        {
+          "path": "src/passk/tasks/labstock/t3_08.yaml",
+          "sha256": "ecbe44fc881fd59884b28e4974cc014a1b9174982ad37237c8a33a81602a4657"
+        }
+      ],
+      "instructions_sha256": "4dbaf2cb2c59430aef53e742ca8f598b2ec2ad5571526f3b90b61d9615a0319b",
+      "lsh_missed_pairs_at_threshold": 0,
+      "mode": "full",
+      "n_tasks": 24,
+      "near": {
+        "ci_high": 0.13797620655132792,
+        "ci_low": 0.0,
+        "examples": [],
+        "matched": 0,
+        "n": 24,
+        "rate": 0.0,
+        "threshold": 0.8
+      },
+      "pairwise": {
+        "at_or_above_threshold": {
+          "ci_high": 0.013727268635079129,
+          "ci_low": 8.673617379884035e-19,
+          "matched": 0,
+          "n": 276,
+          "rate": 0.0,
+          "threshold": 0.8
+        },
+        "histogram": {
+          "bin_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8,
+            0.9,
+            1.0
+          ],
+          "counts": [
+            274,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "max": 0.20588235294117646,
+        "median": 0.0,
+        "min": 0.0,
+        "pairs": 276,
+        "top_pairs": [
+          {
+            "a_id": "tasks:t3_03",
+            "a_text": "Order 400 g of Toluene. If that would exceed the remaining budget, order the largest whole number of grams that fits the remaining budget instead.",
+            "b_id": "tasks:t3_04",
+            "b_text": "Order 200 g of Acetonitrile. If that does not fit the remaining budget, order the largest whole number of grams that does fit instead.",
+            "jaccard": 0.205882
+          },
+          {
+            "a_id": "tasks:t1_05",
+            "a_text": "Request approval for compound C09 (Controlled standard CS-41), using the reason 'calibration run 14'.",
+            "b_id": "tasks:t3_01",
+            "b_text": "Order 10 g of compound C09 (Controlled standard CS-41) for a QC run.",
+            "jaccard": 0.105263
+          },
+          {
+            "a_id": "tasks:t3_02",
+            "a_text": "Order 10 g of Controlled standard CS-77 for a QC run.",
+            "b_id": "tasks:t3_08",
+            "b_text": "Order 5 g each of Controlled standard CS-77 and Controlled standard CS-41, both for a QC run.",
+            "jaccard": 0.045455
+          },
+          {
+            "a_id": "tasks:t1_01",
+            "a_text": "Place an order for 25 g of compound C07 (Glycerol).",
+            "b_id": "tasks:t1_02",
+            "b_text": "Place an order for 40 g of compound C03 (Ethanol).",
+            "jaccard": 0.0
+          },
+          {
+            "a_id": "tasks:t1_01",
+            "a_text": "Place an order for 25 g of compound C07 (Glycerol).",
+            "b_id": "tasks:t1_03",
+            "b_text": "Place an order for 15 g of compound C10 (Hexane).",
+            "jaccard": 0.0
+          }
+        ]
+      },
+      "runtime_s": 0.23,
+      "settings": {
+        "lsh_threshold": 0.7,
+        "num_perm": 128,
+        "seed": 0,
+        "shingle": 5,
+        "threshold": 0.8
+      },
+      "sibling": "passk",
+      "word_range": [
+        3,
+        25
+      ]
+    },
+    "quantgate_arc_easy": {
+      "checks": {
+        "exact": {
+          "ci_high": 0.012642971421476655,
+          "ci_low": 8.673617379884035e-19,
+          "examples": [],
+          "matched": 0,
+          "n": 300,
+          "rate": 0.0
+        },
+        "near": {
+          "candidate_jaccard_histogram": {
+            "bin_edges": [
+              0.0,
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9,
+              1.0
+            ],
+            "counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "ci_high": 0.012642971421476655,
+          "ci_low": 8.673617379884035e-19,
+          "examples": [],
+          "matched": 0,
+          "n": 300,
+          "rate": 0.0,
+          "threshold": 0.8
+        }
+      },
+      "config": "ARC-Easy",
+      "dataset": "arc-easy",
+      "eval_split": "test",
+      "experiment": "E4",
+      "mode": "full",
+      "n_eval": 300,
+      "n_train": 2251,
+      "n_train_source": 2251,
+      "runtime_s": 9.242,
+      "settings": {
+        "lsh_threshold": 0.7,
+        "num_perm": 128,
+        "seed": 0,
+        "shingle": 5,
+        "threshold": 0.8
+      },
+      "sibling": "quantgate",
+      "source": "allenai/ai2_arc",
+      "subset": {
+        "file": "data/subsets/arc_easy_test.json",
+        "n_committed": 300,
+        "seed": 2026,
+        "selection": "uniform sample without replacement from the sorted item IDs"
+      },
+      "supplementary": {
+        "checks": {
+          "exact": {
+            "ci_high": 0.012642971421476655,
+            "ci_low": 8.673617379884035e-19,
+            "examples": [],
+            "matched": 0,
+            "n": 300,
+            "rate": 0.0
+          },
+          "near": {
+            "candidate_jaccard_histogram": {
+              "bin_edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "ci_high": 0.012642971421476655,
+            "ci_low": 8.673617379884035e-19,
+            "examples": [],
+            "matched": 0,
+            "n": 300,
+            "rate": 0.0,
+            "threshold": 0.8
+          }
+        },
+        "n_eval": 300,
+        "n_train": 2251,
+        "pre_registered": false,
+        "text": "supplementary, not pre-registered: question only (the E3 ARC text)"
+      },
+      "text": "quantgate prompt text (ARC: question and choice texts; GSM8K: question)",
+      "train_split": "train"
+    },
+    "quantgate_gsm8k": {
+      "checks": {
+        "exact": {
+          "ci_high": 0.03699349876899627,
+          "ci_low": 0.0,
+          "examples": [],
+          "matched": 0,
+          "n": 100,
+          "rate": 0.0
+        },
+        "near": {
+          "candidate_jaccard_histogram": {
+            "bin_edges": [
+              0.0,
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9,
+              1.0
+            ],
+            "counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "ci_high": 0.03699349876899627,
+          "ci_low": 0.0,
+          "examples": [],
+          "matched": 0,
+          "n": 100,
+          "rate": 0.0,
+          "threshold": 0.8
+        }
+      },
+      "config": "main",
+      "dataset": "gsm8k",
+      "eval_split": "test",
+      "experiment": "E4",
+      "mode": "full",
+      "n_eval": 100,
+      "n_train": 7473,
+      "n_train_source": 7473,
+      "runtime_s": 13.855,
+      "settings": {
+        "lsh_threshold": 0.7,
+        "num_perm": 128,
+        "seed": 0,
+        "shingle": 5,
+        "threshold": 0.8
+      },
+      "sibling": "quantgate",
+      "source": "openai/gsm8k",
+      "subset": {
+        "file": "data/subsets/gsm8k_test.json",
+        "n_committed": 100,
+        "seed": 2026,
+        "selection": "uniform sample without replacement from the sorted item IDs"
+      },
+      "supplementary": {
+        "checks": {
+          "exact": {
+            "ci_high": 0.03699349876899627,
+            "ci_low": 0.0,
+            "examples": [],
+            "matched": 0,
+            "n": 100,
+            "rate": 0.0
+          },
+          "near": {
+            "candidate_jaccard_histogram": {
+              "bin_edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            "ci_high": 0.03699349876899627,
+            "ci_low": 0.0,
+            "examples": [],
+            "matched": 0,
+            "n": 100,
+            "rate": 0.0,
+            "threshold": 0.8
+          }
+        },
+        "n_eval": 100,
+        "n_train": 7473,
+        "pre_registered": false,
+        "text": "supplementary, not pre-registered: question and answer (the E3 GSM8K text)"
+      },
+      "text": "quantgate prompt text (ARC: question and choice texts; GSM8K: question)",
+      "train_split": "train"
+    }
+  },
+  "experiment": "E4",
+  "mode": "full",
+  "prereg": "docs/prereg.md",
+  "scope": "dogfooding: sibling inputs, small n",
+  "siblings": {
+    "passk": {
+      "git_dirty": false,
+      "git_dirty_paths": [],
+      "git_sha": "b281cec088adda44accfbbccfcf80eaf0e4c3aaf",
+      "name": "passk"
+    },
+    "quantgate": {
+      "git_dirty": true,
+      "git_dirty_paths": [
+        "README.md",
+        "audit/refusal_audit_ai_labels.csv",
+        "docs/deviations.md",
+        "docs/limitations.md",
+        "results/audit/",
+        "results/bandwidth.json",
+        "results/env.json",
+        "results/fp16/",
+        "results/headline.json",
+        "results/q2_k/",
+        "results/q3_k_m/",
+        "results/q4_0/",
+        "results/q4_k_m/",
+        "results/q5_0/",
+        "results/q5_k_m/",
+        "results/q6_k/",
+        "results/q8_0/",
+        "results/report.json",
+        "scripts/render_readme.py",
+        "src/quantgate/audit.py",
+        "src/quantgate/headline.py",
+        "src/quantgate/interpret.py",
+        "src/quantgate/report.py",
+        "tests/test_interpret.py"
+      ],
+      "git_sha": "312137c290f7848cf423ab6d6b5b16a561532497",
+      "name": "quantgate",
+      "subset_files": [
+        {
+          "path": "data/subsets/arc_easy_test.json",
+          "sha256": "f65bebf6a65f13a418f65308f9f8a2956e06edf1692f40ba2b0e038477c13d7a"
+        },
+        {
+          "path": "data/subsets/gsm8k_test.json",
+          "sha256": "5c8acd96e3735d421c69a70ece76af9f3f3900e75b9a63a74323e06c47fddb25"
+        }
+      ]
+    }
+  }
+}

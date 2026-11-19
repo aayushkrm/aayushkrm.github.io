@@ -1,0 +1,64 @@
+{
+  "accuracy": {
+    "ci_high": 0.5287850229240958,
+    "ci_low": 0.5089123790117168,
+    "value": 0.5187977585328579
+  },
+  "chance": 0.3333333333333333,
+  "config": "mnli",
+  "config_hash": "ea7a3a9c4370a226",
+  "dataset": "mnli",
+  "eval_dropped_by_label": 0,
+  "eval_split": "validation",
+  "experiment": "E2",
+  "flagged": true,
+  "gap_points": -2.0202,
+  "literature": {
+    "citation": "Gururangan et al. (2018), Annotation Artifacts in Natural Language Inference Data, NAACL",
+    "metric": "accuracy",
+    "setting": "MNLI matched dev hypothesis-only accuracy",
+    "status": "reported",
+    "value": 0.539
+  },
+  "majority": 0.31818644931227713,
+  "mode": "full",
+  "n_eval": 9815,
+  "n_train": 100000,
+  "p_value": 0.004975124378109453,
+  "runtime_s": 63.578,
+  "shortcuts": [
+    {
+      "chance": 0.3333333333333333,
+      "ci_high": 0.5287850229240958,
+      "ci_low": 0.5089123790117168,
+      "flagged": true,
+      "majority": 0.31818644931227713,
+      "metric": "accuracy",
+      "n_test": 9815,
+      "n_train": 100000,
+      "p_value": 0.004975124378109453,
+      "value": 0.5187977585328579,
+      "view": "hypothesis_only"
+    },
+    {
+      "chance": 0.3333333333333333,
+      "ci_high": 0.3706597045338767,
+      "ci_low": 0.35200967906265923,
+      "flagged": false,
+      "majority": 0.31818644931227713,
+      "metric": "accuracy",
+      "n_test": 9815,
+      "n_train": 100000,
+      "p_value": 0.004975124378109453,
+      "value": 0.36128374936321955,
+      "view": "hypothesis_length"
+    }
+  ],
+  "smoke_caps": null,
+  "source": "nyu-mll/glue",
+  "spec": "specs/mnli.yaml",
+  "train_dropped_by_label": 0,
+  "train_source_rows": 392702,
+  "train_split": "train",
+  "view": "hypothesis_only"
+}

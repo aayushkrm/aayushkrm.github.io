@@ -1,0 +1,126 @@
+{
+  "checks": {
+    "exact": {
+      "ci_high": 0.012642971421476655,
+      "ci_low": 8.673617379884035e-19,
+      "examples": [],
+      "matched": 0,
+      "n": 300,
+      "rate": 0.0
+    },
+    "near": {
+      "candidate_jaccard_histogram": {
+        "bin_edges": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1.0
+        ],
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ci_high": 0.012642971421476655,
+      "ci_low": 8.673617379884035e-19,
+      "examples": [],
+      "matched": 0,
+      "n": 300,
+      "rate": 0.0,
+      "threshold": 0.8
+    }
+  },
+  "config": "ARC-Easy",
+  "dataset": "arc-easy",
+  "eval_split": "test",
+  "experiment": "E4",
+  "mode": "full",
+  "n_eval": 300,
+  "n_train": 2251,
+  "n_train_source": 2251,
+  "runtime_s": 9.242,
+  "settings": {
+    "lsh_threshold": 0.7,
+    "num_perm": 128,
+    "seed": 0,
+    "shingle": 5,
+    "threshold": 0.8
+  },
+  "sibling": "quantgate",
+  "source": "allenai/ai2_arc",
+  "subset": {
+    "file": "data/subsets/arc_easy_test.json",
+    "n_committed": 300,
+    "seed": 2026,
+    "selection": "uniform sample without replacement from the sorted item IDs"
+  },
+  "supplementary": {
+    "checks": {
+      "exact": {
+        "ci_high": 0.012642971421476655,
+        "ci_low": 8.673617379884035e-19,
+        "examples": [],
+        "matched": 0,
+        "n": 300,
+        "rate": 0.0
+      },
+      "near": {
+        "candidate_jaccard_histogram": {
+          "bin_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8,
+            0.9,
+            1.0
+          ],
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "ci_high": 0.012642971421476655,
+        "ci_low": 8.673617379884035e-19,
+        "examples": [],
+        "matched": 0,
+        "n": 300,
+        "rate": 0.0,
+        "threshold": 0.8
+      }
+    },
+    "n_eval": 300,
+    "n_train": 2251,
+    "pre_registered": false,
+    "text": "supplementary, not pre-registered: question only (the E3 ARC text)"
+  },
+  "text": "quantgate prompt text (ARC: question and choice texts; GSM8K: question)",
+  "train_split": "train"
+}

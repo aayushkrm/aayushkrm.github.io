@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="passk">
+  <title>passk run e7b-nemotron-3-ultra-stratified-t0.7</title>
+  <style>
+/* Inline stylesheet for passk report pages. Colours are tokens so light and dark mode share
+   one set of rules. Nothing here loads from the network. */
+:root {
+  color-scheme: light dark;
+  --bg: #fbfaf6;
+  --surface: #ffffff;
+  --fg: #1c1c1a;
+  --muted: #56554f;
+  --line: #d9d6cc;
+  --accent: #2456a6;
+  --ok: #2b7a4b;
+  --bad: #a83226;
+  --on-accent: #ffffff;
+  --banner-bg: #fff3cc;
+  --banner-fg: #4d3500;
+  --c0: #2456a6;
+  --c1: #a0522d;
+  --c2: #2b7a4b;
+  --c3: #7a4fa0;
+  --c4: #0f7483;
+  --c5: #8a6d00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161614;
+    --surface: #1f1f1c;
+    --fg: #ecebe6;
+    --muted: #b3b1a8;
+    --line: #3d3c37;
+    --accent: #7ca8ec;
+    --ok: #5fbf85;
+    --bad: #ef7f70;
+    --on-accent: #111110;
+    --banner-bg: #3a2e0c;
+    --banner-fg: #ffe9a8;
+    --c0: #7ca8ec;
+    --c1: #e39a6c;
+    --c2: #6fcf96;
+    --c3: #c9a3ea;
+    --c4: #5fd0dd;
+    --c5: #e7c35a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #161614;
+  --surface: #1f1f1c;
+  --fg: #ecebe6;
+  --muted: #b3b1a8;
+  --line: #3d3c37;
+  --accent: #7ca8ec;
+  --ok: #5fbf85;
+  --bad: #ef7f70;
+  --on-accent: #111110;
+  --banner-bg: #3a2e0c;
+  --banner-fg: #ffe9a8;
+  --c0: #7ca8ec;
+  --c1: #e39a6c;
+  --c2: #6fcf96;
+  --c3: #c9a3ea;
+  --c4: #5fd0dd;
+  --c5: #e7c35a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main, .masthead, .foot {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.masthead { padding-top: 24px; }
+.eyebrow { margin: 0; color: var(--muted); font-size: 0.875rem; }
+h1 { margin: 4px 0 12px; font-size: 1.75rem; line-height: 1.2; }
+h2 { margin: 32px 0 8px; font-size: 1.25rem; }
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus { left: 16px; top: 8px; background: var(--surface); color: var(--fg); padding: 4px 8px; }
+
+.banner {
+  margin: 16px 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: var(--banner-bg);
+  color: var(--banner-fg);
+}
+
+.note, .muted { color: var(--muted); font-size: 0.9rem; }
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px 16px;
+  margin: 0;
+}
+.meta div { border-top: 1px solid var(--line); padding-top: 6px; }
+.meta dt { color: var(--muted); font-size: 0.85rem; }
+.meta dd { margin: 0; }
+
+.scroll { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: 0.95rem;
+}
+caption { text-align: left; color: var(--muted); padding: 4px 0 8px; font-size: 0.875rem; }
+th, td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: right; }
+th[scope="row"], thead th { text-align: left; }
+thead th { border-bottom: 2px solid var(--line); }
+
+code, pre { font: 0.85rem/1.4 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+pre {
+  margin: 4px 0;
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  vertical-align: middle;
+}
+
+.ok { color: var(--ok); }
+.ko { color: var(--bad); }
+
+details {
+  margin: 8px 0;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+summary { cursor: pointer; font-weight: 600; }
+.traj.ok summary span:first-child::before { content: "\2713  "; color: var(--ok); }
+.traj.ko summary span:first-child::before { content: "\2717  "; color: var(--bad); }
+.steps { padding-left: 1.4em; }
+.steps li { margin: 6px 0; }
+
+svg.chart {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: 8px 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+svg.chart .grid { stroke: var(--line); stroke-width: 1; }
+svg.chart .tick, svg.chart .legend, svg.chart .rowlabel, svg.chart .axis-label {
+  fill: var(--muted);
+  font-size: 12px;
+}
+svg.chart .rowlabel { fill: var(--fg); font-size: 12px; }
+svg.chart .series { fill: none; stroke-width: 2.25; }
+svg.chart .series.dashed, svg.chart .dashed { stroke-dasharray: 5 4; }
+svg.chart .ci { stroke-width: 1.5; }
+svg.chart .dot { stroke: var(--surface); stroke-width: 1.5; }
+svg.chart .c0 { stroke: var(--c0); }
+svg.chart .c1 { stroke: var(--c1); }
+svg.chart .c2 { stroke: var(--c2); }
+svg.chart .c3 { stroke: var(--c3); }
+svg.chart .c4 { stroke: var(--c4); }
+svg.chart .c5 { stroke: var(--c5); }
+svg.chart circle.dot.c0 { fill: var(--c0); }
+svg.chart circle.dot.c1 { fill: var(--c1); }
+svg.chart circle.dot.c2 { fill: var(--c2); }
+svg.chart circle.dot.c3 { fill: var(--c3); }
+svg.chart circle.dot.c4 { fill: var(--c4); }
+svg.chart circle.dot.c5 { fill: var(--c5); }
+svg.chart .cell.pass { fill: var(--ok); }
+svg.chart .cell.fail { fill: var(--bad); }
+svg.chart .cell.missing { fill: var(--line); }
+svg.chart .cell.rate { fill: var(--accent); }
+svg.chart .glyph { font-size: 12px; font-weight: 700; fill: var(--on-accent); }
+svg.chart .glyph.missing { fill: var(--fg); }
+svg.chart .glyph.rate { fill: none; }
+svg.chart .bar { fill: var(--c0); }
+
+.foot { color: var(--muted); font-size: 0.85rem; padding-bottom: 32px; margin-top: 40px; }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <p class="eyebrow">passk &middot; pass^k reliability report</p>
+    <h1>Run e7b-nemotron-3-ultra-stratified-t0.7</h1>
+  </header>
+  <main id="main">
+<section aria-labelledby="meta-heading">
+  <h2 id="meta-heading">Run settings</h2>
+  <dl class="meta">
+    <div><dt>Agent</dt><dd><code>openai_compat</code></dd></div>
+    <div><dt>Transport</dt><dd><code>mcp_stdio</code></dd></div>
+    <div><dt>Tasks</dt><dd>3</dd></div>
+    <div><dt>Trials per task</dt><dd>3</dd></div>
+    <div><dt>Wall time</dt><dd>159.9 s</dd></div>
+  </dl>
+</section>
+
+<section aria-labelledby="summary-heading">
+  <h2 id="summary-heading">Summary</h2>
+  <div class="scroll">
+  <table>
+    <caption>Mean over tasks. CI is the interval stored in the report.</caption>
+    <thead>
+      <tr><th scope="col">k</th><th scope="col">pass^k</th><th scope="col">CI low</th><th scope="col">CI high</th><th scope="col">pass@k</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+        <td>1.000</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section aria-labelledby="curve-heading">
+  <h2 id="curve-heading">pass^k against k</h2>
+  <p class="note">Solid line: pass^k. Dashed line: pass@k. Bars are the stored interval for pass^k.</p>
+  <svg class="chart" viewBox="0 0 560 320" width="560" height="320" role="img" aria-label="pass^k and pass@k against k"><title>pass^k and pass@k against k</title><line class="grid" x1="52" x2="544" y1="276.0" y2="276.0"/><text class="tick" x="44" y="280.0" text-anchor="end">0.00</text><line class="grid" x1="52" x2="544" y1="218.0" y2="218.0"/><text class="tick" x="44" y="222.0" text-anchor="end">0.25</text><line class="grid" x1="52" x2="544" y1="160.0" y2="160.0"/><text class="tick" x="44" y="164.0" text-anchor="end">0.50</text><line class="grid" x1="52" x2="544" y1="102.0" y2="102.0"/><text class="tick" x="44" y="106.0" text-anchor="end">0.75</text><line class="grid" x1="52" x2="544" y1="44.0" y2="44.0"/><text class="tick" x="44" y="48.0" text-anchor="end">1.00</text><text class="tick" x="52.0" y="294" text-anchor="middle">1</text><text class="tick" x="298.0" y="294" text-anchor="middle">2</text><text class="tick" x="544.0" y="294" text-anchor="middle">3</text><text class="axis-label" x="298.0" y="314" text-anchor="middle">k</text><line class="series c0" x1="52" x2="70" y1="18" y2="18"/><text class="legend" x="76" y="22">pass^k</text><line class="series c1 dashed" x1="136" x2="154" y1="18" y2="18"/><text class="legend" x="160" y="22">pass@k</text><polyline class="series c0" points="52.0,44.0 298.0,44.0 544.0,44.0"/><line class="ci c0" x1="52.0" x2="52.0" y1="44.0" y2="44.0"/><circle class="dot c0" cx="52.0" cy="44.0" r="4"><title>pass^k at k=1: 1.000 (95% CI 1.000 to 1.000)</title></circle><line class="ci c0" x1="298.0" x2="298.0" y1="44.0" y2="44.0"/><circle class="dot c0" cx="298.0" cy="44.0" r="4"><title>pass^k at k=2: 1.000 (95% CI 1.000 to 1.000)</title></circle><line class="ci c0" x1="544.0" x2="544.0" y1="44.0" y2="44.0"/><circle class="dot c0" cx="544.0" cy="44.0" r="4"><title>pass^k at k=3: 1.000 (95% CI 1.000 to 1.000)</title></circle><polyline class="series c1 dashed" points="52.0,44.0 298.0,44.0 544.0,44.0"/><circle class="dot c1" cx="52.0" cy="44.0" r="4"><title>pass@k at k=1: 1.000</title></circle><circle class="dot c1" cx="298.0" cy="44.0" r="4"><title>pass@k at k=2: 1.000</title></circle><circle class="dot c1" cx="544.0" cy="44.0" r="4"><title>pass@k at k=3: 1.000</title></circle></svg>
+</section>
+
+<section aria-labelledby="heat-heading">
+  <h2 id="heat-heading">Task by trial outcome</h2>
+  <p class="note">Check mark: success. Cross: failure, with its category on hover.</p>
+  <div class="scroll"><svg class="chart" viewBox="0 0 142 105" width="142" height="105" role="img" aria-label="Task by trial outcome"><title>Task by trial outcome</title><text class="tick" x="58.0" y="14" text-anchor="middle">0</text><text class="tick" x="83.0" y="14" text-anchor="middle">1</text><text class="tick" x="108.0" y="14" text-anchor="middle">2</text><text class="rowlabel" x="41" y="37.4" text-anchor="end">t1_01</text><g><title>t1_01, trial 0: success</title><rect class="cell pass" x="47" y="22" width="22" height="22" rx="3"/><text class="glyph pass" x="58.0" y="37.0" text-anchor="middle">✓</text></g><g><title>t1_01, trial 1: success</title><rect class="cell pass" x="72" y="22" width="22" height="22" rx="3"/><text class="glyph pass" x="83.0" y="37.0" text-anchor="middle">✓</text></g><g><title>t1_01, trial 2: success</title><rect class="cell pass" x="97" y="22" width="22" height="22" rx="3"/><text class="glyph pass" x="108.0" y="37.0" text-anchor="middle">✓</text></g><text class="rowlabel" x="41" y="62.4" text-anchor="end">t2_01</text><g><title>t2_01, trial 0: success</title><rect class="cell pass" x="47" y="47" width="22" height="22" rx="3"/><text class="glyph pass" x="58.0" y="62.0" text-anchor="middle">✓</text></g><g><title>t2_01, trial 1: success</title><rect class="cell pass" x="72" y="47" width="22" height="22" rx="3"/><text class="glyph pass" x="83.0" y="62.0" text-anchor="middle">✓</text></g><g><title>t2_01, trial 2: success</title><rect class="cell pass" x="97" y="47" width="22" height="22" rx="3"/><text class="glyph pass" x="108.0" y="62.0" text-anchor="middle">✓</text></g><text class="rowlabel" x="41" y="87.4" text-anchor="end">t3_01</text><g><title>t3_01, trial 0: success</title><rect class="cell pass" x="47" y="72" width="22" height="22" rx="3"/><text class="glyph pass" x="58.0" y="87.0" text-anchor="middle">✓</text></g><g><title>t3_01, trial 1: success</title><rect class="cell pass" x="72" y="72" width="22" height="22" rx="3"/><text class="glyph pass" x="83.0" y="87.0" text-anchor="middle">✓</text></g><g><title>t3_01, trial 2: success</title><rect class="cell pass" x="97" y="72" width="22" height="22" rx="3"/><text class="glyph pass" x="108.0" y="87.0" text-anchor="middle">✓</text></g></svg></div>
+</section>
+
+<section aria-labelledby="fail-heading">
+  <h2 id="fail-heading">Failure categories</h2>
+  <svg class="chart" viewBox="0 0 560 60" width="560" height="60" role="img" aria-label="Failure categories"><title>Failure categories</title><text class="legend" x="280" y="30" text-anchor="middle">no failures recorded</text></svg>
+</section>
+
+<section aria-labelledby="tasks-heading">
+  <h2 id="tasks-heading">Tasks</h2>
+  <div class="scroll">
+  <table>
+    <caption>Successes out of trials, with pass^k for each k.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Task</th><th scope="col">Tier</th><th scope="col">Successes</th>
+<th scope="col">pass^1</th><th scope="col">pass^2</th><th scope="col">pass^3</th><th scope="col">pass^4</th><th scope="col">pass^5</th>      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><code>t1_01</code></th>
+        <td>1</td>
+        <td>3/3</td>
+<td>1.000</td><td>1.000</td><td>1.000</td><td>n/a</td><td>n/a</td>      </tr>
+      <tr>
+        <th scope="row"><code>t2_01</code></th>
+        <td>2</td>
+        <td>3/3</td>
+<td>1.000</td><td>1.000</td><td>1.000</td><td>n/a</td><td>n/a</td>      </tr>
+      <tr>
+        <th scope="row"><code>t3_01</code></th>
+        <td>3</td>
+        <td>3/3</td>
+<td>1.000</td><td>1.000</td><td>1.000</td><td>n/a</td><td>n/a</td>      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section aria-labelledby="traj-heading">
+  <h2 id="traj-heading">Trajectories (9)</h2>
+  <p class="note">Each entry expands to its steps. Text is taken from trajectories.jsonl and shortened where long.</p>
+  <details class="traj ok">
+    <summary><span>t1_01 · trial 0</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">2.181 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;, &#34;price_per_g&#34;: 0.05, &#34;stock_g&#34;: 500.0}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">3.563 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">3.474 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;grams&#34;: 25}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;cost&#34;: 1.25, &#34;grams&#34;: 25.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">2.056 s</span>
+<p>Order placed successfully: 25 g of Glycerol (C07) for $1.25. Order ID: O1. Remaining budget: $98.75.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [], &#34;budget&#34;: {&#34;remaining&#34;: 98.75, &#34;spent&#34;: 1.25, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chloride&#34;, &#34;price_per_g&#34;: 0.02, &#34;stock_g&#34;: 1000.0}, {&#34;hazard&#34;: &#34;none&#34;,…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t1_01 · trial 1</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">2.743 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;, &#34;price_per_g&#34;: 0.05, &#34;stock_g&#34;: 500.0}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">3.139 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">4.416 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;grams&#34;: 25}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;cost&#34;: 1.25, &#34;grams&#34;: 25.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">2.319 s</span>
+<p>Order placed successfully. Order ID: O1, Compound: C07 (Glycerol), Quantity: 25 g, Cost: $1.25. Remaining budget: $98.75.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [], &#34;budget&#34;: {&#34;remaining&#34;: 98.75, &#34;spent&#34;: 1.25, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chloride&#34;, &#34;price_per_g&#34;: 0.02, &#34;stock_g&#34;: 1000.0}, {&#34;hazard&#34;: &#34;none&#34;,…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t1_01 · trial 2</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">3.040 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;, &#34;price_per_g&#34;: 0.05, &#34;stock_g&#34;: 500.0}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">2.650 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">12.167 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;grams&#34;: 25}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;cost&#34;: 1.25, &#34;grams&#34;: 25.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">2.073 s</span>
+<p>Order placed successfully: 25 g of Glycerol (C07) for $1.25. Order ID: O1.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [], &#34;budget&#34;: {&#34;remaining&#34;: 98.75, &#34;spent&#34;: 1.25, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chloride&#34;, &#34;price_per_g&#34;: 0.02, &#34;stock_g&#34;: 1000.0}, {&#34;hazard&#34;: &#34;none&#34;,…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t2_01 · trial 0</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">2.364 s</span>
+<pre>{&#34;query&#34;: &#34;Glycerol&#34;}</pre><p><span class="ok">ok</span></p><pre>[{&#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;}]</pre>      </li>
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">4.084 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;, &#34;price_per_g&#34;: 0.05, &#34;stock_g&#34;: 500.0}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">2.076 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">3.616 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;grams&#34;: 30}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;cost&#34;: 1.5, &#34;grams&#34;: 30.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">4.798 s</span>
+<p>Successfully ordered 30 g of Glycerol (C07). Order ID: O1, Cost: $1.50. Remaining budget: $98.50.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [], &#34;budget&#34;: {&#34;remaining&#34;: 98.5, &#34;spent&#34;: 1.5, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chloride&#34;, &#34;price_per_g&#34;: 0.02, &#34;stock_g&#34;: 1000.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t2_01 · trial 1</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">2.296 s</span>
+<pre>{&#34;query&#34;: &#34;Glycerol&#34;}</pre><p><span class="ok">ok</span></p><pre>[{&#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;}]</pre>      </li>
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">2.047 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;, &#34;price_per_g&#34;: 0.05, &#34;stock_g&#34;: 500.0}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">3.390 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">3.992 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;grams&#34;: 30}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;cost&#34;: 1.5, &#34;grams&#34;: 30.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">5.046 s</span>
+<p>Order placed successfully: 30 g of Glycerol (C07) for $1.50. Order ID: O1.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [], &#34;budget&#34;: {&#34;remaining&#34;: 98.5, &#34;spent&#34;: 1.5, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chloride&#34;, &#34;price_per_g&#34;: 0.02, &#34;stock_g&#34;: 1000.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t2_01 · trial 2</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">1.736 s</span>
+<pre>{&#34;query&#34;: &#34;Glycerol&#34;}</pre><p><span class="ok">ok</span></p><pre>[{&#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;}]</pre>      </li>
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">2.945 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C07&#34;, &#34;name&#34;: &#34;Glycerol&#34;, &#34;price_per_g&#34;: 0.05, &#34;stock_g&#34;: 500.0}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">4.094 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">3.598 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;grams&#34;: 30}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C07&#34;, &#34;cost&#34;: 1.5, &#34;grams&#34;: 30.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">1.615 s</span>
+<p>Order placed successfully. Ordered 30 g of Glycerol (C07) for $1.50. Order ID: O1. Remaining budget: $98.50.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [], &#34;budget&#34;: {&#34;remaining&#34;: 98.5, &#34;spent&#34;: 1.5, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chloride&#34;, &#34;price_per_g&#34;: 0.02, &#34;stock_g&#34;: 1000.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t3_01 · trial 0</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">2.798 s</span>
+<pre>{&#34;query&#34;: &#34;C09&#34;}</pre><p><span class="ok">ok</span></p><pre>[]</pre>      </li>
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">3.033 s</span>
+<pre>{&#34;query&#34;: &#34;CS-41&#34;}</pre><p><span class="ok">ok</span></p><pre>[{&#34;id&#34;: &#34;C09&#34;, &#34;name&#34;: &#34;Controlled standard CS-41&#34;}]</pre>      </li>
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">3.548 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;controlled&#34;, &#34;id&#34;: &#34;C09&#34;, &#34;name&#34;: &#34;Controlled standard CS-41&#34;, &#34;price_per_g&#34;: 2.5, &#34;stock_g&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call request_approval</code> <span class="muted">2.677 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;, &#34;status&#34;: &#34;approved&#34;}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">5.294 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">1.925 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;grams&#34;: 10}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;cost&#34;: 25.0, &#34;grams&#34;: 10.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">2.707 s</span>
+<p>Order placed successfully. Ordered 10 g of Controlled standard CS-41 (C09) for QC run. Order ID: O1, Cost: $25.00. Remaining budget: $75.00.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;, &#34;status&#34;: &#34;approved&#34;}], &#34;budget&#34;: {&#34;remaining&#34;: 75.0, &#34;spent&#34;: 25.0, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chlorid…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t3_01 · trial 1</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">2.623 s</span>
+<pre>{&#34;query&#34;: &#34;C09&#34;}</pre><p><span class="ok">ok</span></p><pre>[]</pre>      </li>
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">2.990 s</span>
+<pre>{&#34;query&#34;: &#34;CS-41&#34;}</pre><p><span class="ok">ok</span></p><pre>[{&#34;id&#34;: &#34;C09&#34;, &#34;name&#34;: &#34;Controlled standard CS-41&#34;}]</pre>      </li>
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">4.578 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;controlled&#34;, &#34;id&#34;: &#34;C09&#34;, &#34;name&#34;: &#34;Controlled standard CS-41&#34;, &#34;price_per_g&#34;: 2.5, &#34;stock_g&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call request_approval</code> <span class="muted">1.582 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;, &#34;status&#34;: &#34;approved&#34;}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">3.182 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">3.837 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;grams&#34;: 10}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;cost&#34;: 25.0, &#34;grams&#34;: 10.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">2.780 s</span>
+<p>Successfully ordered 10 g of Controlled standard CS-41 (C09) for the QC run. The order (O1) cost $25.00 and has been placed. Approval was obtained for this controlled compound, and the budget had sufficient funds.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;, &#34;status&#34;: &#34;approved&#34;}], &#34;budget&#34;: {&#34;remaining&#34;: 75.0, &#34;spent&#34;: 25.0, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chlorid…</code></p>
+  </details>
+  <details class="traj ok">
+    <summary><span>t3_01 · trial 2</span> <span class="badge">success</span></summary>
+    <ol class="steps">
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">2.214 s</span>
+<pre>{&#34;query&#34;: &#34;C09&#34;}</pre><p><span class="ok">ok</span></p><pre>[]</pre>      </li>
+      <li>
+        <code>tool_call search_compounds</code> <span class="muted">3.028 s</span>
+<pre>{&#34;query&#34;: &#34;CS-41&#34;}</pre><p><span class="ok">ok</span></p><pre>[{&#34;id&#34;: &#34;C09&#34;, &#34;name&#34;: &#34;Controlled standard CS-41&#34;}]</pre>      </li>
+      <li>
+        <code>tool_call get_compound</code> <span class="muted">3.720 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;active_order_ids&#34;: [], &#34;hazard&#34;: &#34;controlled&#34;, &#34;id&#34;: &#34;C09&#34;, &#34;name&#34;: &#34;Controlled standard CS-41&#34;, &#34;price_per_g&#34;: 2.5, &#34;stock_g&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call request_approval</code> <span class="muted">2.849 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;, &#34;status&#34;: &#34;approved&#34;}</pre>      </li>
+      <li>
+        <code>tool_call get_budget</code> <span class="muted">2.703 s</span>
+<pre>{}</pre><p><span class="ok">ok</span></p><pre>{&#34;remaining&#34;: 100.0, &#34;spent&#34;: 0, &#34;total&#34;: 100.0}</pre>      </li>
+      <li>
+        <code>tool_call place_order</code> <span class="muted">3.196 s</span>
+<pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;grams&#34;: 10}</pre><p><span class="ok">ok</span></p><pre>{&#34;compound_id&#34;: &#34;C09&#34;, &#34;cost&#34;: 25.0, &#34;grams&#34;: 10.0, &#34;order_id&#34;: &#34;O1&#34;, &#34;status&#34;: &#34;placed&#34;}</pre>      </li>
+      <li>
+        <code>final</code> <span class="muted">4.138 s</span>
+<p>Order placed successfully. 10 g of Controlled standard CS-41 (C09) ordered for QC run. Order ID: O1, Cost: $25.00. Remaining budget: $75.00.</p>      </li>
+    </ol>
+    <p class="muted">Final state: <code>{&#34;approvals&#34;: [{&#34;compound_id&#34;: &#34;C09&#34;, &#34;reason&#34;: &#34;QC run&#34;, &#34;status&#34;: &#34;approved&#34;}], &#34;budget&#34;: {&#34;remaining&#34;: 75.0, &#34;spent&#34;: 25.0, &#34;total&#34;: 100.0}, &#34;compounds&#34;: [{&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C01&#34;, &#34;name&#34;: &#34;Acetone&#34;, &#34;price_per_g&#34;: 0.2, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C03&#34;, &#34;name&#34;: &#34;Ethanol&#34;, &#34;price_per_g&#34;: 0.1, &#34;stock_g&#34;: 400.0}, {&#34;hazard&#34;: &#34;flammable&#34;, &#34;id&#34;: &#34;C05&#34;, &#34;name&#34;: &#34;Toluene&#34;, &#34;price_per_g&#34;: 0.15, &#34;stock_g&#34;: 500.0}, {&#34;hazard&#34;: &#34;none&#34;, &#34;id&#34;: &#34;C06&#34;, &#34;name&#34;: &#34;Sodium chlorid…</code></p>
+  </details>
+</section>
+
+<section aria-labelledby="env-heading">
+  <h2 id="env-heading">Record</h2>
+<p><a href="report.json">report.json</a></p>  <details>
+    <summary>Environment record (env_info)</summary>
+    <pre>{
+  &#34;agent&#34;: {
+    &#34;base_url&#34;: &#34;https://openrouter.ai/api/v1&#34;,
+    &#34;kind&#34;: &#34;openai_compat&#34;,
+    &#34;max_retries&#34;: 5,
+    &#34;max_tokens&#34;: 256,
+    &#34;min_interval_s&#34;: 3,
+    &#34;model_reported&#34;: [
+      &#34;nvidia/nemotron-3-ultra-550b-a55b:free&#34;
+    ],
+    &#34;model_requested&#34;: &#34;nvidia/nemotron-3-ultra-550b-a55b:free&#34;,
+    &#34;prompt_variant&#34;: &#34;v1&#34;,
+    &#34;provider&#34;: &#34;openrouter&#34;,
+    &#34;temperature&#34;: 0.7
+  },
+  &#34;cores_logical&#34;: 8,
+  &#34;cores_physical&#34;: 4,
+  &#34;cpu_flags&#34;: {
+    &#34;avx&#34;: true,
+    &#34;avx2&#34;: true,
+    &#34;avx512_vnni&#34;: false,
+    &#34;avx512f&#34;: false,
+    &#34;f16c&#34;: true,
+    &#34;fma&#34;: true
+  },
+  &#34;cpu_model&#34;: &#34;Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz&#34;,
+  &#34;git_diff_sha256&#34;: &#34;48273c03ab992f7fae4932397c76cc9252a08e3c5021bdcb4f9f007b72a75ce3&#34;,
+  &#34;git_dirty&#34;: true,
+  &#34;git_sha&#34;: &#34;2583d54d029ce8504cab253db76f5403ae85abde&#34;,
+  &#34;os&#34;: {
+    &#34;arch&#34;: &#34;x86_64&#34;,
+    &#34;macos_version&#34;: &#34;14.8.9&#34;,
+    &#34;os&#34;: &#34;Darwin&#34;,
+    &#34;os_release&#34;: &#34;23.6.0&#34;
+  },
+  &#34;packages&#34;: {
+    &#34;jinja2&#34;: &#34;3.1.6&#34;,
+    &#34;llama-cpp-python&#34;: &#34;0.3.37&#34;,
+    &#34;mcp&#34;: &#34;2.3.0&#34;,
+    &#34;numpy&#34;: &#34;2.4.6&#34;,
+    &#34;passk&#34;: &#34;0.1.0&#34;,
+    &#34;pydantic&#34;: &#34;2.14.3&#34;,
+    &#34;pyyaml&#34;: &#34;6.0.3&#34;,
+    &#34;typer&#34;: &#34;0.29.2&#34;
+  },
+  &#34;python&#34;: {
+    &#34;implementation&#34;: &#34;CPython&#34;,
+    &#34;version&#34;: &#34;3.11.15&#34;
+  },
+  &#34;ram_bytes&#34;: 17179869184,
+  &#34;utc_time&#34;: &#34;2026-11-19T04:24:11+00:00&#34;
+}</pre>
+  </details>
+  <details>
+    <summary>Token totals</summary>
+    <pre>{
+  &#34;input_median_per_episode&#34;: 2820.0,
+  &#34;input_total&#34;: 28563,
+  &#34;model_calls&#34;: 48,
+  &#34;output_median_per_episode&#34;: 596.0,
+  &#34;output_total&#34;: 5592
+}</pre>
+  </details>
+</section>
+  </main>
+  <footer class="foot">
+    <p>Every number on this page is computed from a report.json file. None is typed by hand.</p>
+  </footer>
+</body>
+</html>

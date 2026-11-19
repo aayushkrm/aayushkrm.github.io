@@ -1,0 +1,126 @@
+{
+  "checks": {
+    "exact": {
+      "ci_high": 0.03699349876899627,
+      "ci_low": 0.0,
+      "examples": [],
+      "matched": 0,
+      "n": 100,
+      "rate": 0.0
+    },
+    "near": {
+      "candidate_jaccard_histogram": {
+        "bin_edges": [
+          0.0,
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1.0
+        ],
+        "counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ci_high": 0.03699349876899627,
+      "ci_low": 0.0,
+      "examples": [],
+      "matched": 0,
+      "n": 100,
+      "rate": 0.0,
+      "threshold": 0.8
+    }
+  },
+  "config": "main",
+  "dataset": "gsm8k",
+  "eval_split": "test",
+  "experiment": "E4",
+  "mode": "full",
+  "n_eval": 100,
+  "n_train": 7473,
+  "n_train_source": 7473,
+  "runtime_s": 13.855,
+  "settings": {
+    "lsh_threshold": 0.7,
+    "num_perm": 128,
+    "seed": 0,
+    "shingle": 5,
+    "threshold": 0.8
+  },
+  "sibling": "quantgate",
+  "source": "openai/gsm8k",
+  "subset": {
+    "file": "data/subsets/gsm8k_test.json",
+    "n_committed": 100,
+    "seed": 2026,
+    "selection": "uniform sample without replacement from the sorted item IDs"
+  },
+  "supplementary": {
+    "checks": {
+      "exact": {
+        "ci_high": 0.03699349876899627,
+        "ci_low": 0.0,
+        "examples": [],
+        "matched": 0,
+        "n": 100,
+        "rate": 0.0
+      },
+      "near": {
+        "candidate_jaccard_histogram": {
+          "bin_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            0.8,
+            0.9,
+            1.0
+          ],
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "ci_high": 0.03699349876899627,
+        "ci_low": 0.0,
+        "examples": [],
+        "matched": 0,
+        "n": 100,
+        "rate": 0.0,
+        "threshold": 0.8
+      }
+    },
+    "n_eval": 100,
+    "n_train": 7473,
+    "pre_registered": false,
+    "text": "supplementary, not pre-registered: question and answer (the E3 GSM8K text)"
+  },
+  "text": "quantgate prompt text (ARC: question and choice texts; GSM8K: question)",
+  "train_split": "train"
+}

@@ -1,0 +1,28 @@
+# passk reports
+
+> Pass^k reliability reports for tool-using agents. Every number is computed from
+> the report.json file next to it. Runs marked SYNTHETIC are scripted or fixture data.
+
+## Runs
+
+- e3-qwen2.5-0.5b-t0.7: pass^1 0.092, pass^2 0.083, pass^3 0.083, pass^4 0.083, pass^5 0.083
+  - page: runs/e3-qwen2.5-0.5b-t0.7/index.html
+  - data: runs/e3-qwen2.5-0.5b-t0.7/report.json
+- e3-qwen2.5-1.5b-t0.7: pass^1 0.383, pass^2 0.229, pass^3 0.138, pass^4 0.067, pass^5 0.000
+  - page: runs/e3-qwen2.5-1.5b-t0.7/index.html
+  - data: runs/e3-qwen2.5-1.5b-t0.7/report.json
+- e3-qwen3-1.7b-q8-t0.7: pass^1 0.350, pass^2 0.333, pass^3 0.333, pass^4 0.333, pass^5 0.333
+  - page: runs/e3-qwen3-1.7b-q8-t0.7/index.html
+  - data: runs/e3-qwen3-1.7b-q8-t0.7/report.json
+- e4-qwen2.5-0.5b-t0: pass^1 0.083, pass^2 0.083, pass^3 0.083
+  - page: runs/e4-qwen2.5-0.5b-t0/index.html
+  - data: runs/e4-qwen2.5-0.5b-t0/report.json
+- e5-qwen2.5-1.5b-v2-t0.7: pass^1 0.592, pass^2 0.488, pass^3 0.396, pass^4 0.317, pass^5 0.250
+  - page: runs/e5-qwen2.5-1.5b-v2-t0.7/index.html
+  - data: runs/e5-qwen2.5-1.5b-v2-t0.7/report.json
+- e6-qwen2.5-1.5b-flaky0.2: pass^1 0.403, pass^2 0.236, pass^3 0.125
+  - page: runs/e6-qwen2.5-1.5b-flaky0.2/index.html
+  - data: runs/e6-qwen2.5-1.5b-flaky0.2/report.json
+- e7b-nemotron-3-ultra-stratified-t0.7: pass^1 1.000, pass^2 1.000, pass^3 1.000
+  - page: runs/e7b-nemotron-3-ultra-stratified-t0.7/index.html
+  - data: runs/e7b-nemotron-3-ultra-stratified-t0.7/report.json

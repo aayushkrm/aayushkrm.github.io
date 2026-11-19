@@ -1,0 +1,432 @@
+{
+  "all_near": {
+    "ci_high": 0.08675939269633032,
+    "ci_low": 0.05764621619742149,
+    "found": 85,
+    "low_n": false,
+    "n": 1200,
+    "recall": 0.07083333333333333
+  },
+  "below_threshold": {
+    "ci_high": 0.0034426565268038285,
+    "ci_low": 0.0,
+    "found": 0,
+    "low_n": false,
+    "n": 1112,
+    "recall": 0.0
+  },
+  "bound": {
+    "lengths": [
+      35,
+      50,
+      100
+    ],
+    "rows": [
+      {
+        "edits": 1,
+        "guaranteed_length_words": 49,
+        "lower_bound_by_length": {
+          "100": 0.901,
+          "35": 0.7222,
+          "50": 0.8039
+        }
+      },
+      {
+        "edits": 3,
+        "guaranteed_length_words": 139,
+        "lower_bound_by_length": {
+          "100": 0.7297,
+          "35": 0.3478,
+          "50": 0.5082
+        }
+      },
+      {
+        "edits": 5,
+        "guaranteed_length_words": 229,
+        "lower_bound_by_length": {
+          "100": 0.5868,
+          "35": 0.1071,
+          "50": 0.2958
+        }
+      },
+      {
+        "edits": 10,
+        "guaranteed_length_words": 454,
+        "lower_bound_by_length": {
+          "100": 0.3151,
+          "35": 0.0,
+          "50": 0.0
+        }
+      }
+    ],
+    "rule": "lower bound (S - 5k) / (S + 5k), S = words - shingle + 1; arithmetic only",
+    "shingle": 5
+  },
+  "by_edit_size": [
+    {
+      "edit": "all",
+      "found_all": 85,
+      "lsh_recall": {
+        "ci_high": 0.9883390028911263,
+        "ci_low": 0.9045039571274427,
+        "found": 85,
+        "low_n": false,
+        "n": 88,
+        "recall": 0.9659090909090909
+      },
+      "planted_all": 1200,
+      "size": "all"
+    },
+    {
+      "edit": "all",
+      "found_all": 84,
+      "lsh_recall": {
+        "ci_high": 0.988204179564256,
+        "ci_low": 0.9034591754446504,
+        "found": 84,
+        "low_n": false,
+        "n": 87,
+        "recall": 0.9655172413793104
+      },
+      "planted_all": 300,
+      "size": 1
+    },
+    {
+      "edit": "all",
+      "found_all": 1,
+      "lsh_recall": {
+        "ci_high": 1.0,
+        "ci_low": 0.2065493117918027,
+        "found": 1,
+        "low_n": true,
+        "n": 1,
+        "recall": 1.0
+      },
+      "planted_all": 300,
+      "size": 3
+    },
+    {
+      "edit": "all",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 300,
+      "size": 5
+    },
+    {
+      "edit": "all",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 300,
+      "size": 10
+    },
+    {
+      "edit": "substitution",
+      "found_all": 22,
+      "lsh_recall": {
+        "ci_high": 0.9922833339420488,
+        "ci_low": 0.7900884474454931,
+        "found": 22,
+        "low_n": false,
+        "n": 23,
+        "recall": 0.9565217391304348
+      },
+      "planted_all": 400,
+      "size": "all"
+    },
+    {
+      "edit": "substitution",
+      "found_all": 22,
+      "lsh_recall": {
+        "ci_high": 0.9922833339420488,
+        "ci_low": 0.7900884474454931,
+        "found": 22,
+        "low_n": false,
+        "n": 23,
+        "recall": 0.9565217391304348
+      },
+      "planted_all": 100,
+      "size": 1
+    },
+    {
+      "edit": "substitution",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 3
+    },
+    {
+      "edit": "substitution",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 5
+    },
+    {
+      "edit": "substitution",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 10
+    },
+    {
+      "edit": "deletion",
+      "found_all": 36,
+      "lsh_recall": {
+        "ci_high": 0.9952130256010299,
+        "ci_low": 0.8617593000381216,
+        "found": 36,
+        "low_n": false,
+        "n": 37,
+        "recall": 0.972972972972973
+      },
+      "planted_all": 400,
+      "size": "all"
+    },
+    {
+      "edit": "deletion",
+      "found_all": 35,
+      "lsh_recall": {
+        "ci_high": 0.9950795929146393,
+        "ci_low": 0.8583028121147521,
+        "found": 35,
+        "low_n": false,
+        "n": 36,
+        "recall": 0.9722222222222222
+      },
+      "planted_all": 100,
+      "size": 1
+    },
+    {
+      "edit": "deletion",
+      "found_all": 1,
+      "lsh_recall": {
+        "ci_high": 1.0,
+        "ci_low": 0.2065493117918027,
+        "found": 1,
+        "low_n": true,
+        "n": 1,
+        "recall": 1.0
+      },
+      "planted_all": 100,
+      "size": 3
+    },
+    {
+      "edit": "deletion",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 5
+    },
+    {
+      "edit": "deletion",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 10
+    },
+    {
+      "edit": "insertion",
+      "found_all": 27,
+      "lsh_recall": {
+        "ci_high": 0.9936674802210836,
+        "ci_low": 0.8228780209422653,
+        "found": 27,
+        "low_n": false,
+        "n": 28,
+        "recall": 0.9642857142857143
+      },
+      "planted_all": 400,
+      "size": "all"
+    },
+    {
+      "edit": "insertion",
+      "found_all": 27,
+      "lsh_recall": {
+        "ci_high": 0.9936674802210836,
+        "ci_low": 0.8228780209422653,
+        "found": 27,
+        "low_n": false,
+        "n": 28,
+        "recall": 0.9642857142857143
+      },
+      "planted_all": 100,
+      "size": 1
+    },
+    {
+      "edit": "insertion",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 3
+    },
+    {
+      "edit": "insertion",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 5
+    },
+    {
+      "edit": "insertion",
+      "found_all": 0,
+      "lsh_recall": {
+        "ci_high": 0.0,
+        "ci_low": 0.0,
+        "found": 0,
+        "low_n": true,
+        "n": 0,
+        "recall": 0.0
+      },
+      "planted_all": 100,
+      "size": 10
+    }
+  ],
+  "by_true_jaccard": [
+    {
+      "bin": "[0.0, 0.5)",
+      "ci_high": 0.005457846838692503,
+      "ci_low": 0.0,
+      "found": 0,
+      "high": 0.5,
+      "low": 0.0,
+      "low_n": false,
+      "n": 700,
+      "recall": 0.0
+    },
+    {
+      "bin": "[0.5, 0.6)",
+      "ci_high": 0.02563682247874531,
+      "ci_low": 0.0,
+      "found": 0,
+      "high": 0.6,
+      "low": 0.5,
+      "low_n": false,
+      "n": 146,
+      "recall": 0.0
+    },
+    {
+      "bin": "[0.6, 0.7)",
+      "ci_high": 0.045278086114368794,
+      "ci_low": 0.0,
+      "found": 0,
+      "high": 0.7,
+      "low": 0.6,
+      "low_n": false,
+      "n": 81,
+      "recall": 0.0
+    },
+    {
+      "bin": "[0.7, 0.8)",
+      "ci_high": 0.020342243192003222,
+      "ci_low": 0.0,
+      "found": 0,
+      "high": 0.8,
+      "low": 0.7,
+      "low_n": false,
+      "n": 185,
+      "recall": 0.0
+    },
+    {
+      "bin": "[0.8, 0.9)",
+      "ci_high": 0.9836738312590775,
+      "ci_low": 0.8690903207207067,
+      "found": 60,
+      "high": 0.9,
+      "low": 0.8,
+      "low_n": false,
+      "n": 63,
+      "recall": 0.9523809523809523
+    },
+    {
+      "bin": "[0.9, 1.0]",
+      "ci_high": 1.0,
+      "ci_low": 0.866807747239609,
+      "found": 25,
+      "high": 1.0,
+      "low": 0.9,
+      "low_n": false,
+      "n": 25,
+      "recall": 1.0
+    }
+  ],
+  "config_hash": "980036a65660598e",
+  "experiment": "E1",
+  "found_below_threshold": 0,
+  "lsh_recall_at_threshold": {
+    "ci_high": 0.9883390028911263,
+    "ci_low": 0.9045039571274427,
+    "found": 85,
+    "low_n": false,
+    "n": 88,
+    "recall": 0.9659090909090909
+  },
+  "missed_at_or_above_threshold": 3,
+  "mode": "full",
+  "near_planted": 1200,
+  "record": "summary",
+  "shingle": 5,
+  "threshold": 0.8
+}

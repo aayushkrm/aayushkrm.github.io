@@ -1,0 +1,605 @@
+{
+  "datasets": [
+    {
+      "config_hash": "7090490cc6ba3031",
+      "error": null,
+      "findings": [
+        {
+          "check": "exact",
+          "ci_high": 0.0005137809732120185,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 7473,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "train"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.002903945030982515,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 1319,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.002903945030982515,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 1319,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "train",
+            "test"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.00043673580285115535,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 8792,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.00043673580285115535,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 8792,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test",
+            "train"
+          ]
+        }
+      ],
+      "n_records": 8792,
+      "name": "gsm8k",
+      "report": "gsm8k.json",
+      "runtime_s": 42.203,
+      "shortcut_flagged": 0,
+      "spec": "specs/gsm8k.yaml",
+      "status": "ok"
+    },
+    {
+      "config_hash": "a5da0767771d20d2",
+      "error": null,
+      "findings": [
+        {
+          "check": "exact",
+          "ci_high": 0.005803361929518412,
+          "ci_low": 0.001222169208779662,
+          "count": 6,
+          "denominator": 2251,
+          "n_examples": 5,
+          "rate": 0.0026654820079964462,
+          "severity": "low",
+          "splits": [
+            "train"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.004916937773809265,
+          "ci_low": 0.000899188686901494,
+          "count": 5,
+          "denominator": 2376,
+          "n_examples": 5,
+          "rate": 0.0021043771043771043,
+          "severity": "low",
+          "splits": [
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.006069071221250382,
+          "ci_low": 0.001427839471986647,
+          "count": 7,
+          "denominator": 2376,
+          "n_examples": 5,
+          "rate": 0.002946127946127946,
+          "severity": "medium",
+          "splits": [
+            "train",
+            "test"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.006404912628533065,
+          "ci_low": 0.002630477430232611,
+          "count": 19,
+          "denominator": 4627,
+          "n_examples": 5,
+          "rate": 0.004106332396801383,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.008476925999379816,
+          "ci_low": 0.0040135596704252464,
+          "count": 27,
+          "denominator": 4627,
+          "n_examples": 5,
+          "rate": 0.005835314458612492,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "labels",
+          "ci_high": 0.007706661839117765,
+          "ci_low": 0.0034881629765475286,
+          "count": 24,
+          "denominator": 4627,
+          "n_examples": 5,
+          "rate": 0.005186946185433326,
+          "severity": "medium",
+          "splits": [
+            "train",
+            "test"
+          ]
+        }
+      ],
+      "n_records": 4627,
+      "name": "arc-easy",
+      "report": "arc-easy.json",
+      "runtime_s": 19.654,
+      "shortcut_flagged": 0,
+      "spec": "specs/arc-easy.yaml",
+      "status": "ok"
+    },
+    {
+      "config_hash": "e83a804683698017",
+      "error": null,
+      "findings": [
+        {
+          "check": "exact",
+          "ci_high": 0.002153973378474596,
+          "ci_low": 0.0016612499786724598,
+          "count": 227,
+          "denominator": 120000,
+          "n_examples": 5,
+          "rate": 0.0018916666666666667,
+          "severity": "low",
+          "splits": [
+            "train"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.0007449974151084947,
+          "ci_low": 2.322729247968995e-05,
+          "count": 1,
+          "denominator": 7600,
+          "n_examples": 1,
+          "rate": 0.00013157894736842105,
+          "severity": "low",
+          "splits": [
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.0035795320858121923,
+          "ci_low": 0.0013970917806805964,
+          "count": 17,
+          "denominator": 7600,
+          "n_examples": 5,
+          "rate": 0.0022368421052631577,
+          "severity": "medium",
+          "splits": [
+            "train",
+            "test"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.0018669494227523684,
+          "ci_low": 0.001423245089272448,
+          "count": 208,
+          "denominator": 127600,
+          "n_examples": 5,
+          "rate": 0.0016300940438871473,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.015169062591320533,
+          "ci_low": 0.013857034245072996,
+          "count": 1850,
+          "denominator": 127600,
+          "n_examples": 5,
+          "rate": 0.014498432601880877,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "labels",
+          "ci_high": 0.0018167257605172032,
+          "ci_low": 0.001379427695511138,
+          "count": 202,
+          "denominator": 127600,
+          "n_examples": 5,
+          "rate": 0.0015830721003134796,
+          "severity": "medium",
+          "splits": [
+            "train",
+            "test"
+          ]
+        }
+      ],
+      "n_records": 127600,
+      "name": "ag-news",
+      "report": "ag-news.json",
+      "runtime_s": 390.838,
+      "shortcut_flagged": 0,
+      "spec": "specs/ag-news.yaml",
+      "status": "ok"
+    },
+    {
+      "config_hash": "f41995c5cb3a32b6",
+      "error": null,
+      "findings": [
+        {
+          "check": "exact",
+          "ci_high": 0.004686618625477722,
+          "ci_low": 0.003145836207646876,
+          "count": 96,
+          "denominator": 25000,
+          "n_examples": 5,
+          "rate": 0.00384,
+          "severity": "low",
+          "splits": [
+            "train"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.009139638176999924,
+          "ci_low": 0.006931550705801242,
+          "count": 199,
+          "denominator": 25000,
+          "n_examples": 5,
+          "rate": 0.00796,
+          "severity": "low",
+          "splits": [
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.005866664366265939,
+          "ci_low": 0.004125458615803,
+          "count": 123,
+          "denominator": 25000,
+          "n_examples": 5,
+          "rate": 0.00492,
+          "severity": "medium",
+          "splits": [
+            "train",
+            "test"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.005572490711765675,
+          "ci_low": 0.0043435766225616654,
+          "count": 246,
+          "denominator": 50000,
+          "n_examples": 5,
+          "rate": 0.00492,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.013719610214946476,
+          "ci_low": 0.011755261749216315,
+          "count": 635,
+          "denominator": 50000,
+          "n_examples": 5,
+          "rate": 0.0127,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "labels",
+          "ci_high": 7.682327535685181e-05,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 50000,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "train",
+            "test"
+          ]
+        }
+      ],
+      "n_records": 50000,
+      "name": "imdb",
+      "report": "imdb.json",
+      "runtime_s": 631.934,
+      "shortcut_flagged": 0,
+      "spec": "specs/imdb.yaml",
+      "status": "ok"
+    },
+    {
+      "config_hash": "f42411a2c72d17ee",
+      "error": null,
+      "findings": [
+        {
+          "check": "exact",
+          "ci_high": 0.00045169618661957246,
+          "ci_low": 0.00022669234217699845,
+          "count": 32,
+          "denominator": 100000,
+          "n_examples": 5,
+          "rate": 0.00032,
+          "severity": "low",
+          "splits": [
+            "train"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.0007406939555008301,
+          "ci_low": 5.572948012363125e-05,
+          "count": 2,
+          "denominator": 9842,
+          "n_examples": 2,
+          "rate": 0.000203210729526519,
+          "severity": "low",
+          "splits": [
+            "validation"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.00039087513747228014,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 9824,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.00039016054618987075,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 9842,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "train",
+            "validation"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.00039087513747228014,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 9824,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "train",
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.00039087513747228014,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 9824,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "validation",
+            "test"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 3.210047606368668e-05,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 119666,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test",
+            "train",
+            "validation"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.029394495682378757,
+          "ci_low": 0.027510747742892805,
+          "count": 3403,
+          "denominator": 119666,
+          "n_examples": 5,
+          "rate": 0.028437484331389033,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train",
+            "validation"
+          ]
+        },
+        {
+          "check": "labels",
+          "ci_high": 0.027101210831705944,
+          "ci_low": 0.025291617490337256,
+          "count": 3133,
+          "denominator": 119666,
+          "n_examples": 5,
+          "rate": 0.026181204352113383,
+          "severity": "high",
+          "splits": [
+            "train",
+            "validation",
+            "test"
+          ]
+        }
+      ],
+      "n_records": 119666,
+      "name": "snli",
+      "report": "snli.json",
+      "runtime_s": 274.535,
+      "shortcut_flagged": 1,
+      "spec": "specs/snli.yaml",
+      "status": "ok"
+    },
+    {
+      "config_hash": "f9ab8ddfb31d7c35",
+      "error": null,
+      "findings": [
+        {
+          "check": "exact",
+          "ci_high": 0.010166853824537147,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 374,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "train"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.007624340580914839,
+          "ci_low": 4.336808689942018e-19,
+          "count": 0,
+          "denominator": 500,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test"
+          ]
+        },
+        {
+          "check": "exact",
+          "ci_high": 0.011240706827931778,
+          "ci_low": 0.0003531363906594037,
+          "count": 1,
+          "denominator": 500,
+          "n_examples": 1,
+          "rate": 0.002,
+          "severity": "medium",
+          "splits": [
+            "train",
+            "test"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.008304892583924785,
+          "ci_low": 0.0006277669549502678,
+          "count": 2,
+          "denominator": 874,
+          "n_examples": 1,
+          "rate": 0.002288329519450801,
+          "severity": "medium",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "near",
+          "ci_high": 0.0043760280884790745,
+          "ci_low": 0.0,
+          "count": 0,
+          "denominator": 874,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test",
+            "train"
+          ]
+        },
+        {
+          "check": "ngram",
+          "ci_high": 0.007624340580914839,
+          "ci_low": 4.336808689942018e-19,
+          "count": 0,
+          "denominator": 500,
+          "n_examples": 0,
+          "rate": 0.0,
+          "severity": "info",
+          "splits": [
+            "test"
+          ]
+        }
+      ],
+      "n_records": 874,
+      "name": "mbpp-vs-humaneval",
+      "report": "mbpp-vs-humaneval.json",
+      "runtime_s": 18.067,
+      "shortcut_flagged": 0,
+      "spec": "specs/mbpp-vs-humaneval.yaml",
+      "status": "ok"
+    }
+  ],
+  "experiment": "E3",
+  "mode": "full"
+}

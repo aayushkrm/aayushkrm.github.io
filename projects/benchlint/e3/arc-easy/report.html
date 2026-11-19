@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>benchlint report: arc-easy</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff; --fg: #1d1f23; --muted: #5b616b; --line: #d8dce3; --card: #f5f7fa;
+  --sev-info: #6b7280; --sev-low: #2563eb; --sev-medium: #b45309; --sev-high: #b91c1c;
+  --flag: #b91c1c; --ok: #15803d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2c313a; --card: #181c23;
+    --sev-info: #9ca3af; --sev-low: #60a5fa; --sev-medium: #fbbf24; --sev-high: #f87171;
+    --flag: #f87171; --ok: #4ade80;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1115; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2c313a; --card: #181c23;
+  --sev-info: #9ca3af; --sev-low: #60a5fa; --sev-medium: #fbbf24; --sev-high: #f87171;
+  --flag: #f87171; --ok: #4ade80;
+}
+body { background: var(--bg); color: var(--fg); margin: 0; padding: 16px;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1100px; margin: 0 auto; }
+h1 { font-size: 1.5rem; margin: 0.5rem 0; overflow-wrap: anywhere; }
+h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid var(--line); }
+.banner { border: 2px solid var(--sev-medium); padding: 10px 12px; border-radius: 6px;
+  font-weight: 600; background: var(--card); }
+.meta { color: var(--muted); font-size: 0.9rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;
+  margin: 12px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; }
+.card .k { color: var(--muted); font-size: 0.8rem; }
+.card .v { font-size: 1.2rem; font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; vertical-align: top; padding: 6px 8px;
+  border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sev { display: inline-block; padding: 1px 8px; border-radius: 999px; color: #fff;
+  font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+.sev-info { background: var(--sev-info); }
+.sev-low { background: var(--sev-low); }
+.sev-medium { background: var(--sev-medium); }
+.sev-high { background: var(--sev-high); }
+.flag { color: var(--flag); font-weight: 700; }
+.ok { color: var(--ok); }
+details { margin: 8px 0; }
+summary { cursor: pointer; color: var(--muted); }
+pre { background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+  padding: 10px; overflow-x: auto; font-size: 0.82rem; }
+td.text { max-width: 320px; overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: 0.85rem; margin: 2rem 0 1rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>benchlint report: arc-easy</h1>
+
+<p class="meta">Schema version 1 · benchlint 0.1.0 · runtime 19.64 s</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Findings with matches</div><div class="v">6</div></div>
+  <div class="card"><div class="k">Highest severity</div><div class="v">
+    <span class="sev sev-medium">medium</span></div></div>
+  <div class="card"><div class="k">Shortcuts flagged</div><div class="v ok">0</div></div>
+  <div class="card"><div class="k">Splits in findings</div><div class="v" style="font-size:1rem">test, train</div></div>
+</div>
+
+<h2>Findings</h2>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Check</th><th>Severity</th><th>Splits</th><th>Count / n</th><th>Rate [95% Wilson CI]</th></tr></thead>
+<tbody>
+
+<tr>
+  <td>exact</td>
+  <td><span class="sev sev-low">low</span></td>
+  <td>train</td>
+  <td class="num">6 / 2251</td>
+  <td class="num">0.3% [0.1%, 0.6%] (n=2251)</td>
+</tr>
+
+<tr>
+  <td>exact</td>
+  <td><span class="sev sev-low">low</span></td>
+  <td>test</td>
+  <td class="num">5 / 2376</td>
+  <td class="num">0.2% [0.1%, 0.5%] (n=2376)</td>
+</tr>
+
+<tr>
+  <td>exact</td>
+  <td><span class="sev sev-medium">medium</span></td>
+  <td>train, test</td>
+  <td class="num">7 / 2376</td>
+  <td class="num">0.3% [0.1%, 0.6%] (n=2376)</td>
+</tr>
+
+<tr>
+  <td>near</td>
+  <td><span class="sev sev-medium">medium</span></td>
+  <td>test, train</td>
+  <td class="num">19 / 4627</td>
+  <td class="num">0.4% [0.3%, 0.6%] (n=4627)</td>
+</tr>
+
+<tr>
+  <td>near</td>
+  <td><span class="sev sev-medium">medium</span></td>
+  <td>test, train</td>
+  <td class="num">27 / 4627</td>
+  <td class="num">0.6% [0.4%, 0.8%] (n=4627)</td>
+</tr>
+
+<tr>
+  <td>labels</td>
+  <td><span class="sev sev-medium">medium</span></td>
+  <td>train, test</td>
+  <td class="num">24 / 4627</td>
+  <td class="num">0.5% [0.3%, 0.8%] (n=4627)</td>
+</tr>
+
+</tbody></table></div>
+
+<details>
+  <summary>exact: details and 5 example pair(s)</summary>
+  <pre>{
+  &#34;key_method&#34;: &#34;blake2b-128 over per-field NFKC/casefold/punct-strip/whitespace-collapse&#34;,
+  &#34;largest_group&#34;: 3,
+  &#34;mask_numbers&#34;: false,
+  &#34;n_groups&#34;: 5,
+  &#34;pairs&#34;: [
+    [
+      &#34;TIMSS_1995_8_J4&#34;,
+      &#34;AIMS_2009_8_11&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_1995_8_J4&#34;,
+      &#34;Mercury_407660&#34;,
+      1.0
+    ],
+    [
+      &#34;MCAS_2000_8_4&#34;,
+      &#34;Mercury_7135870&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2007_4_30&#34;,
+      &#34;NYSEDREGENTS_2011_4_25&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2011_4_26&#34;,
+      &#34;Mercury_7008365&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2006_4_9&#34;,
+      &#34;NYSEDREGENTS_2004_4_6&#34;,
+      1.0
+    ]
+  ],
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.005803,
+  &#34;rate_ci_low&#34;: 0.001222,
+  &#34;scope&#34;: &#34;within&#34;,
+  &#34;skipped_empty&#34;: 0
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>TIMSS_1995_8_J4</td><td>AIMS_2009_8_11</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical reaction?</td><td class="text">Which is an example of a chemical reaction?</td>
+  </tr>
+  
+  <tr>
+    <td>TIMSS_1995_8_J4</td><td>Mercury_407660</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical reaction?</td><td class="text">Which is an example of a chemical reaction?</td>
+  </tr>
+  
+  <tr>
+    <td>MCAS_2000_8_4</td><td>Mercury_7135870</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical change?</td><td class="text">Which is an example of a chemical change?</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2007_4_30</td><td>NYSEDREGENTS_2011_4_25</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">A decomposer is an organism that</td><td class="text">A decomposer is an organism that</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2011_4_26</td><td>Mercury_7008365</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">What is the main source of energy for the water cycle?</td><td class="text">What is the main source of energy for the water cycle?</td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>exact: details and 5 example pair(s)</summary>
+  <pre>{
+  &#34;key_method&#34;: &#34;blake2b-128 over per-field NFKC/casefold/punct-strip/whitespace-collapse&#34;,
+  &#34;largest_group&#34;: 2,
+  &#34;mask_numbers&#34;: false,
+  &#34;n_groups&#34;: 5,
+  &#34;pairs&#34;: [
+    [
+      &#34;LEAP_2005_4_10267&#34;,
+      &#34;LEAP__4_10227&#34;,
+      1.0
+    ],
+    [
+      &#34;NAEP_2009_4_S11+1&#34;,
+      &#34;NYSEDREGENTS_2008_4_4&#34;,
+      1.0
+    ],
+    [
+      &#34;OHAT_2007_5_40&#34;,
+      &#34;MCAS_2003_5_20&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_2003_8_pg57&#34;,
+      &#34;TIMSS_1995_8_M10&#34;,
+      1.0
+    ],
+    [
+      &#34;Mercury_SC_400065&#34;,
+      &#34;Mercury_401603&#34;,
+      1.0
+    ]
+  ],
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.004917,
+  &#34;rate_ci_low&#34;: 0.000899,
+  &#34;scope&#34;: &#34;within&#34;,
+  &#34;skipped_empty&#34;: 0
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>LEAP_2005_4_10267</td><td>LEAP__4_10227</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">A wetland was drained to build a mall. Two years later, there were no more toads in that area. Why did the toads disappear?</td><td class="text">A wetland was drained to build a mall. Two years later, there were no more toads in that area. Why did the toads disappear?</td>
+  </tr>
+  
+  <tr>
+    <td>NAEP_2009_4_S11+1</td><td>NYSEDREGENTS_2008_4_4</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which material is the best conductor of electricity?</td><td class="text">Which material is the best conductor of electricity?</td>
+  </tr>
+  
+  <tr>
+    <td>OHAT_2007_5_40</td><td>MCAS_2003_5_20</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">What causes day and night on Earth?</td><td class="text">What causes day and night on Earth?</td>
+  </tr>
+  
+  <tr>
+    <td>TIMSS_2003_8_pg57</td><td>TIMSS_1995_8_M10</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which of the following is NOT a mixture?</td><td class="text">Which of the following is NOT a mixture?</td>
+  </tr>
+  
+  <tr>
+    <td>Mercury_SC_400065</td><td>Mercury_401603</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">What keeps the planets in orbit around the Sun?</td><td class="text">What keeps the planets in orbit around the Sun?</td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>exact: details and 5 example pair(s)</summary>
+  <pre>{
+  &#34;key_method&#34;: &#34;blake2b-128 over per-field NFKC/casefold/punct-strip/whitespace-collapse&#34;,
+  &#34;mask_numbers&#34;: false,
+  &#34;measured_split&#34;: &#34;test&#34;,
+  &#34;pairs&#34;: [
+    [
+      &#34;CSZ_2009_8_CSZ30768&#34;,
+      &#34;CSZ30768&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2006_4_9&#34;,
+      &#34;NYSEDREGENTS_2015_4_12&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2009_4_25&#34;,
+      &#34;NYSEDREGENTS_2012_4_20&#34;,
+      1.0
+    ],
+    [
+      &#34;CSZ_2009_8_CSZ20770&#34;,
+      &#34;CSZ20770&#34;,
+      1.0
+    ],
+    [
+      &#34;Mercury_409875&#34;,
+      &#34;Mercury_7172813&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_2003_8_pg17&#34;,
+      &#34;TIMSS_1995_8_K15&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2009_8_9&#34;,
+      &#34;NYSEDREGENTS_2010_8_41&#34;,
+      1.0
+    ]
+  ],
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.006069,
+  &#34;rate_ci_low&#34;: 0.001428,
+  &#34;reference_split&#34;: &#34;train&#34;,
+  &#34;reverse_count&#34;: 8,
+  &#34;reverse_denominator&#34;: 2251,
+  &#34;reverse_rate&#34;: 0.003553976010661928,
+  &#34;scope&#34;: &#34;cross&#34;
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>CSZ_2009_8_CSZ30768</td><td>CSZ30768</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which of the following elements is best able to combine with itself and hydrogen [H] to form large molecules?</td><td class="text">Which of the following elements is best able to combine with itself and hydrogen [H] to form large molecules?</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2006_4_9</td><td>NYSEDREGENTS_2015_4_12</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which object is the best conductor of electricity?</td><td class="text">Which object is the best conductor of electricity?</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2009_4_25</td><td>NYSEDREGENTS_2012_4_20</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Green plants get the energy they need to make food from</td><td class="text">Green plants get the energy they need to make food from</td>
+  </tr>
+  
+  <tr>
+    <td>CSZ_2009_8_CSZ20770</td><td>CSZ20770</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Iron oxides, such as rust, form when iron metal reacts with oxygen in the air. What are the chemical symbols for the two elements found in iron oxide?</td><td class="text">Iron oxides, such as rust, form when iron metal reacts with oxygen in the air. What are the chemical symbols for the two elements found in iron oxide?</td>
+  </tr>
+  
+  <tr>
+    <td>Mercury_409875</td><td>Mercury_7172813</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">In the Adirondack forests of New York, some trees have died. The change in the forest is thought to be related to air pollution and rain. Which abiotic factor most likely has been changed as a result </td><td class="text">In the Adirondack forests of New York, some trees have died. The change in the forest is thought to be related to air pollution and rain. Which abiotic factor most likely has been changed as a result </td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>near: details and 5 example pair(s)</summary>
+  <pre>{
+  &#34;flagged_by_split&#34;: {
+    &#34;test&#34;: 9,
+    &#34;train&#34;: 10
+  },
+  &#34;jaccard_histogram&#34;: {
+    &#34;bin_edges&#34;: [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    &#34;counts&#34;: [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      8
+    ]
+  },
+  &#34;lsh_threshold&#34;: 0.7,
+  &#34;n_candidate_pairs&#34;: 11,
+  &#34;n_candidate_pairs_below_threshold&#34;: 1,
+  &#34;n_evaluable&#34;: 4627,
+  &#34;n_near_pairs&#34;: 10,
+  &#34;n_records&#34;: 4627,
+  &#34;near_pairs_by_split_pair&#34;: {
+    &#34;test|train&#34;: 10
+  },
+  &#34;note&#34;: &#34;rate is flagged items / evaluable items; the Jaccard histogram covers LSH candidate pairs of this scope, each verified by exact Jaccard; pairs lists near-duplicate pairs [a_id, b_id, jaccard] with jaccard at or above the threshold&#34;,
+  &#34;num_perm&#34;: 128,
+  &#34;pairs&#34;: [
+    [
+      &#34;CSZ_2009_8_CSZ20770&#34;,
+      &#34;CSZ20770&#34;,
+      1.0
+    ],
+    [
+      &#34;CSZ_2009_8_CSZ30768&#34;,
+      &#34;CSZ30768&#34;,
+      1.0
+    ],
+    [
+      &#34;Mercury_409875&#34;,
+      &#34;Mercury_7172813&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2004_4_6&#34;,
+      &#34;NYSEDREGENTS_2015_4_12&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2006_4_9&#34;,
+      &#34;NYSEDREGENTS_2015_4_12&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2009_4_25&#34;,
+      &#34;NYSEDREGENTS_2012_4_20&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2009_8_9&#34;,
+      &#34;NYSEDREGENTS_2010_8_41&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_2003_8_pg17&#34;,
+      &#34;TIMSS_1995_8_K15&#34;,
+      1.0
+    ],
+    [
+      &#34;LEAP_2002_4_10246&#34;,
+      &#34;LEAP__4_10224&#34;,
+      0.821429
+    ],
+    [
+      &#34;MSA_2012_8_35&#34;,
+      &#34;MDSA_2012_8_35&#34;,
+      0.809524
+    ]
+  ],
+  &#34;pairs_listed&#34;: 10,
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.006405,
+  &#34;rate_ci_low&#34;: 0.00263,
+  &#34;scope&#34;: &#34;cross_split&#34;,
+  &#34;seed&#34;: 0,
+  &#34;shingle&#34;: 5,
+  &#34;threshold&#34;: 0.8
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>CSZ_2009_8_CSZ20770</td><td>CSZ20770</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Iron oxides, such as rust, form when iron metal reacts with oxygen in the air. What are the chemical symbols for the two elements found in iron oxide?</td><td class="text">Iron oxides, such as rust, form when iron metal reacts with oxygen in the air. What are the chemical symbols for the two elements found in iron oxide?</td>
+  </tr>
+  
+  <tr>
+    <td>CSZ_2009_8_CSZ30768</td><td>CSZ30768</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which of the following elements is best able to combine with itself and hydrogen [H] to form large molecules?</td><td class="text">Which of the following elements is best able to combine with itself and hydrogen [H] to form large molecules?</td>
+  </tr>
+  
+  <tr>
+    <td>Mercury_409875</td><td>Mercury_7172813</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">In the Adirondack forests of New York, some trees have died. The change in the forest is thought to be related to air pollution and rain. Which abiotic factor most likely has been changed as a result </td><td class="text">In the Adirondack forests of New York, some trees have died. The change in the forest is thought to be related to air pollution and rain. Which abiotic factor most likely has been changed as a result </td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2004_4_6</td><td>NYSEDREGENTS_2015_4_12</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which object is the best conductor of electricity?</td><td class="text">Which object is the best conductor of electricity?</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2006_4_9</td><td>NYSEDREGENTS_2015_4_12</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which object is the best conductor of electricity?</td><td class="text">Which object is the best conductor of electricity?</td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>near: details and 5 example pair(s)</summary>
+  <pre>{
+  &#34;flagged_by_split&#34;: {
+    &#34;test&#34;: 16,
+    &#34;train&#34;: 11
+  },
+  &#34;jaccard_histogram&#34;: {
+    &#34;bin_edges&#34;: [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    &#34;counts&#34;: [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      13
+    ]
+  },
+  &#34;lsh_threshold&#34;: 0.7,
+  &#34;n_candidate_pairs&#34;: 17,
+  &#34;n_candidate_pairs_below_threshold&#34;: 2,
+  &#34;n_evaluable&#34;: 4627,
+  &#34;n_near_pairs&#34;: 15,
+  &#34;n_records&#34;: 4627,
+  &#34;near_pairs_by_split_pair&#34;: {
+    &#34;test|test&#34;: 8,
+    &#34;train|train&#34;: 7
+  },
+  &#34;note&#34;: &#34;rate is flagged items / evaluable items; the Jaccard histogram covers LSH candidate pairs of this scope, each verified by exact Jaccard; pairs lists near-duplicate pairs [a_id, b_id, jaccard] with jaccard at or above the threshold&#34;,
+  &#34;num_perm&#34;: 128,
+  &#34;pairs&#34;: [
+    [
+      &#34;AIMS_2009_8_11&#34;,
+      &#34;Mercury_407660&#34;,
+      1.0
+    ],
+    [
+      &#34;LEAP_2005_4_10267&#34;,
+      &#34;LEAP__4_10227&#34;,
+      1.0
+    ],
+    [
+      &#34;MCAS_2000_8_4&#34;,
+      &#34;Mercury_7135870&#34;,
+      1.0
+    ],
+    [
+      &#34;Mercury_SC_400065&#34;,
+      &#34;Mercury_401603&#34;,
+      1.0
+    ],
+    [
+      &#34;NAEP_2009_4_S11+1&#34;,
+      &#34;NYSEDREGENTS_2008_4_4&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2006_4_9&#34;,
+      &#34;NYSEDREGENTS_2004_4_6&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2007_4_30&#34;,
+      &#34;NYSEDREGENTS_2011_4_25&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2011_4_26&#34;,
+      &#34;Mercury_7008365&#34;,
+      1.0
+    ],
+    [
+      &#34;OHAT_2007_5_40&#34;,
+      &#34;MCAS_2003_5_20&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_1995_8_J4&#34;,
+      &#34;AIMS_2009_8_11&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_1995_8_J4&#34;,
+      &#34;Mercury_407660&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_2003_8_pg57&#34;,
+      &#34;TIMSS_1995_8_M10&#34;,
+      1.0
+    ],
+    [
+      &#34;AKDE&amp;ED_2012_8_48&#34;,
+      &#34;AMP_2016_8_48&#34;,
+      0.954545
+    ],
+    [
+      &#34;MSA_2012_8_36&#34;,
+      &#34;MDSA_2012_8_36&#34;,
+      0.822222
+    ],
+    [
+      &#34;LEAP_2002_8_10389&#34;,
+      &#34;LEAP__8_10369&#34;,
+      0.814815
+    ]
+  ],
+  &#34;pairs_listed&#34;: 15,
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.008477,
+  &#34;rate_ci_low&#34;: 0.004014,
+  &#34;scope&#34;: &#34;within_split&#34;,
+  &#34;seed&#34;: 0,
+  &#34;shingle&#34;: 5,
+  &#34;threshold&#34;: 0.8
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>AIMS_2009_8_11</td><td>Mercury_407660</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical reaction?</td><td class="text">Which is an example of a chemical reaction?</td>
+  </tr>
+  
+  <tr>
+    <td>LEAP_2005_4_10267</td><td>LEAP__4_10227</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">A wetland was drained to build a mall. Two years later, there were no more toads in that area. Why did the toads disappear?</td><td class="text">A wetland was drained to build a mall. Two years later, there were no more toads in that area. Why did the toads disappear?</td>
+  </tr>
+  
+  <tr>
+    <td>MCAS_2000_8_4</td><td>Mercury_7135870</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical change?</td><td class="text">Which is an example of a chemical change?</td>
+  </tr>
+  
+  <tr>
+    <td>Mercury_SC_400065</td><td>Mercury_401603</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">What keeps the planets in orbit around the Sun?</td><td class="text">What keeps the planets in orbit around the Sun?</td>
+  </tr>
+  
+  <tr>
+    <td>NAEP_2009_4_S11+1</td><td>NYSEDREGENTS_2008_4_4</td><td>test</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which material is the best conductor of electricity?</td><td class="text">Which material is the best conductor of electricity?</td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>labels: details and 5 example pair(s)</summary>
+  <pre>{
+  &#34;label_counts_in_conflicts&#34;: {
+    &#34;1&#34;: 1,
+    &#34;2&#34;: 1,
+    &#34;A&#34;: 7,
+    &#34;B&#34;: 6,
+    &#34;C&#34;: 2,
+    &#34;D&#34;: 7
+  },
+  &#34;mode&#34;: &#34;near&#34;,
+  &#34;n_conflict_groups&#34;: 11,
+  &#34;n_groups_checked&#34;: 21,
+  &#34;near&#34;: {
+    &#34;num_perm&#34;: 128,
+    &#34;shingle&#34;: 5,
+    &#34;threshold&#34;: 0.8
+  },
+  &#34;pairs&#34;: [
+    [
+      &#34;NYSEDREGENTS_2009_4_25&#34;,
+      &#34;NYSEDREGENTS_2012_4_20&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_1995_8_J4&#34;,
+      &#34;AIMS_2009_8_11&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_1995_8_J4&#34;,
+      &#34;Mercury_407660&#34;,
+      1.0
+    ],
+    [
+      &#34;MCAS_2000_8_4&#34;,
+      &#34;Mercury_7135870&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2009_8_9&#34;,
+      &#34;NYSEDREGENTS_2010_8_41&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2011_4_26&#34;,
+      &#34;Mercury_7008365&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_2003_8_pg17&#34;,
+      &#34;TIMSS_1995_8_K15&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2006_4_9&#34;,
+      &#34;NYSEDREGENTS_2004_4_6&#34;,
+      1.0
+    ],
+    [
+      &#34;NYSEDREGENTS_2006_4_9&#34;,
+      &#34;NYSEDREGENTS_2015_4_12&#34;,
+      1.0
+    ],
+    [
+      &#34;NAEP_2009_4_S11+1&#34;,
+      &#34;NYSEDREGENTS_2008_4_4&#34;,
+      1.0
+    ],
+    [
+      &#34;OHAT_2007_5_40&#34;,
+      &#34;MCAS_2003_5_20&#34;,
+      1.0
+    ],
+    [
+      &#34;TIMSS_2003_8_pg57&#34;,
+      &#34;TIMSS_1995_8_M10&#34;,
+      1.0
+    ],
+    [
+      &#34;Mercury_SC_400065&#34;,
+      &#34;Mercury_401603&#34;,
+      1.0
+    ]
+  ],
+  &#34;pairs_listed&#34;: 13,
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.007707,
+  &#34;rate_ci_low&#34;: 0.003488,
+  &#34;seed&#34;: 0
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>NYSEDREGENTS_2009_4_25</td><td>NYSEDREGENTS_2012_4_20</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Green plants get the energy they need to make food from</td><td class="text">Green plants get the energy they need to make food from</td>
+  </tr>
+  
+  <tr>
+    <td>TIMSS_1995_8_J4</td><td>AIMS_2009_8_11</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical reaction?</td><td class="text">Which is an example of a chemical reaction?</td>
+  </tr>
+  
+  <tr>
+    <td>MCAS_2000_8_4</td><td>Mercury_7135870</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">Which is an example of a chemical change?</td><td class="text">Which is an example of a chemical change?</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2009_8_9</td><td>NYSEDREGENTS_2010_8_41</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Which energy source is considered nonrenewable?</td><td class="text">Which energy source is considered nonrenewable?</td>
+  </tr>
+  
+  <tr>
+    <td>NYSEDREGENTS_2011_4_26</td><td>Mercury_7008365</td><td>train</td><td>train</td>
+    <td class="num">1.000</td>
+    <td class="text">What is the main source of energy for the water cycle?</td><td class="text">What is the main source of energy for the water cycle?</td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+
+
+<h2>Shortcut baselines</h2>
+
+<p class="meta">No shortcut baselines were run.</p>
+
+
+<h2>Environment</h2>
+<table><tbody>
+<tr><th>git_sha</th><td>6172c97bafc512540635d555acf421079fc74fb1</td></tr>
+<tr><th>utc_time</th><td>2026-11-18T20:22:23+00:00</td></tr>
+<tr><th>python_version</th><td>3.11.15</td></tr>
+<tr><th>os_version</th><td>14.8.9</td></tr>
+<tr><th>cpu_model</th><td>Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz</td></tr>
+<tr><th>machine</th><td>x86_64</td></tr>
+</tbody></table>
+
+<h2>Limits</h2>
+<ul>
+  <li>Matching is lexical. Paraphrases are not detected.</li>
+  <li>A flag is a prompt to investigate, not proof of a shortcut or a leak.</li>
+  <li>Each rate carries its denominator and a 95% Wilson interval.</li>
+</ul>
+<footer>Generated by benchlint 0.1.0. Report schema: schemas/audit_report.schema.json.</footer>
+</main>
+</body>
+</html>

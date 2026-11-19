@@ -1,0 +1,707 @@
+{
+  "schema_version": "1",
+  "run_id": "e5-qwen2.5-1.5b-v2-t0.7",
+  "config": {
+    "run_id": "e5-qwen2.5-1.5b-v2-t0.7",
+    "env": "labstock",
+    "tasks_glob": "src/passk/tasks/labstock/*.yaml",
+    "agent": {
+      "kind": "llamacpp",
+      "params": {
+        "model_path": "~/models/Qwen/Qwen2.5-1.5B-Instruct-GGUF/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+        "repo_id": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+        "n_ctx": 4096,
+        "n_threads": 4,
+        "temperature": 0.7,
+        "prompt_variant": "v2",
+        "max_tokens": 256
+      }
+    },
+    "n_trials": 5,
+    "base_seed": 2026,
+    "transport": "mcp_stdio",
+    "k_values": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "env_params": {}
+  },
+  "env_info": {
+    "utc_time": "2026-11-19T03:18:54+00:00",
+    "git_sha": "cbb20aa3068bb6e09c60f59e16fdf81cf6c0bd27",
+    "git_dirty": true,
+    "git_diff_sha256": "36856d4ddf494b950e01977770dd94d1b4f53ddc13abaefd60f86d0546b19fd3",
+    "cpu_model": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
+    "cpu_flags": {
+      "avx": true,
+      "avx2": true,
+      "fma": true,
+      "f16c": true,
+      "avx512f": false,
+      "avx512_vnni": false
+    },
+    "cores_physical": 4,
+    "cores_logical": 8,
+    "ram_bytes": 17179869184,
+    "os": {
+      "os": "Darwin",
+      "os_release": "23.6.0",
+      "arch": "x86_64",
+      "macos_version": "14.8.9"
+    },
+    "python": {
+      "version": "3.11.15",
+      "implementation": "CPython"
+    },
+    "packages": {
+      "passk": "0.1.0",
+      "pydantic": "2.14.3",
+      "typer": "0.29.2",
+      "pyyaml": "6.0.3",
+      "numpy": "2.4.6",
+      "jinja2": "3.1.6",
+      "mcp": "2.3.0",
+      "llama-cpp-python": "0.3.37"
+    },
+    "agent": {
+      "kind": "llamacpp",
+      "model": "qwen2.5-1.5b-instruct-q4_k_m",
+      "repo_id": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+      "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+      "n_ctx": 4096,
+      "n_threads": 4,
+      "temperature": 0.7,
+      "prompt_variant": "v2",
+      "system_suffix": "",
+      "n_gpu_layers": 0
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "t1_01",
+      "tier": 1,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "max_turns": 1
+      }
+    },
+    {
+      "task_id": "t1_02",
+      "tier": 1,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "max_turns": 1
+      }
+    },
+    {
+      "task_id": "t1_03",
+      "tier": 1,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "max_turns": 1
+      }
+    },
+    {
+      "task_id": "t1_04",
+      "tier": 1,
+      "n": 5,
+      "c": 5,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t1_05",
+      "tier": 1,
+      "n": 5,
+      "c": 3,
+      "pass_at_k": {
+        "1": 0.6,
+        "2": 0.9,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.6,
+        "2": 0.3,
+        "3": 0.1,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "policy_violation": 2
+      }
+    },
+    {
+      "task_id": "t1_06",
+      "tier": 1,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "max_turns": 1
+      }
+    },
+    {
+      "task_id": "t1_07",
+      "tier": 1,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "max_turns": 1
+      }
+    },
+    {
+      "task_id": "t1_08",
+      "tier": 1,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "max_turns": 1
+      }
+    },
+    {
+      "task_id": "t2_01",
+      "tier": 2,
+      "n": 5,
+      "c": 5,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t2_02",
+      "tier": 2,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "tool_error_unrecovered": 1
+      }
+    },
+    {
+      "task_id": "t2_03",
+      "tier": 2,
+      "n": 5,
+      "c": 5,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t2_04",
+      "tier": 2,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "tool_error_unrecovered": 3,
+        "schema_error": 2
+      }
+    },
+    {
+      "task_id": "t2_05",
+      "tier": 2,
+      "n": 5,
+      "c": 5,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t2_06",
+      "tier": 2,
+      "n": 5,
+      "c": 5,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t2_07",
+      "tier": 2,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "schema_error": 3,
+        "tool_error_unrecovered": 2
+      }
+    },
+    {
+      "task_id": "t2_08",
+      "tier": 2,
+      "n": 5,
+      "c": 5,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t3_01",
+      "tier": 3,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "policy_violation": 5
+      }
+    },
+    {
+      "task_id": "t3_02",
+      "tier": 3,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "policy_violation": 4,
+        "schema_error": 1
+      }
+    },
+    {
+      "task_id": "t3_03",
+      "tier": 3,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "policy_violation": 5
+      }
+    },
+    {
+      "task_id": "t3_04",
+      "tier": 3,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "policy_violation": 5
+      }
+    },
+    {
+      "task_id": "t3_05",
+      "tier": 3,
+      "n": 5,
+      "c": 3,
+      "pass_at_k": {
+        "1": 0.6,
+        "2": 0.9,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.6,
+        "2": 0.3,
+        "3": 0.1,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "loop": 1,
+        "false_success_claim": 1
+      }
+    },
+    {
+      "task_id": "t3_06",
+      "tier": 3,
+      "n": 5,
+      "c": 4,
+      "pass_at_k": {
+        "1": 0.8,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.8,
+        "2": 0.6,
+        "3": 0.4,
+        "4": 0.2,
+        "5": 0.0
+      },
+      "failures": {
+        "false_success_claim": 1
+      }
+    },
+    {
+      "task_id": "t3_07",
+      "tier": 3,
+      "n": 5,
+      "c": 3,
+      "pass_at_k": {
+        "1": 0.6,
+        "2": 0.9,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "pass_hat_k": {
+        "1": 0.6,
+        "2": 0.3,
+        "3": 0.1,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "false_success_claim": 2
+      }
+    },
+    {
+      "task_id": "t3_08",
+      "tier": 3,
+      "n": 5,
+      "c": 0,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "pass_hat_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "failures": {
+        "tool_error_unrecovered": 1,
+        "policy_violation": 4
+      }
+    }
+  ],
+  "summary": {
+    "pass_at_k": {
+      "1": {
+        "mean": 0.5916666666666667,
+        "ci_low": 0.43333333333333335,
+        "ci_high": 0.75
+      },
+      "2": {
+        "mean": 0.6958333333333333,
+        "ci_low": 0.5208333333333334,
+        "ci_high": 0.8626041666666653
+      },
+      "3": {
+        "mean": 0.7083333333333334,
+        "ci_low": 0.5416666666666666,
+        "ci_high": 0.875
+      },
+      "4": {
+        "mean": 0.7083333333333334,
+        "ci_low": 0.5416666666666666,
+        "ci_high": 0.875
+      },
+      "5": {
+        "mean": 0.7083333333333334,
+        "ci_low": 0.5416666666666666,
+        "ci_high": 0.875
+      }
+    },
+    "pass_hat_k": {
+      "1": {
+        "mean": 0.5916666666666667,
+        "ci_low": 0.43333333333333335,
+        "ci_high": 0.75
+      },
+      "2": {
+        "mean": 0.48750000000000004,
+        "ci_low": 0.3416666666666666,
+        "ci_high": 0.6375000000000001
+      },
+      "3": {
+        "mean": 0.3958333333333333,
+        "ci_low": 0.25,
+        "ci_high": 0.5541666666666667
+      },
+      "4": {
+        "mean": 0.31666666666666665,
+        "ci_low": 0.16666666666666666,
+        "ci_high": 0.4833333333333334
+      },
+      "5": {
+        "mean": 0.25,
+        "ci_low": 0.08333333333333333,
+        "ci_high": 0.4166666666666667
+      }
+    }
+  },
+  "failure_totals": {
+    "false_success_claim": 4,
+    "loop": 1,
+    "max_turns": 6,
+    "policy_violation": 25,
+    "schema_error": 6,
+    "tool_error_unrecovered": 7
+  },
+  "tokens": {
+    "model_calls": 682,
+    "input_total": 392861,
+    "output_total": 25922,
+    "input_median_per_episode": 2537.0,
+    "output_median_per_episode": 187.0
+  },
+  "wall_s": 3007.260896412001,
+  "complete": true,
+  "stop_reason": null,
+  "reset_at": null,
+  "episodes_total": 120,
+  "episodes_done": 120
+}

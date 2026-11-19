@@ -1,0 +1,189 @@
+{
+  "schema_version": "1",
+  "run_id": "e7b-nemotron-3-ultra-stratified-t0.7",
+  "config": {
+    "run_id": "e7b-nemotron-3-ultra-stratified-t0.7",
+    "env": "labstock",
+    "tasks_glob": "src/passk/tasks/labstock/t[123]_01.yaml",
+    "agent": {
+      "kind": "openai_compat",
+      "params": {
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "base_url": "https://openrouter.ai/api/v1",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "provider_name": "openrouter",
+        "temperature": 0.7,
+        "max_tokens": 256,
+        "seed": 2026,
+        "min_interval_s": 3,
+        "prompt_variant": "v1"
+      }
+    },
+    "n_trials": 3,
+    "base_seed": 2026,
+    "transport": "mcp_stdio",
+    "k_values": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "env_params": {}
+  },
+  "env_info": {
+    "utc_time": "2026-11-19T04:24:11+00:00",
+    "git_sha": "2583d54d029ce8504cab253db76f5403ae85abde",
+    "git_dirty": true,
+    "git_diff_sha256": "48273c03ab992f7fae4932397c76cc9252a08e3c5021bdcb4f9f007b72a75ce3",
+    "cpu_model": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
+    "cpu_flags": {
+      "avx": true,
+      "avx2": true,
+      "fma": true,
+      "f16c": true,
+      "avx512f": false,
+      "avx512_vnni": false
+    },
+    "cores_physical": 4,
+    "cores_logical": 8,
+    "ram_bytes": 17179869184,
+    "os": {
+      "os": "Darwin",
+      "os_release": "23.6.0",
+      "arch": "x86_64",
+      "macos_version": "14.8.9"
+    },
+    "python": {
+      "version": "3.11.15",
+      "implementation": "CPython"
+    },
+    "packages": {
+      "passk": "0.1.0",
+      "pydantic": "2.14.3",
+      "typer": "0.29.2",
+      "pyyaml": "6.0.3",
+      "numpy": "2.4.6",
+      "jinja2": "3.1.6",
+      "mcp": "2.3.0",
+      "llama-cpp-python": "0.3.37"
+    },
+    "agent": {
+      "kind": "openai_compat",
+      "provider": "openrouter",
+      "base_url": "https://openrouter.ai/api/v1",
+      "model_requested": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_reported": [
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
+      "temperature": 0.7,
+      "max_tokens": 256,
+      "min_interval_s": 3,
+      "max_retries": 5,
+      "prompt_variant": "v1"
+    }
+  },
+  "tasks": [
+    {
+      "task_id": "t1_01",
+      "tier": 1,
+      "n": 3,
+      "c": 3,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t2_01",
+      "tier": 2,
+      "n": 3,
+      "c": 3,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "failures": {}
+    },
+    {
+      "task_id": "t3_01",
+      "tier": 3,
+      "n": 3,
+      "c": 3,
+      "pass_at_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "pass_hat_k": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0
+      },
+      "failures": {}
+    }
+  ],
+  "summary": {
+    "pass_at_k": {
+      "1": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "2": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "3": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      }
+    },
+    "pass_hat_k": {
+      "1": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "2": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "3": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      }
+    }
+  },
+  "failure_totals": {},
+  "tokens": {
+    "model_calls": 48,
+    "input_total": 28563,
+    "output_total": 5592,
+    "input_median_per_episode": 2820.0,
+    "output_median_per_episode": 596.0
+  },
+  "wall_s": 159.92088729499665,
+  "complete": true,
+  "stop_reason": null,
+  "reset_at": null,
+  "episodes_total": 9,
+  "episodes_done": 9
+}

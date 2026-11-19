@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>benchlint report: mbpp-vs-humaneval</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff; --fg: #1d1f23; --muted: #5b616b; --line: #d8dce3; --card: #f5f7fa;
+  --sev-info: #6b7280; --sev-low: #2563eb; --sev-medium: #b45309; --sev-high: #b91c1c;
+  --flag: #b91c1c; --ok: #15803d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1115; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2c313a; --card: #181c23;
+    --sev-info: #9ca3af; --sev-low: #60a5fa; --sev-medium: #fbbf24; --sev-high: #f87171;
+    --flag: #f87171; --ok: #4ade80;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1115; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2c313a; --card: #181c23;
+  --sev-info: #9ca3af; --sev-low: #60a5fa; --sev-medium: #fbbf24; --sev-high: #f87171;
+  --flag: #f87171; --ok: #4ade80;
+}
+body { background: var(--bg); color: var(--fg); margin: 0; padding: 16px;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1100px; margin: 0 auto; }
+h1 { font-size: 1.5rem; margin: 0.5rem 0; overflow-wrap: anywhere; }
+h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid var(--line); }
+.banner { border: 2px solid var(--sev-medium); padding: 10px 12px; border-radius: 6px;
+  font-weight: 600; background: var(--card); }
+.meta { color: var(--muted); font-size: 0.9rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;
+  margin: 12px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 10px 12px; }
+.card .k { color: var(--muted); font-size: 0.8rem; }
+.card .v { font-size: 1.2rem; font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; vertical-align: top; padding: 6px 8px;
+  border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sev { display: inline-block; padding: 1px 8px; border-radius: 999px; color: #fff;
+  font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+.sev-info { background: var(--sev-info); }
+.sev-low { background: var(--sev-low); }
+.sev-medium { background: var(--sev-medium); }
+.sev-high { background: var(--sev-high); }
+.flag { color: var(--flag); font-weight: 700; }
+.ok { color: var(--ok); }
+details { margin: 8px 0; }
+summary { cursor: pointer; color: var(--muted); }
+pre { background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+  padding: 10px; overflow-x: auto; font-size: 0.82rem; }
+td.text { max-width: 320px; overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: 0.85rem; margin: 2rem 0 1rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>benchlint report: mbpp-vs-humaneval</h1>
+
+<p class="meta">Schema version 1 · benchlint 0.1.0 · runtime 18.06 s</p>
+
+<div class="cards">
+  <div class="card"><div class="k">Findings with matches</div><div class="v">2</div></div>
+  <div class="card"><div class="k">Highest severity</div><div class="v">
+    <span class="sev sev-medium">medium</span></div></div>
+  <div class="card"><div class="k">Shortcuts flagged</div><div class="v ok">0</div></div>
+  <div class="card"><div class="k">Splits in findings</div><div class="v" style="font-size:1rem">test, train</div></div>
+</div>
+
+<h2>Findings</h2>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Check</th><th>Severity</th><th>Splits</th><th>Count / n</th><th>Rate [95% Wilson CI]</th></tr></thead>
+<tbody>
+
+<tr>
+  <td>exact</td>
+  <td><span class="sev sev-info">info</span></td>
+  <td>train</td>
+  <td class="num">0 / 374</td>
+  <td class="num">0.0% [0.0%, 1.0%] (n=374)</td>
+</tr>
+
+<tr>
+  <td>exact</td>
+  <td><span class="sev sev-info">info</span></td>
+  <td>test</td>
+  <td class="num">0 / 500</td>
+  <td class="num">0.0% [0.0%, 0.8%] (n=500)</td>
+</tr>
+
+<tr>
+  <td>exact</td>
+  <td><span class="sev sev-medium">medium</span></td>
+  <td>train, test</td>
+  <td class="num">1 / 500</td>
+  <td class="num">0.2% [0.0%, 1.1%] (n=500)</td>
+</tr>
+
+<tr>
+  <td>near</td>
+  <td><span class="sev sev-medium">medium</span></td>
+  <td>test, train</td>
+  <td class="num">2 / 874</td>
+  <td class="num">0.2% [0.1%, 0.8%] (n=874)</td>
+</tr>
+
+<tr>
+  <td>near</td>
+  <td><span class="sev sev-info">info</span></td>
+  <td>test, train</td>
+  <td class="num">0 / 874</td>
+  <td class="num">0.0% [0.0%, 0.4%] (n=874)</td>
+</tr>
+
+<tr>
+  <td>ngram</td>
+  <td><span class="sev sev-info">info</span></td>
+  <td>test</td>
+  <td class="num">0 / 500</td>
+  <td class="num">0.0% [0.0%, 0.8%] (n=500)</td>
+</tr>
+
+</tbody></table></div>
+
+<details>
+  <summary>exact: details</summary>
+  <pre>{
+  &#34;key_method&#34;: &#34;blake2b-128 over per-field NFKC/casefold/punct-strip/whitespace-collapse&#34;,
+  &#34;largest_group&#34;: 0,
+  &#34;mask_numbers&#34;: false,
+  &#34;n_groups&#34;: 0,
+  &#34;pairs&#34;: [],
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.010167,
+  &#34;rate_ci_low&#34;: 0.0,
+  &#34;scope&#34;: &#34;within&#34;,
+  &#34;skipped_empty&#34;: 0
+}</pre>
+  
+</details>
+
+<details>
+  <summary>exact: details</summary>
+  <pre>{
+  &#34;key_method&#34;: &#34;blake2b-128 over per-field NFKC/casefold/punct-strip/whitespace-collapse&#34;,
+  &#34;largest_group&#34;: 0,
+  &#34;mask_numbers&#34;: false,
+  &#34;n_groups&#34;: 0,
+  &#34;pairs&#34;: [],
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.007624,
+  &#34;rate_ci_low&#34;: 0.0,
+  &#34;scope&#34;: &#34;within&#34;,
+  &#34;skipped_empty&#34;: 0
+}</pre>
+  
+</details>
+
+<details>
+  <summary>exact: details and 1 example pair(s)</summary>
+  <pre>{
+  &#34;key_method&#34;: &#34;blake2b-128 over per-field NFKC/casefold/punct-strip/whitespace-collapse&#34;,
+  &#34;mask_numbers&#34;: false,
+  &#34;measured_split&#34;: &#34;test&#34;,
+  &#34;pairs&#34;: [
+    [
+      &#34;704&#34;,
+      &#34;248&#34;,
+      1.0
+    ]
+  ],
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.011241,
+  &#34;rate_ci_low&#34;: 0.000353,
+  &#34;reference_split&#34;: &#34;train&#34;,
+  &#34;reverse_count&#34;: 1,
+  &#34;reverse_denominator&#34;: 374,
+  &#34;reverse_rate&#34;: 0.00267379679144385,
+  &#34;scope&#34;: &#34;cross&#34;
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>704</td><td>248</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Write a function to calculate the harmonic sum of n-1. | def harmonic_sum(n):
+  if n &lt; 2:
+    return 1
+  else:
+    return 1 / n + (harmonic_sum(n - 1))</td><td class="text">Write a function to calculate the harmonic sum of n-1. | def harmonic_sum(n):
+  if n &lt; 2:
+    return 1
+  else:
+    return 1 / n + (harmonic_sum(n - 1)) </td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>near: details and 1 example pair(s)</summary>
+  <pre>{
+  &#34;flagged_by_split&#34;: {
+    &#34;test&#34;: 1,
+    &#34;train&#34;: 1
+  },
+  &#34;jaccard_histogram&#34;: {
+    &#34;bin_edges&#34;: [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    &#34;counts&#34;: [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      0,
+      0,
+      1
+    ]
+  },
+  &#34;lsh_threshold&#34;: 0.7,
+  &#34;n_candidate_pairs&#34;: 5,
+  &#34;n_candidate_pairs_below_threshold&#34;: 4,
+  &#34;n_evaluable&#34;: 874,
+  &#34;n_near_pairs&#34;: 1,
+  &#34;n_records&#34;: 874,
+  &#34;near_pairs_by_split_pair&#34;: {
+    &#34;test|train&#34;: 1
+  },
+  &#34;note&#34;: &#34;rate is flagged items / evaluable items; the Jaccard histogram covers LSH candidate pairs of this scope, each verified by exact Jaccard; pairs lists near-duplicate pairs [a_id, b_id, jaccard] with jaccard at or above the threshold&#34;,
+  &#34;num_perm&#34;: 128,
+  &#34;pairs&#34;: [
+    [
+      &#34;704&#34;,
+      &#34;248&#34;,
+      1.0
+    ]
+  ],
+  &#34;pairs_listed&#34;: 1,
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.008305,
+  &#34;rate_ci_low&#34;: 0.000628,
+  &#34;scope&#34;: &#34;cross_split&#34;,
+  &#34;seed&#34;: 0,
+  &#34;shingle&#34;: 5,
+  &#34;threshold&#34;: 0.8
+}</pre>
+  
+  <div class="table-wrap"><table>
+  <thead><tr><th>A id</th><th>B id</th><th>A split</th><th>B split</th><th>Similarity</th><th>A text</th><th>B text</th></tr></thead>
+  <tbody>
+  
+  <tr>
+    <td>704</td><td>248</td><td>train</td><td>test</td>
+    <td class="num">1.000</td>
+    <td class="text">Write a function to calculate the harmonic sum of n-1. def harmonic_sum(n):
+  if n &lt; 2:
+    return 1
+  else:
+    return 1 / n + (harmonic_sum(n - 1))</td><td class="text">Write a function to calculate the harmonic sum of n-1. def harmonic_sum(n):
+  if n &lt; 2:
+    return 1
+  else:
+    return 1 / n + (harmonic_sum(n - 1)) </td>
+  </tr>
+  
+  </tbody></table></div>
+  
+</details>
+
+<details>
+  <summary>near: details</summary>
+  <pre>{
+  &#34;flagged_by_split&#34;: {
+    &#34;test&#34;: 0,
+    &#34;train&#34;: 0
+  },
+  &#34;jaccard_histogram&#34;: {
+    &#34;bin_edges&#34;: [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    &#34;counts&#34;: [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3,
+      0,
+      0
+    ]
+  },
+  &#34;lsh_threshold&#34;: 0.7,
+  &#34;n_candidate_pairs&#34;: 4,
+  &#34;n_candidate_pairs_below_threshold&#34;: 4,
+  &#34;n_evaluable&#34;: 874,
+  &#34;n_near_pairs&#34;: 0,
+  &#34;n_records&#34;: 874,
+  &#34;near_pairs_by_split_pair&#34;: {},
+  &#34;note&#34;: &#34;rate is flagged items / evaluable items; the Jaccard histogram covers LSH candidate pairs of this scope, each verified by exact Jaccard; pairs lists near-duplicate pairs [a_id, b_id, jaccard] with jaccard at or above the threshold&#34;,
+  &#34;num_perm&#34;: 128,
+  &#34;pairs&#34;: [],
+  &#34;pairs_listed&#34;: 0,
+  &#34;pairs_truncated&#34;: false,
+  &#34;rate_ci_high&#34;: 0.004376,
+  &#34;rate_ci_low&#34;: 0.0,
+  &#34;scope&#34;: &#34;within_split&#34;,
+  &#34;seed&#34;: 0,
+  &#34;shingle&#34;: 5,
+  &#34;threshold&#34;: 0.8
+}</pre>
+  
+</details>
+
+<details>
+  <summary>ngram: details</summary>
+  <pre>{
+  &#34;counts_at_fraction&#34;: {
+    &#34;any&#34;: 0,
+    &#34;ge_0.5&#34;: 0,
+    &#34;ge_0.8&#34;: 0,
+    &#34;ge_1.0&#34;: 0
+  },
+  &#34;fraction_histogram&#34;: {
+    &#34;bin_edges&#34;: [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    &#34;counts&#34;: [
+      500,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  &#34;mean_fraction&#34;: 0.0,
+  &#34;n&#34;: 13,
+  &#34;n_eval_items&#34;: 500,
+  &#34;n_items_evaluable&#34;: 500,
+  &#34;n_items_too_short&#34;: 0,
+  &#34;n_reference_ngrams&#34;: 10406,
+  &#34;n_reference_texts&#34;: 164,
+  &#34;rate_ci_high&#34;: 0.007624,
+  &#34;rate_ci_low&#34;: 0.0
+}</pre>
+  
+</details>
+
+
+
+<h2>Shortcut baselines</h2>
+
+<p class="meta">No shortcut baselines were run.</p>
+
+
+<h2>Environment</h2>
+<table><tbody>
+<tr><th>git_sha</th><td>b0eddc1f07ed6d9abb9b5abd6f089f791f948f5d</td></tr>
+<tr><th>utc_time</th><td>2026-11-18T20:44:18+00:00</td></tr>
+<tr><th>python_version</th><td>3.11.15</td></tr>
+<tr><th>os_version</th><td>14.8.9</td></tr>
+<tr><th>cpu_model</th><td>Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz</td></tr>
+<tr><th>machine</th><td>x86_64</td></tr>
+</tbody></table>
+
+<h2>Limits</h2>
+<ul>
+  <li>Matching is lexical. Paraphrases are not detected.</li>
+  <li>A flag is a prompt to investigate, not proof of a shortcut or a leak.</li>
+  <li>Each rate carries its denominator and a 95% Wilson interval.</li>
+</ul>
+<footer>Generated by benchlint 0.1.0. Report schema: schemas/audit_report.schema.json.</footer>
+</main>
+</body>
+</html>

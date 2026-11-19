@@ -1,0 +1,64 @@
+{
+  "accuracy": {
+    "ci_high": 0.6539087947882736,
+    "ci_low": 0.6350722719869707,
+    "value": 0.6442385993485342
+  },
+  "chance": 0.3333333333333333,
+  "config": "plain_text",
+  "config_hash": "00f6980ce73f6021",
+  "dataset": "snli",
+  "eval_dropped_by_label": 176,
+  "eval_split": "test",
+  "experiment": "E2",
+  "flagged": true,
+  "gap_points": -2.5761,
+  "literature": {
+    "citation": "Gururangan et al. (2018), Annotation Artifacts in Natural Language Inference Data, NAACL",
+    "metric": "accuracy",
+    "setting": "SNLI test hypothesis-only accuracy",
+    "status": "reported",
+    "value": 0.67
+  },
+  "majority": 0.3276669381107492,
+  "mode": "full",
+  "n_eval": 9824,
+  "n_train": 100000,
+  "p_value": 0.004975124378109453,
+  "runtime_s": 51.973,
+  "shortcuts": [
+    {
+      "chance": 0.3333333333333333,
+      "ci_high": 0.6539087947882736,
+      "ci_low": 0.6350722719869707,
+      "flagged": true,
+      "majority": 0.3276669381107492,
+      "metric": "accuracy",
+      "n_test": 9824,
+      "n_train": 100000,
+      "p_value": 0.004975124378109453,
+      "value": 0.6442385993485342,
+      "view": "hypothesis_only"
+    },
+    {
+      "chance": 0.3333333333333333,
+      "ci_high": 0.43658387622149836,
+      "ci_low": 0.41764556188925084,
+      "flagged": false,
+      "majority": 0.3276669381107492,
+      "metric": "accuracy",
+      "n_test": 9824,
+      "n_train": 100000,
+      "p_value": 0.004975124378109453,
+      "value": 0.42732084690553745,
+      "view": "hypothesis_length"
+    }
+  ],
+  "smoke_caps": null,
+  "source": "stanfordnlp/snli",
+  "spec": "specs/snli.yaml",
+  "train_dropped_by_label": 785,
+  "train_source_rows": 550152,
+  "train_split": "train",
+  "view": "hypothesis_only"
+}

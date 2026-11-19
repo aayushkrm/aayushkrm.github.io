@@ -1,0 +1,40 @@
+{
+  "ci_high": 0.00038399837673212995,
+  "ci_low": 0.0,
+  "config_hash": "980036a65660598e",
+  "controls": 600,
+  "exact_jaccard_at_or_above_threshold": 0,
+  "flagged": 0,
+  "jaccard_histogram": {
+    "bin_edges": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "counts": [
+      10000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "max_jaccard": 0.091837,
+  "mode": "full",
+  "pairs": 10000,
+  "rate": 0.0,
+  "seed": 1
+}
